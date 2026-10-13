@@ -1,0 +1,616 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-10-13",
+  "timezone": "Asia/Shanghai",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly"
+  ],
+  "candidate_count": 42,
+  "eligible_count": 34,
+  "editor_note": "可以按用途先看 **diagram-design**（流程与技术图解）、**e2e**（完整用户路径测试）和 **HyperFrames**（网页素材转视频）。**PPT Master** 适合文档转演示文稿，**Impeccable** 适合前端设计审查。以上属于公开文档研究后的通用建议，尚未通过实际接入验证。",
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "morluto/rea",
+      "url": "https://github.com/morluto/rea",
+      "weekly_stars": 130471,
+      "total_stars": 184041,
+      "forks": 44541,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-10-13T10:54:20Z",
+      "source_revision": "f0f09950f34d96e3b1c62fd04821af5e301f80c7",
+      "evidence_url": "https://github.com/morluto/rea/blob/f0f09950f34d96e3b1c62fd04821af5e301f80c7/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 5,
+          "captured_at": "2026-10-13T18:58:09.617373+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "让 AI 助手分析应用、网页和程序的内部行为。",
+      "fit_short": "应用分析、调试与技术研究",
+      "project_fit": "适合分析自有或已获授权的 Electron 应用、网页和原生程序，研究模块、交互与运行行为，辅助调试和技术分析。技术分析不能代替用户研究。",
+      "difficulty": "高",
+      "cost": "需要 Node.js；原生程序分析可能还需 Ghidra、Hopper 或 IDA 等工具。模型使用沿用所配置助手的费用。",
+      "caution": "分析结论有证据范围和局限；先明确目标与分析权限，别把推测当作已验证的实现。热度很高不等于适合马上接入。",
+      "first_step": "先阅读 JavaScript/Electron 示例，选择一个自有应用的小功能，核对分析能提供哪些证据。"
+    },
+    {
+      "rank": 2,
+      "repo": "boykopovar/AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "weekly_stars": 27263,
+      "total_stars": 33847,
+      "forks": 2927,
+      "language": "C++",
+      "license": "GPL-2.0",
+      "last_push_at": "2026-10-13T10:54:27Z",
+      "source_revision": "b1328fc0f9012e820fb92c8fdbbb4af02007bd48",
+      "evidence_url": "https://github.com/boykopovar/AnyPS5/blob/b1328fc0f9012e820fb92c8fdbbb4af02007bd48/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 1,
+          "captured_at": "2026-10-13T18:58:09.648600+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "尝试把 PS5 可执行程序转换到 Linux 和 Windows。",
+      "fit_short": "程序移植与兼容层研究",
+      "project_fit": "适合研究原生程序移植、系统兼容层与图形接口。它面向 PS5 程序转换，与常规网页、移动端产品开发的直接关联有限。",
+      "difficulty": "高",
+      "cost": "需要编译环境、系统和图形知识，以及具有使用权限的目标程序。",
+      "caution": "项目仍以逐项兼容进展和阻塞记录为依据；有工具不代表任意程序都可运行。",
+      "first_step": "先阅读架构、兼容性进展和阻塞记录，判断是否属于实际研究需求。"
+    },
+    {
+      "rank": 3,
+      "repo": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "weekly_stars": 11139,
+      "total_stars": 288746,
+      "forks": 24237,
+      "language": "Shell",
+      "license": "MIT",
+      "last_push_at": "2026-10-13T08:46:40Z",
+      "source_revision": "49dd158d1076134a641b33efb035946536778336",
+      "evidence_url": "https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 2,
+          "captured_at": "2026-10-13T18:58:09.648600+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "给 AI 编程助手补充可组合的工程工作方法。",
+      "fit_short": "改进需求拆解、调试和测试习惯",
+      "project_fit": "适合为 AI 辅助开发补充需求澄清、调试和测试等小型工作方法，可选择具体方法融入已有工程流程。",
+      "difficulty": "低",
+      "cost": "需要已有 AI 编程助手；主要成本来自模型或订阅。Skill 文档本身开放。",
+      "caution": "与其他 Skill 或项目流程可能重叠，采用前核对职责与触发条件，避免重复规则。",
+      "first_step": "阅读一个与具体工程问题匹配的 Skill，评估是否只借用其中一步。"
+    },
+    {
+      "rank": 4,
+      "repo": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "weekly_stars": 9237,
+      "total_stars": 53323,
+      "forks": 3374,
+      "language": "HTML",
+      "license": "MIT",
+      "last_push_at": "2026-10-13T04:30:17Z",
+      "source_revision": "0a8ea20ae69b33a5edce6018eedd3a9d26e90c1c",
+      "evidence_url": "https://github.com/cathrynlavery/diagram-design/blob/0a8ea20ae69b33a5edce6018eedd3a9d26e90c1c/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-10-13T18:58:09.648600+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "让 AI 助手生成可独立打开的 HTML 和 SVG 图解。",
+      "fit_short": "制作产品流程图、知识卡片和项目展示",
+      "project_fit": "适合制作技术文档、产品流程图、知识库处理链和演示材料，把复杂步骤转换成可独立打开的图解。",
+      "difficulty": "低",
+      "cost": "需要支持 Skill 的 AI 助手；产物可在浏览器打开。模型生成消耗原有额度。",
+      "caution": "图解结构和中文可读性仍需人工核对；它画得清楚不代表流程事实正确。",
+      "first_step": "用一个已确认的项目流程做一张图，检查步骤、中文换行和实际阅读效果。"
+    },
+    {
+      "rank": 5,
+      "repo": "DuarteSantos8/openGym",
+      "url": "https://github.com/DuarteSantos8/openGym",
+      "weekly_stars": 6621,
+      "total_stars": 10824,
+      "forks": 1313,
+      "language": "JavaScript",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-10-13T09:42:50Z",
+      "source_revision": "5ec23d3b3ac68cbc09fbe450276f6db1995c83a6",
+      "evidence_url": "https://github.com/DuarteSantos8/openGym/blob/5ec23d3b3ac68cbc09fbe450276f6db1995c83a6/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/javascript?since=weekly",
+          "rank": 2,
+          "captured_at": "2026-10-13T18:58:09.427458+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "自托管的健身、训练计划和体重记录应用。",
+      "fit_short": "健身应用、自托管与记录产品参考",
+      "project_fit": "适合管理个人健身与体重记录，也可作为自托管记录产品的界面、登录和时间线设计参考。其功能范围是运动记录。",
+      "difficulty": "中",
+      "cost": "自托管需要部署和维护自己的运行环境。",
+      "caution": "AGPL-3.0；采用前阅读许可证。复用产品设计时仍需核对目标业务的数据与权限需求。",
+      "first_step": "先查看截图和功能说明，梳理一次训练记录、回顾和修改的用户路径。"
+    },
+    {
+      "rank": 6,
+      "repo": "tester-army/e2e",
+      "url": "https://github.com/tester-army/e2e",
+      "weekly_stars": 5582,
+      "total_stars": 9852,
+      "forks": 475,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-13T09:50:44Z",
+      "source_revision": "a91b6fbcbcd901372a3b0175cd30456ed5a5eed7",
+      "evidence_url": "https://github.com/tester-army/e2e/blob/a91b6fbcbcd901372a3b0175cd30456ed5a5eed7/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 3,
+          "captured_at": "2026-10-13T18:58:09.648600+08:00"
+        },
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 1,
+          "captured_at": "2026-10-13T18:58:09.617373+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "用自然语言引导 Agent 操作网页或手机应用并检查结果。",
+      "fit_short": "检查真实用户流程能否走通",
+      "project_fit": "适合检查网页或移动端的登录、记录查看、返回和提交等完整用户路径，让自动化测试更接近实际操作。",
+      "difficulty": "中",
+      "cost": "Agent 步骤需要自备订阅、API 或本地模型；没有 Agent 步骤的普通测试不需要模型。",
+      "caution": "自然语言操作仍要配合明确断言；页面被打开或按钮被点击不代表业务目标成功。",
+      "first_step": "选一个免费、无敏感数据的详情查看与返回流程，先验证一次结果和失败时的证据。"
+    },
+    {
+      "rank": 7,
+      "repo": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "weekly_stars": 4482,
+      "total_stars": 62175,
+      "forks": 5567,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-13T10:32:19Z",
+      "source_revision": "e8eb358fe21d6f1a611e04f8df27ca366b337ce9",
+      "evidence_url": "https://github.com/heygen-com/hyperframes/blob/e8eb358fe21d6f1a611e04f8df27ca366b337ce9/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 5,
+          "captured_at": "2026-10-13T18:58:09.648600+08:00"
+        },
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 2,
+          "captured_at": "2026-10-13T18:58:09.617373+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "把 HTML、CSS、素材和动画渲染成 MP4 视频。",
+      "fit_short": "制作自媒体短片和产品演示视频",
+      "project_fit": "适合把知识卡片、网页动画和产品说明做成短视频，尤其适用于已有 HTML/CSS 素材的内容制作流程。",
+      "difficulty": "中",
+      "cost": "本地渲染需要 Node.js 22+ 和 FFmpeg；生成脚本或外部素材可能消耗模型额度。",
+      "caution": "画面排版、时间轴、字体和导出效果需要实际播放检查；浏览器预览通过不代表视频已验证。",
+      "first_step": "用已有文案和自有素材做一个 10 秒说明片，检查预览、导出和播放是否一致。"
+    },
+    {
+      "rank": 8,
+      "repo": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "weekly_stars": 4175,
+      "total_stars": 105912,
+      "forks": 11047,
+      "language": "JavaScript",
+      "license": "MIT",
+      "last_push_at": "2026-10-10T08:28:49Z",
+      "source_revision": "1be8e34187e34647bb83adc3a1323b26ae6f6abe",
+      "evidence_url": "https://github.com/addyosmani/agent-skills/blob/1be8e34187e34647bb83adc3a1323b26ae6f6abe/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/javascript?since=weekly",
+          "rank": 3,
+          "captured_at": "2026-10-13T18:58:09.427458+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "给 AI 编程 Agent 提供从需求到交付的工程 Skills。",
+      "fit_short": "参考质量检查和发布前审查方法",
+      "project_fit": "适合参考测试、代码审查、性能检查和发布等工程方法，为 AI 辅助开发补充清晰的质量检查点。",
+      "difficulty": "低",
+      "cost": "需要已有 AI 编程助手，费用取决于其运行方式。",
+      "caution": "完整生命周期流程可能与现有规范重叠，应选择具体方法复用并保持职责清晰。",
+      "first_step": "阅读测试或审查方法，与一个项目的验收条件比较，选择一个可复用的检查点。"
+    },
+    {
+      "rank": 9,
+      "repo": "calesthio/OpenMontage",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "weekly_stars": 3786,
+      "total_stars": 67773,
+      "forks": 8655,
+      "language": "Python",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-10-12T16:48:52Z",
+      "source_revision": "e45f5b12bd46440b04f3675af9a77d0718e6a254",
+      "evidence_url": "https://github.com/calesthio/OpenMontage/blob/e45f5b12bd46440b04f3675af9a77d0718e6a254/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 4,
+          "captured_at": "2026-10-13T18:58:09.584331+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "让 AI 编程助手组织脚本、素材、剪辑和视频合成。",
+      "fit_short": "探索自媒体视频生产的完整流程",
+      "project_fit": "可作为长文转视频、产品宣传片和知识讲解视频的流程参考，尤其适合需要统一脚本、素材和剪辑的内容任务。",
+      "difficulty": "高",
+      "cost": "需要 Python、Node.js、FFmpeg 等环境；所选语音、图像和视频服务可能收费。",
+      "caution": "AGPL-3.0；外部素材和第三方工具另有条件。复杂生产管线需要先验证成本、可用素材和最终成片。",
+      "first_step": "先阅读一条最短制作流程，用自有素材定义一个小样，确认工具和成本后再考虑试做。"
+    },
+    {
+      "rank": 10,
+      "repo": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "weekly_stars": 3762,
+      "total_stars": 100251,
+      "forks": 8786,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-13T07:33:53Z",
+      "source_revision": "a2150b2c09c6da01dfdc1296f8d2c3f3975a4418",
+      "evidence_url": "https://github.com/thedotmack/claude-mem/blob/a2150b2c09c6da01dfdc1296f8d2c3f3975a4418/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 6,
+          "captured_at": "2026-10-13T18:58:09.648600+08:00"
+        },
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 3,
+          "captured_at": "2026-10-13T18:58:09.617373+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "记录 AI 编程会话的工具观察和摘要，供后续会话继续。",
+      "fit_short": "参考项目记忆与跨会话衔接",
+      "project_fit": "适合为 AI 编程会话保存工具观察和摘要，支持后续检索与跨会话继续；也可参考其项目知识组织方法。开发会话记忆与业务数据存储应分别设计。",
+      "difficulty": "中",
+      "cost": "需要配置记忆提供方；托管服务或摘要模型可能产生费用。",
+      "caution": "README 包含托管记忆与本地观察两种路径，数据去向不同；先核对配置，再决定能否使用项目资料。",
+      "first_step": "只研究一个无敏感内容的开发会话如何记录、检索与修正，和现有项目记录方式比较。"
+    },
+    {
+      "rank": 11,
+      "repo": "hugohe3/ppt-master",
+      "url": "https://github.com/hugohe3/ppt-master",
+      "weekly_stars": 3733,
+      "total_stars": 61457,
+      "forks": 4867,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-10-13T08:08:13Z",
+      "source_revision": "bf89859cbf3c5f5974de70e0dd2ccf2239c8c51b",
+      "evidence_url": "https://github.com/hugohe3/ppt-master/blob/bf89859cbf3c5f5974de70e0dd2ccf2239c8c51b/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 8,
+          "captured_at": "2026-10-13T18:58:09.584331+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "把文档或主题做成可继续编辑的原生 PowerPoint。",
+      "fit_short": "制作面试项目展示和产品汇报",
+      "project_fit": "适合把研究文档、产品方案和培训材料转换成演示文稿，可参考模板复用、图表和可编辑对象的组织方法。",
+      "difficulty": "中",
+      "cost": "需要 Python 和可运行工作流的 AI 工具；模型与可选语音、图片服务按各自条件使用。",
+      "caution": "生成后仍需核对事实、原生对象编辑与实际展示效果；采用前比较已有演示工具的能力。",
+      "first_step": "拿一段已确认的项目材料制作 3 页小样，核对文字、图形能否编辑和版式是否合适。"
+    },
+    {
+      "rank": 12,
+      "repo": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "weekly_stars": 3378,
+      "total_stars": 80511,
+      "forks": 4810,
+      "language": "JavaScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-12T20:24:10Z",
+      "source_revision": "245ad82def45831dc56a21b683c7a1ff530b06cc",
+      "evidence_url": "https://github.com/pbakaus/impeccable/blob/245ad82def45831dc56a21b683c7a1ff530b06cc/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/javascript?since=weekly",
+          "rank": 9,
+          "captured_at": "2026-10-13T18:58:09.427458+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "给 AI 前端设计提供审查、澄清、排版和动效等指导。",
+      "fit_short": "改进产品页面的层级和可理解性",
+      "project_fit": "适合对网页、仪表盘、表单和应用界面进行设计审查，改善信息层级、排版、表达和交互细节。",
+      "difficulty": "低",
+      "cost": "文档和部分规则可本地使用；需要模型判断的部分消耗助手额度。",
+      "caution": "使用时核对具体版本与支持的命令；视觉检查不能代替完整业务路径验证。",
+      "first_step": "选择一个已有页面做审查，先处理最影响理解的一项问题，再检查实际效果。"
+    },
+    {
+      "rank": 13,
+      "repo": "anthropics/knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "weekly_stars": 3145,
+      "total_stars": 29428,
+      "forks": 3337,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-12T10:20:03Z",
+      "source_revision": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06",
+      "evidence_url": "https://github.com/anthropics/knowledge-work-plugins/blob/02ffa99ff00ce4d3046ccebabb8357cb39f3ab06/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 2,
+          "captured_at": "2026-10-13T18:58:09.584331+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "按岗位打包 Skills、工具连接和工作流程的插件集合。",
+      "fit_short": "参考产品管理、客服和办公 Agent 的分工",
+      "project_fit": "适合参考产品管理、客户支持和办公岗位如何组织任务、资料与工具，帮助设计职责明确、输出可检查的工作型 Agent。",
+      "difficulty": "中",
+      "cost": "主要面向 Claude Cowork 与 Claude Code；实际工具连接需要相应账号和权限。",
+      "caution": "插件格式和连接能力依赖运行环境；借鉴流程不代表能原样装入现有应用。",
+      "first_step": "先阅读 product-management 或 customer-support 的说明，把一个角色拆成输入、步骤和输出。"
+    },
+    {
+      "rank": 14,
+      "repo": "tashfeenahmed/freellmapi",
+      "url": "https://github.com/tashfeenahmed/freellmapi",
+      "weekly_stars": 3029,
+      "total_stars": 34375,
+      "forks": 4696,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-10-12T13:33:15Z",
+      "source_revision": "986b2118226f5c2d1a0348e14d151a7005c1924e",
+      "evidence_url": "https://github.com/tashfeenahmed/freellmapi/blob/986b2118226f5c2d1a0348e14d151a7005c1924e/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 6,
+          "captured_at": "2026-10-13T18:58:09.617373+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "把多个模型服务接到统一 API，提供路由与失败切换。",
+      "fit_short": "学习模型路由与低成本原型的备选方案",
+      "project_fit": "适合用公开样本进行个人模型实验，研究统一接口、模型切换和限额处理。正式采用前需明确提供方、路由与数据条件。",
+      "difficulty": "中",
+      "cost": "需要各提供方的账号或 API 凭证；免费额度由各服务决定，随时可能改变。",
+      "caution": "仓库明确面向个人实验。路由可能把请求发送给不同提供方，不宜直接当生产稳定性或隐私保证。",
+      "first_step": "只用公开或合成文本阅读路由和限额处理示例，先确认有哪些实际可用服务。"
+    },
+    {
+      "rank": 15,
+      "repo": "earthtojake/text-to-cad",
+      "url": "https://github.com/earthtojake/text-to-cad",
+      "weekly_stars": 2441,
+      "total_stars": 19805,
+      "forks": 1944,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-10-13T08:45:58Z",
+      "source_revision": "24573128ceaab564f497d7c12f995c41784c9539",
+      "evidence_url": "https://github.com/earthtojake/text-to-cad/blob/24573128ceaab564f497d7c12f995c41784c9539/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 8,
+          "captured_at": "2026-10-13T18:58:09.648600+08:00"
+        },
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 1,
+          "captured_at": "2026-10-13T18:58:09.584331+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "给 AI 助手提供生成 3D CAD 模型和工程图的本地工作流。",
+      "fit_short": "3D 模型、工程图与实体设计",
+      "project_fit": "适合简单零件、桌面摆件和可制造 3D 模型的设计探索，生成 CAD 模型与工程图，并检查制造条件。",
+      "difficulty": "中",
+      "cost": "需要本地 CAD 运行环境和 AI 助手；实体制造与打印另有成本。",
+      "caution": "CAD 精度和可制造性仍需验证；工程模型生成不自动解决 2D 角色动画的帧一致性。",
+      "first_step": "先查看模型、工程图与制造检查示例，选一个尺寸明确的简单物体评估流程。"
+    },
+    {
+      "rank": 16,
+      "repo": "666ghj/MiroFish",
+      "url": "https://github.com/666ghj/MiroFish",
+      "weekly_stars": 2123,
+      "total_stars": 78662,
+      "forks": 11984,
+      "language": "Python",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-10-01T18:28:51Z",
+      "source_revision": "7657031ac01184afe2cb220f5ee3545573b5e843",
+      "evidence_url": "https://github.com/666ghj/MiroFish/blob/7657031ac01184afe2cb220f5ee3545573b5e843/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 12,
+          "captured_at": "2026-10-13T18:58:09.584331+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "让多个 AI 角色在模拟环境中互动并生成推演报告。",
+      "fit_short": "探索产品假设和内容场景的模拟方法",
+      "project_fit": "适合探索多角色模拟、内容场景和假设推演的产品形态。模拟可以提出待验证假设，不能替代真实用户反馈。",
+      "difficulty": "高",
+      "cost": "需要前后端环境、模型 API 和相关配置；多 Agent 模拟可能消耗较多额度。",
+      "caution": "预测能力属于项目主张，本期没有验证准确率。模拟角色的结论不证明真实用户会采取同样行为。",
+      "first_step": "先看官方演示，用一个低成本假设比较输入、模拟过程和报告，明确哪些结论仍需实证。"
+    },
+    {
+      "rank": 17,
+      "repo": "mvschwarz/openrig",
+      "url": "https://github.com/mvschwarz/openrig",
+      "weekly_stars": 2056,
+      "total_stars": 7358,
+      "forks": 556,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-13T10:52:07Z",
+      "source_revision": "ff5d0cb2596af7a550499a9fad40901b495c7cf9",
+      "evidence_url": "https://github.com/mvschwarz/openrig/blob/ff5d0cb2596af7a550499a9fad40901b495c7cf9/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 9,
+          "captured_at": "2026-10-13T18:58:09.617373+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "把多个 AI 编程助手组织成有角色和共享工作记录的团队。",
+      "fit_short": "参考多 Agent 的分工与持续协作",
+      "project_fit": "适合研究多个 AI 编程 Agent 的角色分工、工作归属与共享上下文，尤其用于需要持续协作的研发任务。",
+      "difficulty": "高",
+      "cost": "需要相应助手和运行环境；多个 Agent 会增加模型或订阅额度消耗。",
+      "caution": "持续团队会增加协调和状态维护成本；先确认单 Agent 的实际瓶颈。",
+      "first_step": "阅读最小团队示例，先画出两个角色如何交接，避免一开始建立庞大团队。"
+    },
+    {
+      "rank": 18,
+      "repo": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "weekly_stars": 1716,
+      "total_stars": 27294,
+      "forks": 7213,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-10-13T10:57:15Z",
+      "source_revision": "6524a8d43795dc543f7cfb572388cdea3662ad48",
+      "evidence_url": "https://github.com/pingdotgg/t3code/blob/6524a8d43795dc543f7cfb572388cdea3662ad48/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 8,
+          "captured_at": "2026-10-13T18:58:09.617373+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "从桌面、网页或手机控制本机已有的 AI 编程助手。",
+      "fit_short": "参考远程控制和任务进度展示",
+      "project_fit": "适合从桌面、网页或手机管理本机已有的 AI 编程助手，也可作为远程任务控制与进度展示的界面参考。",
+      "difficulty": "中",
+      "cost": "需要先安装并登录至少一个支持的助手；使用既有助手的订阅或 API。",
+      "caution": "这是控制界面，不提供独立免费的模型能力。远程体验取决于本机助手、连接与实际运行状态。",
+      "first_step": "先看移动端和桌面演示，与现有工作方式比较一个具体的远程控制需求。"
+    },
+    {
+      "rank": 19,
+      "repo": "p-e-w/heretic",
+      "url": "https://github.com/p-e-w/heretic",
+      "weekly_stars": 1499,
+      "total_stars": 34991,
+      "forks": 3937,
+      "language": "Python",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-10-12T12:23:20Z",
+      "source_revision": "66a952b49b00bfd1854bdad769fee5fb225b53be",
+      "evidence_url": "https://github.com/p-e-w/heretic/blob/66a952b49b00bfd1854bdad769fee5fb225b53be/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 6,
+          "captured_at": "2026-10-13T18:58:09.584331+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "研究和修改开放权重语言模型的拒绝行为。",
+      "fit_short": "开放权重模型行为研究",
+      "project_fit": "适合研究开放权重语言模型的内部行为与评估方法，属于专业模型研究工具，与常规产品开发的直接关联有限。",
+      "difficulty": "高",
+      "cost": "涉及可修改的模型权重和相应计算资源。",
+      "caution": "减少拒绝不等于提高准确性或产品质量，也可能改变原有行为边界；本期只作研究观察。",
+      "first_step": "先阅读原理与评估说明，明确研究目标和模型行为改变的评价标准。"
+    },
+    {
+      "rank": 20,
+      "repo": "DmNote-App/DmNote",
+      "url": "https://github.com/DmNote-App/DmNote",
+      "weekly_stars": 1338,
+      "total_stars": 3602,
+      "forks": 218,
+      "language": "TypeScript",
+      "license": "GPL-3.0",
+      "last_push_at": "2026-10-07T23:36:48Z",
+      "source_revision": "baac1e88c519852e7962f4dde35b9a352f5f7fcf",
+      "evidence_url": "https://github.com/DmNote-App/DmNote/blob/baac1e88c519852e7962f4dde35b9a352f5f7fcf/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-10-13T18:58:09.617373+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首期",
+      "summary": "把实时键盘输入显示成可自定义的桌面或录屏叠层。",
+      "fit_short": "录制操作教程，参考桌面交互反馈",
+      "project_fit": "适合在游戏录屏、操作教程或软件演示中展示按键，也可参考自定义桌面叠层、主题与交互反馈的实现。",
+      "difficulty": "低",
+      "cost": "有 Windows 和 macOS 使用说明；需要相应系统输入权限。",
+      "caution": "全局按键显示可能把录屏里的敏感输入展示出来，使用时要明确捕获和显示范围。",
+      "first_step": "先看官方演示，确认它是否能让一段无敏感输入的操作教程更容易理解。"
+    }
+  ]
+}
