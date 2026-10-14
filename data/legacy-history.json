@@ -1,0 +1,102 @@
+{
+  "description": "每日 5 项格式启用前已推荐的项目，保留稳定仓库标识以避免改名后重复；原始资料继续归档。",
+  "resolved_on": "2026-10-14",
+  "projects": [
+    {
+      "repo": "666ghj/MiroFish",
+      "repo_id": "R_kgDOQdLIuw"
+    },
+    {
+      "repo": "addyosmani/agent-skills",
+      "repo_id": "R_kgDORRCyRw"
+    },
+    {
+      "repo": "anthropics/knowledge-work-plugins",
+      "repo_id": "R_kgDOQ_-q4g"
+    },
+    {
+      "repo": "boykopovar/AnyPS5",
+      "repo_id": "R_kgDOTs_xqg"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "repo_id": "R_kgDORz_BDQ"
+    },
+    {
+      "repo": "cathrynlavery/diagram-design",
+      "repo_id": "R_kgDOSEljpA"
+    },
+    {
+      "repo": "DmNote-App/DmNote",
+      "repo_id": "R_kgDONlQVzw"
+    },
+    {
+      "repo": "DuarteSantos8/openGym",
+      "repo_id": "R_kgDOTcv79w"
+    },
+    {
+      "repo": "earthtojake/text-to-cad",
+      "repo_id": "R_kgDOSJHpkw"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "repo_id": "R_kgDORi26-Q"
+    },
+    {
+      "repo": "hugohe3/ppt-master",
+      "repo_id": "R_kgDOQl_Gyg"
+    },
+    {
+      "repo": "ifixai-ai/iFixAi",
+      "repo_id": "R_kgDOSN5LZA"
+    },
+    {
+      "repo": "mattpocock/skills",
+      "repo_id": "R_kgDORHkddg"
+    },
+    {
+      "repo": "morluto/rea",
+      "repo_id": "R_kgDOSB6hVQ"
+    },
+    {
+      "repo": "mvschwarz/openrig",
+      "repo_id": "R_kgDOR2ntBw"
+    },
+    {
+      "repo": "NationalSecurityAgency/ghidra",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkxNzMyMjg0MzY="
+    },
+    {
+      "repo": "p-e-w/heretic",
+      "repo_id": "R_kgDOPz41qA"
+    },
+    {
+      "repo": "pbakaus/impeccable",
+      "repo_id": "R_kgDOQWgufQ"
+    },
+    {
+      "repo": "pingdotgg/t3code",
+      "repo_id": "R_kgDORLtfbQ"
+    },
+    {
+      "repo": "tashfeenahmed/freellmapi",
+      "repo_id": "R_kgDOSIqPOQ"
+    },
+    {
+      "repo": "tester-army/e2e",
+      "repo_id": "R_kgDOTgAgwg"
+    },
+    {
+      "repo": "thedotmack/claude-mem",
+      "repo_id": "R_kgDOPng1Jw"
+    },
+    {
+      "repo": "vercel-labs/skills",
+      "repo_id": "R_kgDOQ5_BBQ"
+    },
+    {
+      "repo": "Vincentwei1021/video-shotcraft",
+      "repo_id": "R_kgDOTdLZdQ"
+    }
+  ]
+}

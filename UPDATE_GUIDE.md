@@ -2,7 +2,7 @@
 
 ## 同一个仓库，不同日期的文档
 
-每两天在 Irixil/github-weekly-radar 新增一份资料，采用 `reports/YYYY-MM-DD.md` 命名。首页列出最新资料和历史入口，旧资料继续保留。每份含 20 个项目，不另建仓库，也不只覆盖首页。
+每天在 Irixil/github-weekly-radar 新增一份资料，采用 `reports/YYYY-MM-DD.md` 命名。首页列出最新资料和历史入口，旧资料继续保留。每份推荐 5 个从未介绍过的项目，不另建仓库，也不只覆盖首页。
 
 每个项目都按下面的顺序说明。
 
@@ -16,28 +16,30 @@
 
 ## 热度和来源
 
-每次重新读取 [GitHub 总周榜](https://github.com/trending?since=weekly)、[Python 周榜](https://github.com/trending/python?since=weekly)、[TypeScript 周榜](https://github.com/trending/typescript?since=weekly) 和 [JavaScript 周榜](https://github.com/trending/javascript?since=weekly)。这个池不覆盖所有 GitHub 项目。
+每次重新读取 [GitHub 总周榜](https://github.com/trending?since=weekly)，以及 Python、TypeScript、JavaScript、Go、Rust、Swift、Dart、Java 的周榜。这个池不覆盖所有 GitHub 项目，具体来源链接保存在每期资料和数据中。
 
-去重后，筛掉归档项目和未确认开源许可证的项目，按页面显示的周新增 Star 降序选取 20 个。增量相同按仓库名排序。遇到 README 与许可证说明冲突时，暂不收录并记明原因，从下一顺位补选。
+先排除所有历史推荐，再筛掉归档项目和未确认开源许可证的项目，按页面显示的周新增 Star 降序选取 5 个。增量相同按仓库名排序。遇到 README 与许可证说明冲突时，暂不收录并记明原因，从下一顺位补选。
 
-**每两天更新的是资料；热度指标仍是滚动一周数据，不是两天内的新增 Star。** Star 只反映关注，不证明质量。名次变化比较本仓库的上期资料。
+**每天更新的是资料；热度指标仍是滚动一周数据，不是一天内的新增 Star。** Star 只反映关注，不证明质量。序号表示当天的推荐顺序。
+
+去重范围包括全部 `data/*.json` 中的项目，早期周榜和图文格式示例也算已经推荐。核对仓库名和 GitHub 稳定仓库标识，避免改名或转移后重复介绍。旧资料缺少的标识保存在 `data/legacy-history.json`；新资料直接保存 `repo_id`。
 
 ## 更新流程
 
 1. 核对 origin 和 main，保留未知工作区改动。用北京时间确定本期日期；当天已发布时跳过，不能按本周已有资料跳过。
 2. 执行 `python3 scripts/radar.py collect`。原文、完整候选池和采集结果留在被忽略的 `.cache/` 中。
-3. 阅读 `.cache/candidates.json`、官方 README 和必要公开文档，核对实际功能与许可。用 schema_version 2 生成 `data/YYYY-MM-DD.json`；每项目补齐 `example`、`diagram_title` 和三个 `diagram_steps`。
-4. 保留真实抓取时间、公开来源、许可证和绑定源版本的文档链接。与上期资料比较新上榜和名次变化，不编造收益或性能数字。
-5. 执行 `python3 scripts/radar.py render data/YYYY-MM-DD.json`，生成本期独立文档、20 张用途图和首页。历史文字周榜保留归档。
+3. 阅读 `.cache/new_candidates.json`、官方 README 和必要公开文档，核对实际功能与许可。从未推荐的候选中选 5 个，用 schema_version 3 生成 `data/YYYY-MM-DD.json`；每项目补齐 `repo_id`、`example`、`diagram_title` 和三个 `diagram_steps`。
+4. 保留真实抓取时间、公开来源、许可证和绑定源版本的文档链接。每个项目标为首次推荐，不编造收益或性能数字。
+5. 执行 `python3 scripts/radar.py render data/YYYY-MM-DD.json`，生成本期独立文档、5 张用途图和首页。早期 20 项图文示例及文字周榜保留归档，不再按旧格式新增。
 6. 检查每个项目的短句、例子与图解是否对应真实功能，检查文字没有遮挡、箭头正确，图片和详情链接可打开。运行 `python3 scripts/radar.py check data/YYYY-MM-DD.json`。
 7. 检查提交范围和隐私，确认旧资料未改动；正常提交并推送 main，不强制推送。只更新同一个公开仓库。
-8. 从 GitHub 读回本期文档、数据与图解，确认真的发布，再在任务所在聊天给出本期链接和三项值得先看的内容。
+8. 从 GitHub 读回本期文档、数据与图解，确认真的发布，再在任务所在聊天给出本期链接和简短导读。
 
-来源不可用或可确认候选不足时保留上期资料并说明问题。不能把旧数据改成新日期，也不能用猜测凑满 20 个项目。
+来源不可用或可确认的新候选不足 5 个时保留上期资料并说明缺口。不能重复凑数，不能把旧数据改成新日期，也不能用猜测补足项目。
 
 ## 定时任务与运行条件
 
-Codex 本地任务每隔两天 09:00（北京时间）执行研究与追加资料。2026-10-14 起改为图解和例子格式；原来的每周一任务由这个频率取代。
+Codex 本地任务每天 09:00（北京时间）执行研究与追加资料。2026-10-14 起采用每日 5 个未推荐项目的图解和例子格式；原来的每周一和每两天安排由这个频率取代。
 
 电脑需要开机、联网，Codex 应用保持运行，仓库目录和 GitHub 登录仍然可用。不需要在仓库添加模型 API 密钥。启用定时任务不等于未来运行已经验证，以实际资料和远端提交为准。[官方定时任务说明](https://learn.chatgpt.com/docs/automations?surface=app)。
 

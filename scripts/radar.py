@@ -16,11 +16,26 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 TZ = ZoneInfo("Asia/Shanghai")
 SOURCES = ["https://github.com/trending" + suffix + "?since=weekly"
-           for suffix in ("", "/python", "/typescript", "/javascript")]
+           for suffix in ("", "/python", "/typescript", "/javascript", "/go", "/rust", "/swift", "/dart", "/java")]
 OPEN_LICENSES = {"MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "GPL-2.0",
                  "GPL-3.0", "AGPL-3.0", "LGPL-2.1", "LGPL-3.0", "MPL-2.0",
                  "ISC", "Unlicense", "BSL-1.0", "EPL-2.0", "Zlib"}
 REPO_NAME = re.compile(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+\Z")
+
+
+def history(exclude=None):
+    known = {}
+    for path in (ROOT / "data").glob("*.json"):
+        if exclude and path.resolve() == exclude.resolve():
+            continue
+        for project in json.loads(path.read_text(encoding="utf-8")).get("projects", []):
+            name = project["repo"].lower()
+            known[name] = project.get("repo_id") or known.get(name)
+    cached = ROOT / ".cache" / "history_ids.json"
+    if cached.exists():
+        resolved = json.loads(cached.read_text(encoding="utf-8"))
+        known = {name: value or resolved.get(name) for name, value in known.items()}
+    return known
 
 
 class Trending(HTMLParser):
@@ -68,7 +83,7 @@ def fetch_source(url):
 
 
 def collect():
-    # ponytail: four weekly source pages; add languages only when the user changes coverage.
+    # ponytail: fixed weekly source pages keep popularity metrics comparable.
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         sources = list(pool.map(fetch_source, SOURCES))
     candidates = {}
@@ -80,22 +95,41 @@ def collect():
                 raise ValueError("同一仓库的周热度不一致；重新核对后再发榜。")
             item["sources"].append({"url": source["url"], "rank": row["source_rank"], "captured_at": source["captured_at"]})
     query = []
+    candidate_names = list(candidates)
+    previous = history()
+    unresolved = [name for name, repo_id in previous.items() if not repo_id]
     for index, item in enumerate(candidates.values()):
         owner, name = item["repo"].split("/")
-        query.append('r%d: repository(owner:%s,name:%s) { nameWithOwner url stargazerCount forkCount isArchived pushedAt licenseInfo { spdxId } primaryLanguage { name } defaultBranchRef { target { oid } } readme: object(expression:"HEAD:README.md") { ... on Blob { text } } readmeLower: object(expression:"HEAD:readme.md") { ... on Blob { text } } }' % (index, json.dumps(owner), json.dumps(name)))
-    result = subprocess.run(["gh", "api", "graphql", "-f", "query=query { " + " ".join(query) + " }"], capture_output=True, text=True)
-    if result.returncode:
-        raise RuntimeError("GitHub 资料读取失败：" + result.stderr[:500])
-    payload = json.loads(result.stdout)
-    if payload.get("errors"):
-        raise RuntimeError("GitHub 资料不完整；停止本次更新。")
+        query.append('r%d: repository(owner:%s,name:%s) { id nameWithOwner url stargazerCount forkCount isArchived pushedAt licenseInfo { spdxId } primaryLanguage { name } defaultBranchRef { target { oid } } readme: object(expression:"HEAD:README.md") { ... on Blob { text } } readmeLower: object(expression:"HEAD:readme.md") { ... on Blob { text } } }' % (index, json.dumps(owner), json.dumps(name)))
+    for index, name in enumerate(unresolved):
+        owner, repo = name.split("/")
+        query.append('h%d: repository(owner:%s,name:%s) { id nameWithOwner }' % (index, json.dumps(owner), json.dumps(repo)))
+    payload = {"data": {}}
+    # Read README files in small batches to avoid oversized GitHub responses.
+    for start in range(0, len(query), 15):
+        result = subprocess.run(["gh", "api", "graphql", "-f", "query=query { " + " ".join(query[start:start + 15]) + " }"], capture_output=True, text=True)
+        if result.returncode:
+            raise RuntimeError("GitHub 资料读取失败：" + result.stderr[:500])
+        batch = json.loads(result.stdout)
+        if batch.get("errors"):
+            raise RuntimeError("GitHub 资料不完整；停止本次更新。")
+        payload["data"].update(batch["data"])
     cache = ROOT / ".cache"
     cache.mkdir(exist_ok=True)
+    for index, name in enumerate(unresolved):
+        metadata = payload["data"]["h%d" % index]
+        if metadata:
+            previous[name] = metadata["id"]
+            previous[metadata["nameWithOwner"].lower()] = metadata["id"]
+    (cache / "history_ids.json").write_text(json.dumps(previous, ensure_ascii=False, indent=2), encoding="utf-8")
     selected = []
-    for metadata in payload["data"].values():
+    for key, metadata in payload["data"].items():
+        if not key.startswith("r"):
+            continue
         if not metadata:
             raise ValueError("候选仓库已不可访问；需要重新核对。")
-        item = candidates[metadata["nameWithOwner"].lower()]
+        item = candidates[candidate_names[int(key[1:])]]
+        item["repo"] = metadata["nameWithOwner"]
         upper, lower = metadata.pop("readme"), metadata.pop("readmeLower")
         readme = upper or lower
         item["metadata"] = metadata
@@ -108,14 +142,18 @@ def collect():
         if license_id in OPEN_LICENSES and not metadata["isArchived"]:
             selected.append(item)
     selected.sort(key=lambda item: (-item["weekly_stars"], item["repo"].lower()))
-    if len(selected) < 20:
-        raise ValueError("可确认开源的候选不足 20 个；不生成榜单。")
+    previous_ids = {value for value in previous.values() if value}
+    fresh = [item for item in selected if item["repo"].lower() not in previous and item["metadata"]["id"] not in previous_ids]
+    if len(fresh) < 5:
+        raise ValueError("未推荐过且可确认开源的候选不足 5 个；不重复凑数。")
     output = {"issue_date": dt.datetime.now(TZ).date().isoformat(), "source_urls": SOURCES,
-              "candidate_count": len(candidates), "eligible_count": len(selected), "projects": selected[:20]}
+              "candidate_count": len(candidates), "eligible_count": len(selected), "history_count": len(previous),
+              "unseen_count": len(fresh), "projects": fresh[:5]}
     (cache / "candidates.json").write_text(json.dumps(selected, ensure_ascii=False, indent=2), encoding="utf-8")
+    (cache / "new_candidates.json").write_text(json.dumps(fresh, ensure_ascii=False, indent=2), encoding="utf-8")
     (cache / "sources.json").write_text(json.dumps(sources, ensure_ascii=False, indent=2), encoding="utf-8")
     (cache / "selected.json").write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(json.dumps({"candidates": len(candidates), "eligible": len(selected), "selected": 20,
+    print(json.dumps({"candidates": len(candidates), "eligible": len(selected), "already_recommended": len(previous), "unseen": len(fresh), "selected": 5,
                       "review": str(cache / "selected.json")}, ensure_ascii=False))
 
 
@@ -126,10 +164,14 @@ def week_id(date):
 
 def validate(issue):
     projects = issue["projects"]
-    if len(projects) != 20 or len({p["repo"].lower() for p in projects}) != 20:
-        raise ValueError("必须正好 20 个不同项目。")
-    if issue["source_urls"] != SOURCES:
-        raise ValueError("来源范围改变，需要明确说明。")
+    count = 5 if issue.get("schema_version", 1) >= 3 else 20
+    if len(projects) != count or len({p["repo"].lower() for p in projects}) != count:
+        raise ValueError("本格式必须正好 %d 个不同项目。" % count)
+    if not issue["source_urls"] or any(url not in SOURCES for url in issue["source_urls"]):
+        raise ValueError("来源不在已确认的 GitHub 周榜范围。")
+    previous = history(ROOT / "data" / (issue["issue_date"] + ".json")) if count == 5 else {}
+    previous_ids = {value for value in previous.values() if value}
+    current_ids = set()
     gains = []
     for rank, project in enumerate(projects, 1):
         if project["rank"] != rank or not REPO_NAME.fullmatch(project["repo"]):
@@ -142,6 +184,13 @@ def validate(issue):
             raise ValueError("总 Star 与周热度不一致。")
         if project["url"] != "https://github.com/" + project["repo"]:
             raise ValueError("仓库链接不正确。")
+        if count == 5:
+            repo_id = project.get("repo_id")
+            if not isinstance(repo_id, str) or not repo_id:
+                raise ValueError("缺少 GitHub 稳定仓库标识。")
+            if project["repo"].lower() in previous or repo_id in previous_ids or repo_id in current_ids:
+                raise ValueError("已推荐过或重复的项目：" + project["repo"])
+            current_ids.add(repo_id)
         if not re.fullmatch(r"[0-9a-f]{40}", project["source_revision"]):
             raise ValueError("缺少源版本。")
         if not project["evidence_url"].startswith(project["url"] + "/blob/" + project["source_revision"] + "/"):
@@ -164,7 +213,7 @@ def validate(issue):
             raise ValueError("缺少来源，或把文档研究冒充运行验证。")
         for source in project["sources"]:
             captured = dt.datetime.fromisoformat(source["captured_at"].replace("Z", "+00:00"))
-            if source["url"] not in SOURCES or type(source["rank"]) is not int or source["rank"] < 1:
+            if source["url"] not in issue["source_urls"] or type(source["rank"]) is not int or source["rank"] < 1:
                 raise ValueError("来源或原榜名次不正确。")
             if captured.tzinfo is None or abs((captured.astimezone(TZ).date() - dt.date.fromisoformat(issue["issue_date"])).days) > 1:
                 raise ValueError("抓取时间与刊发日期不匹配。")
@@ -225,14 +274,14 @@ def diagram(project):
 
 def render(issue):
     issue_id = validate(issue)
-    if issue.get("schema_version", 1) < 2:
-        raise ValueError("历史文字周报保留归档；新资料需要例子和图解字段。")
+    if issue.get("schema_version", 1) < 3:
+        raise ValueError("旧版 20 项资料保留归档；新资料使用每日 5 项格式。")
     report_path = "reports/" + issue_id + ".md"
     assets = ROOT / "assets" / issue_id
     assets.mkdir(parents=True, exist_ok=True)
-    report = ["# " + issue_id + " · 开源项目图文资料 Top 20", "",
-              "每两天在同一个仓库新增一份资料，旧资料保留。先看速览，再点项目查看图解和例子。", "",
-              "热度参考抓取时的 GitHub 滚动周榜，**不是两天内的新增 Star**。用途按公开文档整理，图解和例子用于解释用法；本期未实际安装或运行这些项目。", "",
+    report = ["# " + issue_id + " · 每日开源项目推荐 5 个", "",
+              "每天在同一个仓库新增一份资料，每份 5 个项目，避开全部历史推荐。先看速览，再点项目查看图解和例子。", "",
+              "热度参考抓取时的 GitHub 滚动周榜，**不是一天内的新增 Star**。用途按公开文档整理，图解和例子用于解释用法；本期未实际安装或运行这些项目。", "",
               "**先认两个词**　Agent 是能分步办事的 AI 助手；Skill 是写给 AI 助手的工作说明。Star 是关注热度，不代表质量。", "",
               "## 本期速览", "", table(issue["projects"], ""), "",
               "## 可以先看", "", issue["editor_note"], ""]
@@ -249,32 +298,32 @@ def render(issue):
                    "**注意事项**　" + p["caution"], "", "**小范围第一步**　" + p["first_step"], "",
                    "周新增 Star **+%s** · 总 Star **%s** · %s · %s · %s" % (format(p["weekly_stars"], ","), format(p["total_stars"], ","), p["language"], p["license"], p["change"]), "",
                    "[官方文档](%s) · [仓库](%s)" % (p["evidence_url"], p["url"]), ""]
-    report += ["## 来源与选取方法", "", "候选池 %d 个，GitHub 可识别开源许可证且未归档的候选 %d 个，人工复核后入榜 20 个。抓取时间与原榜名次见 [本期数据](../data/%s.json)。" % (issue["candidate_count"], issue["eligible_count"], issue_id), ""]
+    report += ["## 来源与选取方法", "", "候选池 %d 个，可识别开源许可证且未归档的候选 %d 个。已核对 %d 个历史推荐，剩余未介绍过的候选 %d 个；再核对用途与许可，选出本期 5 个。抓取时间与原榜名次见 [本期数据](../data/%s.json)。" % (issue["candidate_count"], issue["eligible_count"], issue["history_count"], issue["unseen_count"], issue_id), ""]
     for excluded in issue.get("exclusions", []):
         report += ["- [%s](%s) 暂未收录：%s" % (excluded["repo"], excluded["source_url"], excluded["reason"])]
-    report += ["- [周榜来源 %d](%s)" % (i, url) for i, url in enumerate(SOURCES, 1)]
+    report += ["- [周榜来源 %d](%s)" % (i, url) for i, url in enumerate(issue["source_urls"], 1)]
     report += ["", "[排名和更新规则](../UPDATE_GUIDE.md) · [通用应用场景](../USE_CASES.md)", "",
-               "名次变化比较本仓库上期资料，不是 GitHub 官方榜名次。图解和应用例子仅作说明。", "",
+               "序号是本期推荐顺序，不是 GitHub 官方总榜排名。图解和应用例子仅作说明。", "",
                "[返回资料首页](../README.md)", ""]
     (ROOT / "reports").mkdir(exist_ok=True)
     (ROOT / report_path).write_text("\n".join(report), encoding="utf-8")
-    archives = sorted((ROOT / "reports").glob("*.md"), reverse=True)
-    readme = ["# 开源项目图文资料", "",
-              "**同一个仓库，每两天新增一份按日期命名的资料。** 每份保留 20 个近期热门项目，每个项目配一张用途图和一个具体例子，用简短中文说明能做什么、何时值得用。", "",
+    archives = sorted((ROOT / "reports").glob("*.md"), key=lambda p: (not p.stem.endswith("-top20"), p.stem), reverse=True)
+    readme = ["# 每日开源项目推荐", "",
+              "**同一个仓库，每天新增一份按日期命名的资料，每份推荐 5 个项目，跨全部历史去重。** 每个项目配一张用途图和一个具体例子，用简短中文说明能做什么、何时值得用。", "",
               "只使用公开资料和通用应用建议；旧文档保留，首页持续列出新旧资料。", "",
-              "**最新资料：[" + issue_id + "](" + report_path + ")** · 每两天 09:00（北京时间）", "",
+              "**最新资料：[" + issue_id + "](" + report_path + ")** · 每天 09:00（北京时间）", "",
               "## 先看这份资料", "", issue["editor_note"], "",
               "**阅读方式**　速览选项目 → 点名称 → 看三步图解 → 看具体例子和使用门槛。", "",
-              "## 本期 20 个项目", "", table(issue["projects"], report_path), "",
+              "## 今日 5 个项目", "", table(issue["projects"], report_path), "",
               "## 所有资料", ""]
-    readme += ["- [" + p.stem + " · 图解＋例子](reports/" + p.name + ")" for p in archives]
+    readme += ["- [" + p.stem + (" · 早期图文格式示例（20 项，留档）" if p.stem.endswith("-top20") else " · 每日 5 项图解＋例子") + "](reports/" + p.name + ")" for p in archives]
     readme += ["- [" + p.stem + " · 早期文字周榜](weekly/" + p.name + ")" for p in sorted((ROOT / "weekly").glob("*.md"), reverse=True)]
     readme += ["", "## 数据怎么选", "",
-               "每两天重新读取 GitHub 总周榜和 Python、TypeScript、JavaScript 周榜，去重、核对许可证后按页面显示的周新增 Star 排序。指标是滚动一周热度，不是两天新增量；范围是这四个榜的样本池。", "",
+               "每天读取总周榜和 Python、TypeScript、JavaScript、Go、Rust、Swift、Dart、Java 周榜，核对历史推荐、许可证与用途，选取 5 个未介绍过的项目。热度指标是滚动一周，不是单日新增量；这是这些榜的样本池。项目改名时，结合 GitHub 仓库标识去重。", "",
                "[更新与排名规则](UPDATE_GUIDE.md) · [通用应用场景](USE_CASES.md) · [每期原始指标](data/)", "",
                "定时更新由 Codex 本地任务执行，需要电脑开机、联网并保持 Codex 应用运行。开源项目可能依赖收费服务；具体采用建议以每期说明为准。", ""]
     (ROOT / "README.md").write_text("\n".join(readme), encoding="utf-8")
-    print("已验证并生成 " + issue_id + "，20 个项目。")
+    print("已验证并生成 " + issue_id + "，5 个未重复项目。")
 
 
 def self_check():
@@ -312,4 +361,4 @@ if __name__ == "__main__":
         if args.command == "render":
             render(issue)
         else:
-            print(validate(issue) + " 数据检查通过，20 个项目。")
+            print(validate(issue) + " 数据检查通过，%d 个项目。" % len(issue["projects"]))
