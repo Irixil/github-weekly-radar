@@ -1,47 +1,50 @@
-# GitHub 开源周热榜
+# 开源项目图文资料
 
-每周 20 个最近热门的开源项目，用中文说清楚：它能做什么、可用在哪些场景、试用门槛是什么。只使用公开资料与通用应用建议。
+**同一个仓库，每两天新增一份按日期命名的资料。** 每份保留 20 个近期热门项目，每个项目配一张用途图和一个具体例子，用简短中文说明能做什么、何时值得用。
 
-**最新一期：[2026-W42](weekly/2026-W42.md)** · 更新于 2026-10-13 · 每周一 09:00（北京时间）
+只使用公开资料和通用应用建议；旧文档保留，首页持续列出新旧资料。
 
-## 先看这几个
+**最新资料：[2026-10-14](reports/2026-10-14.md)** · 每两天 09:00（北京时间）
 
-可以按用途先看 **diagram-design**（流程与技术图解）、**e2e**（完整用户路径测试）和 **HyperFrames**（网页素材转视频）。**PPT Master** 适合文档转演示文稿，**Impeccable** 适合前端设计审查。以上属于公开文档研究后的通用建议，尚未通过实际接入验证。
+## 先看这份资料
 
-## 本周 20 名速览
+想看懂复杂流程，可以先看 **diagram-design**；想检查应用是否真的能用，可以看 **e2e**；想把已有网页素材做成视频，可以看 **HyperFrames**。这三个用途比较容易通过一个小例子理解。
+
+**阅读方式**　速览选项目 → 点名称 → 看三步图解 → 看具体例子和使用门槛。
+
+## 本期 20 个项目
 
 | 名次 | 项目 | 本周新增 Star | 一句话用途 | 可用场景 |
 | --- | --- | ---: | --- | --- |
-| 1 | [morluto/rea](https://github.com/morluto/rea) | +130,471 | 让 AI 助手分析应用、网页和程序的内部行为。 | 应用分析、调试与技术研究 |
-| 2 | [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) | +27,263 | 尝试把 PS5 可执行程序转换到 Linux 和 Windows。 | 程序移植与兼容层研究 |
-| 3 | [mattpocock/skills](https://github.com/mattpocock/skills) | +11,139 | 给 AI 编程助手补充可组合的工程工作方法。 | 改进需求拆解、调试和测试习惯 |
-| 4 | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | +9,237 | 让 AI 助手生成可独立打开的 HTML 和 SVG 图解。 | 制作产品流程图、知识卡片和项目展示 |
-| 5 | [DuarteSantos8/openGym](https://github.com/DuarteSantos8/openGym) | +6,621 | 自托管的健身、训练计划和体重记录应用。 | 健身应用、自托管与记录产品参考 |
-| 6 | [tester-army/e2e](https://github.com/tester-army/e2e) | +5,582 | 用自然语言引导 Agent 操作网页或手机应用并检查结果。 | 检查真实用户流程能否走通 |
-| 7 | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | +4,482 | 把 HTML、CSS、素材和动画渲染成 MP4 视频。 | 制作自媒体短片和产品演示视频 |
-| 8 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | +4,175 | 给 AI 编程 Agent 提供从需求到交付的工程 Skills。 | 参考质量检查和发布前审查方法 |
-| 9 | [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) | +3,786 | 让 AI 编程助手组织脚本、素材、剪辑和视频合成。 | 探索自媒体视频生产的完整流程 |
-| 10 | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | +3,762 | 记录 AI 编程会话的工具观察和摘要，供后续会话继续。 | 参考项目记忆与跨会话衔接 |
-| 11 | [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | +3,733 | 把文档或主题做成可继续编辑的原生 PowerPoint。 | 制作面试项目展示和产品汇报 |
-| 12 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | +3,378 | 给 AI 前端设计提供审查、澄清、排版和动效等指导。 | 改进产品页面的层级和可理解性 |
-| 13 | [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | +3,145 | 按岗位打包 Skills、工具连接和工作流程的插件集合。 | 参考产品管理、客服和办公 Agent 的分工 |
-| 14 | [tashfeenahmed/freellmapi](https://github.com/tashfeenahmed/freellmapi) | +3,029 | 把多个模型服务接到统一 API，提供路由与失败切换。 | 学习模型路由与低成本原型的备选方案 |
-| 15 | [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) | +2,441 | 给 AI 助手提供生成 3D CAD 模型和工程图的本地工作流。 | 3D 模型、工程图与实体设计 |
-| 16 | [666ghj/MiroFish](https://github.com/666ghj/MiroFish) | +2,123 | 让多个 AI 角色在模拟环境中互动并生成推演报告。 | 探索产品假设和内容场景的模拟方法 |
-| 17 | [mvschwarz/openrig](https://github.com/mvschwarz/openrig) | +2,056 | 把多个 AI 编程助手组织成有角色和共享工作记录的团队。 | 参考多 Agent 的分工与持续协作 |
-| 18 | [pingdotgg/t3code](https://github.com/pingdotgg/t3code) | +1,716 | 从桌面、网页或手机控制本机已有的 AI 编程助手。 | 参考远程控制和任务进度展示 |
-| 19 | [p-e-w/heretic](https://github.com/p-e-w/heretic) | +1,499 | 研究和修改开放权重语言模型的拒绝行为。 | 开放权重模型行为研究 |
-| 20 | [DmNote-App/DmNote](https://github.com/DmNote-App/DmNote) | +1,338 | 把实时键盘输入显示成可自定义的桌面或录屏叠层。 | 录制操作教程，参考桌面交互反馈 |
+| 1 | [rea](reports/2026-10-14.md#project-01) | +183,758 | 给 AI 助手一套查程序内部的工具，帮助解释功能怎样实现。 | 应用分析与调试 |
+| 2 | [AnyPS5](reports/2026-10-14.md#project-02) | +28,663 | 尝试让 PS5 程序在 Linux 或 Windows 电脑上运行。 | 程序移植与兼容研究 |
+| 3 | [skills](reports/2026-10-14.md#project-03) | +11,955 | 给 AI 编程助手提供需求拆解、调试和测试的工作说明。 | 改善 AI 辅助开发步骤 |
+| 4 | [diagram-design](reports/2026-10-14.md#project-04) | +9,867 | 让 AI 把复杂流程画成能在浏览器打开的图解。 | 流程图与知识讲解 |
+| 5 | [iFixAi](reports/2026-10-14.md#project-05) | +5,547 | 检查 AI 助手是否按业务要求做事，并给出问题报告。 | AI 任务评估 |
+| 6 | [openGym](reports/2026-10-14.md#project-06) | +5,446 | 在自己管理的环境里记录训练、体重和运动进度。 | 健身记录与自托管应用 |
+| 7 | [ghidra](reports/2026-10-14.md#project-07) | +4,986 | 让专业人员查看程序内部结构和代码线索。 | 程序内部分析 |
+| 8 | [hyperframes](reports/2026-10-14.md#project-08) | +4,732 | 把网页文字、图片和动画导出成视频。 | 说明短片与产品视频 |
+| 9 | [e2e](reports/2026-10-14.md#project-09) | +4,426 | 让 AI 像用户一样操作应用，再检查事情是否办成。 | 完整用户流程测试 |
+| 10 | [agent-skills](reports/2026-10-14.md#project-10) | +4,302 | 给 AI 编程助手提供从需求到交付的质量检查方法。 | 开发质量与交付检查 |
+| 11 | [claude-mem](reports/2026-10-14.md#project-11) | +3,587 | 保存 AI 编程会话的观察和摘要，方便下次继续。 | 跨会话项目记忆 |
+| 12 | [freellmapi](reports/2026-10-14.md#project-12) | +3,412 | 把多个模型服务接到统一接口，并在失败时切换。 | 个人模型实验与备用路由 |
+| 13 | [OpenMontage](reports/2026-10-14.md#project-13) | +3,401 | 让 AI 组织脚本、素材和剪辑，完成一条视频制作流程。 | 完整视频制作流程 |
+| 14 | [knowledge-work-plugins](reports/2026-10-14.md#project-14) | +3,227 | 把岗位工作说明和工具连接打包，让 AI 按角色处理任务。 | 办公、产品与客服工作流 |
+| 15 | [MiroFish](reports/2026-10-14.md#project-15) | +2,222 | 让多个 AI 角色在模拟环境里互动，生成推演报告。 | 多角色模拟与假设探索 |
+| 16 | [text-to-cad](reports/2026-10-14.md#project-16) | +2,173 | 让 AI 助手根据要求生成 3D 工程模型和图纸。 | 3D 模型与实体设计 |
+| 17 | [t3code](reports/2026-10-14.md#project-17) | +1,574 | 从电脑、网页或手机控制本机已经可用的 AI 编程助手。 | 远程控制 AI 开发任务 |
+| 18 | [skills](reports/2026-10-14.md#project-18) | +1,561 | 帮助查找、安装、更新和管理 AI 助手的 Skills。 | Skill 查找与管理 |
+| 19 | [heretic](reports/2026-10-14.md#project-19) | +1,494 | 研究和改变开放权重模型何时会拒绝回答。 | 专业模型行为研究 |
+| 20 | [video-shotcraft](reports/2026-10-14.md#project-20) | +1,264 | 给 AI 提供镜头和动效模板，帮助制作产品介绍视频。 | 产品视频与镜头设计 |
 
-点击 [本期详细说明](weekly/2026-W42.md) 查看通用应用建议、门槛、费用条件和注意事项。应用建议属于文档研究后的推断，尚未通过实际接入验证。
+## 所有资料
 
-## 历史周报
+- [2026-10-14 · 图解＋例子](reports/2026-10-14.md)
+- [2026-W42 · 早期文字周榜](weekly/2026-W42.md)
 
-- [2026-W42](weekly/2026-W42.md)
+## 数据怎么选
 
-## 如何读这个榜
-
-热度取自 GitHub 总周榜及 Python、TypeScript、JavaScript 周榜，去重和许可证核对后按本周新增 Star 排序。范围是这四个榜的样本池；本榜不等同于 GitHub 官方总榜，也不按历史总 Star 排名。
+每两天重新读取 GitHub 总周榜和 Python、TypeScript、JavaScript 周榜，去重、核对许可证后按页面显示的周新增 Star 排序。指标是滚动一周热度，不是两天新增量；范围是这四个榜的样本池。
 
 [更新与排名规则](UPDATE_GUIDE.md) · [通用应用场景](USE_CASES.md) · [每期原始指标](data/)
 

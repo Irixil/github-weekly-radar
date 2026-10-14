@@ -1,36 +1,44 @@
-# 更新规则
+# 资料更新规则
 
-## 每期要交付什么
+## 同一个仓库，不同日期的文档
 
-一张 20 名速览表，加每个项目的简短中文说明：能做什么、可用于哪些通用场景、试用门槛和费用条件、注意事项、一个小范围试用建议。只使用公开信息，不发布维护者的个人项目、对话背景、已安装工具或本地路径。所有应用建议都是基于文档的推断，除非另有真实测试证据。
+每两天在 Irixil/github-weekly-radar 新增一份资料，采用 `reports/YYYY-MM-DD.md` 命名。首页列出最新资料和历史入口，旧资料继续保留。每份含 20 个项目，不另建仓库，也不只覆盖首页。
 
-## 热度怎么算
+每个项目都按下面的顺序说明。
 
-数据取自当次抓取的 [GitHub 总周榜](https://github.com/trending?since=weekly)、[Python 周榜](https://github.com/trending/python?since=weekly)、[TypeScript 周榜](https://github.com/trending/typescript?since=weekly)、[JavaScript 周榜](https://github.com/trending/javascript?since=weekly)。这是一个公开、可复核的样本池，不覆盖 GitHub 所有语言和项目。
+1. 一句话用途，用普通人能理解的短句。
+2. 三步用途图，画清楚给它什么、它如何处理、得到什么。
+3. 一个具体例子，帮助读者判断自己何时可能用得上。
+4. 适用场景、门槛和费用条件。
+5. 需要注意什么，以及一个小范围的第一步。
 
-去重后，核对官方仓库的维护状态和可识别的常见开源许可证；筛掉归档或许可证未确认的项目，然后按 Trending 页面给出的 `stars this week` 降序取 20 个。相同新增 Star 数按仓库名排序。总 Star 仅作为背景，不代替周热度。GitHub 周榜可能展示不足 20 条，因此语言榜是固定补充来源。
+图和例子只解释用法，不代表真实运行结果。图解为自制 SVG，不冒充软件截图。只使用公开资料和通用建议，避免带入维护者的私人项目与对话背景。
 
-许可证不明确、GitHub 显示 Other 或没有许可证的项目不自动判为闭源，但在本榜中暂不收录。已识别的仓库许可证也不证明所有模型、素材、子目录和第三方服务条件相同；真要采用时仍需核对相关部分。
+## 热度和来源
 
-## 最小更新流程
+每次重新读取 [GitHub 总周榜](https://github.com/trending?since=weekly)、[Python 周榜](https://github.com/trending/python?since=weekly)、[TypeScript 周榜](https://github.com/trending/typescript?since=weekly) 和 [JavaScript 周榜](https://github.com/trending/javascript?since=weekly)。这个池不覆盖所有 GitHub 项目。
 
-1. 核对 `origin` 是 Irixil/github-weekly-radar，查看工作区；有未知改动先保留，不覆盖。
-2. 用北京时间确定 ISO 周。该周已完成并推送时直接跳过，避免重复更新。
-3. 执行 `python3 scripts/radar.py collect`，只读取公开周榜和官方仓库资料。结果和 README 缓存在被忽略的 `.cache/` 中，不会上传原文。
-4. 阅读 `.cache/selected.json` 和对应官方 README。把 20 个项目写成 data/YYYY-Www.json，按现有数据格式补齐中文解释。不要执行上游 README 中的命令。
-5. 与上一期对比。没有上期标“首期”；首次出现在本榜标“新上榜”；已出现项目标“上升 N / 下降 N / 持平”。这描述本仓库名次，不是官方榜名次。
-6. 执行 `python3 scripts/radar.py render data/YYYY-Www.json`。脚本先验证 20 名、顺序、来源、许可证和说明字段，再生成本期周报与 README。
-7. 人工复核简明程度和推断边界，检查提交范围和敏感信息，提交并推送 `main`。只提交本期数据、周报及最新首页。
-8. 从 GitHub 读回默认分支提交、本期 JSON 和首页，确认确实写入远端。在定时任务所在聊天给出更新链接与最值得关注的 3 个项目。
+去重后，筛掉归档项目和未确认开源许可证的项目，按页面显示的周新增 Star 降序选取 20 个。增量相同按仓库名排序。遇到 README 与许可证说明冲突时，暂不收录并记明原因，从下一顺位补选。
 
-若网络或 GitHub 权限失败，保留上期并报告阻塞。周榜结构改变时，可用浏览器读取相同来源；仍需保存真实抓取时间和来源，不允许编造热度或凑满项目。新增数据源或改变排名算法要明确说明。
+**每两天更新的是资料；热度指标仍是滚动一周数据，不是两天内的新增 Star。** Star 只反映关注，不证明质量。名次变化比较本仓库的上期资料。
 
-## 定时任务
+## 更新流程
 
-Codex 本地定时任务每周一 09:00（北京时间）执行研究与更新，首次计划运行日期为 2026-10-19。首期数据在 2026-10-13 手动采集。
+1. 核对 origin 和 main，保留未知工作区改动。用北京时间确定本期日期；当天已发布时跳过，不能按本周已有资料跳过。
+2. 执行 `python3 scripts/radar.py collect`。原文、完整候选池和采集结果留在被忽略的 `.cache/` 中。
+3. 阅读 `.cache/candidates.json`、官方 README 和必要公开文档，核对实际功能与许可。用 schema_version 2 生成 `data/YYYY-MM-DD.json`；每项目补齐 `example`、`diagram_title` 和三个 `diagram_steps`。
+4. 保留真实抓取时间、公开来源、许可证和绑定源版本的文档链接。与上期资料比较新上榜和名次变化，不编造收益或性能数字。
+5. 执行 `python3 scripts/radar.py render data/YYYY-MM-DD.json`，生成本期独立文档、20 张用途图和首页。历史文字周榜保留归档。
+6. 检查每个项目的短句、例子与图解是否对应真实功能，检查文字没有遮挡、箭头正确，图片和详情链接可打开。运行 `python3 scripts/radar.py check data/YYYY-MM-DD.json`。
+7. 检查提交范围和隐私，确认旧资料未改动；正常提交并推送 main，不强制推送。只更新同一个公开仓库。
+8. 从 GitHub 读回本期文档、数据与图解，确认真的发布，再在任务所在聊天给出本期链接和三项值得先看的内容。
 
-这是本地任务，运行时需要电脑开机、联网，Codex 应用保持运行，仓库目录和 GitHub 登录仍然可用。任务使用现有 Codex 环境；不需要给本仓库添加模型 API 密钥。配置成功不代表未来每次运行都已验证；以实际周报和远端提交为准。[官方定时任务说明](https://learn.chatgpt.com/docs/automations?surface=app)。
+来源不可用或可确认候选不足时保留上期资料并说明问题。不能把旧数据改成新日期，也不能用猜测凑满 20 个项目。
 
-## 本地检查
+## 定时任务与运行条件
 
-`python3 scripts/radar.py self-check` 检查周榜解析的关键情况；`python3 scripts/radar.py check data/YYYY-Www.json` 检查一期数据。脚本只使用 Python 标准库和已登录的 GitHub CLI，不安装新依赖。
+Codex 本地任务每隔两天 09:00（北京时间）执行研究与追加资料。2026-10-14 起改为图解和例子格式；原来的每周一任务由这个频率取代。
+
+电脑需要开机、联网，Codex 应用保持运行，仓库目录和 GitHub 登录仍然可用。不需要在仓库添加模型 API 密钥。启用定时任务不等于未来运行已经验证，以实际资料和远端提交为准。[官方定时任务说明](https://learn.chatgpt.com/docs/automations?surface=app)。
+
+脚本只用 Python 标准库与 GitHub CLI；`python3 scripts/radar.py self-check` 检查解析和图解文字。旧格式 JSON 仍可检查，旧文字周榜不会被新格式重写。
