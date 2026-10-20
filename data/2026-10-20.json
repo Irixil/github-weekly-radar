@@ -1,0 +1,220 @@
+{
+  "schema_version": 3,
+  "issue_date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 113,
+  "eligible_count": 97,
+  "history_count": 54,
+  "unseen_count": 64,
+  "editor_note": "想让 AI 读代码并协助小修改，先看 **OpenCode**；跨会话或换工具继续开发，先看 **ai-memory**；给网页加入可操作的 AI 回答，先看 **OpenUI**。另外两项分别帮助研究上下文精简和视频区域重建，采用前需核对数据流、模型与许可边界。",
+  "exclusions": [
+    {
+      "repo": "chthollyphile/folia-major",
+      "source_url": "https://github.com/chthollyphile/folia-major/blob/26c57f9b1b26b402a09e8943171a332215418ce6/README.md",
+      "reason": "固定版本 LICENSE 为 AGPL-3.0，同版本 README 又限定个人学习、技术交流与非营利测试，并明确禁止商用。许可表述不一致，暂不收录，等待澄清。"
+    },
+    {
+      "repo": "corrinehu/dsh-workbuddy-connect",
+      "source_url": "https://github.com/corrinehu/dsh-workbuddy-connect/blob/70a72bc58911a858a4cef2b188221561bbcf23e3/README.md",
+      "reason": "固定版本 LICENSE 为 MIT，同版本 README 的免责声明又限定个人学习研究并禁止商用。许可表述不一致，暂不收录，等待澄清。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "anomalyco/opencode",
+      "repo_id": "R_kgDOOiiGLw",
+      "url": "https://github.com/anomalyco/opencode",
+      "weekly_stars": 4917,
+      "total_stars": 217818,
+      "forks": 29113,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-10-20T00:56:54Z",
+      "source_revision": "6e9c85390bc232866f83ca19dfb46bd9d39b7aa1",
+      "evidence_url": "https://github.com/anomalyco/opencode/blob/6e9c85390bc232866f83ca19dfb46bd9d39b7aa1/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 17,
+          "captured_at": "2026-10-20T08:57:26.706242+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "让 AI 在终端或桌面客户端里阅读代码、规划修改并调用开发工具。",
+      "fit_short": "代码理解、小功能开发与排错",
+      "project_fit": "想把代码阅读、修改和检查放在同一个助手流程中时可以关注；它支持连接不同模型，也适合参考终端交互、权限控制和开发工具调用的设计。",
+      "difficulty": "中",
+      "cost": "代码采用 MIT，需要连接可用模型。托管模型按所选服务计费，本地模型则需要相应硬件；桌面客户端仍标为测试版，使用前核对平台支持。",
+      "caution": "build 模式可以改文件并调用工具，先确认权限规则与工作范围。plan 模式默认禁止改文件，但命令执行仍需留意；所有代码修改都应查看差异并按项目要求检查。",
+      "first_step": "在测试仓库中先用 plan 模式，要求它解释一个函数和相关调用位置。核对引用后，再切到 build 模式处理一处小修改，并人工审查代码差异。",
+      "diagram_title": "让助手从读代码走到检查修改",
+      "diagram_steps": [
+        "代码仓库与明确的小需求",
+        "读代码、规划并调用工具",
+        "修改差异与检查记录"
+      ],
+      "example": "一个列表页面需要增加空数据提示时，可先让助手找出列表组件和数据入口，再限定只改空状态显示。最后检查有数据、无数据两种情况，以及实际修改的文件。"
+    },
+    {
+      "rank": 2,
+      "repo": "JuliusBrussee/caveman",
+      "repo_id": "R_kgDOR5h10Q",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "weekly_stars": 2606,
+      "total_stars": 113678,
+      "forks": 6579,
+      "language": "Go",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-19T08:07:31Z",
+      "source_revision": "bad48a0e1df55e05e3f52249afa35ecc1909ee76",
+      "evidence_url": "https://github.com/JuliusBrussee/caveman/blob/bad48a0e1df55e05e3f52249afa35ecc1909ee76/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 5,
+          "captured_at": "2026-10-20T08:57:28.285920+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "帮助 AI 编程助手精简解释，并压缩日志等输入中的冗余内容。",
+      "fit_short": "简短回复、上下文整理",
+      "project_fit": "助手解释过长，或反复读取大量日志、表格和测试输出时，可研究它的回答规则与输入压缩方式；需要保留原始材料，方便检查信息是否遗漏。",
+      "difficulty": "中",
+      "cost": "当前仓库代码采用 Apache-2.0，模型调用费用按所选服务计算；云端服务另有方案。实际费用应按完整会话统计，按请求计费时，缩短回复通常不会降低单次价格。",
+      "caution": "压缩后的材料需要与原文对照，不能预设一定省钱或保持相同效果。CLI 默认发送使用统计；Auto 路由会向云端发送部分请求上下文，采用前应核对这些开关。",
+      "first_step": "先只参考回答风格说明，对一个无敏感信息的小问题比较普通回复和精简回复，核对结论、错误原文与下一步是否完整，再考虑输入压缩或自动路由。",
+      "diagram_title": "减少助手读写中的冗余内容",
+      "diagram_steps": [
+        "冗长解释与工具输出",
+        "精简表达并压缩冗余",
+        "更短的模型输入与回复"
+      ],
+      "example": "解释一次保存失败时，可让助手先写“失败原因、受影响操作、下一步”，保留原始错误和必要代码。若进一步压缩长日志，再检查失败时间、错误编号和上下文是否仍可找到。"
+    },
+    {
+      "rank": 3,
+      "repo": "akitaonrails/ai-memory",
+      "repo_id": "R_kgDOSka2Jw",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "weekly_stars": 1976,
+      "total_stars": 11348,
+      "forks": 805,
+      "language": "Rust",
+      "license": "MIT",
+      "last_push_at": "2026-10-19T23:29:24Z",
+      "source_revision": "11ab1003d9ef3788f5fc40b87fff54abf7f17dc0",
+      "evidence_url": "https://github.com/akitaonrails/ai-memory/blob/11ab1003d9ef3788f5fc40b87fff54abf7f17dc0/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 3,
+          "captured_at": "2026-10-20T08:57:28.183994+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把开发进展整理成可检索的知识页，让重开会话或换助手时更容易继续工作。",
+      "fit_short": "开发交接、跨工具知识检索",
+      "project_fit": "项目经常跨会话、跨设备或跨编程助手继续时，可参考它的记录采集、知识整理、检索和交接流程；知识页采用普通 Markdown，便于阅读与维护。",
+      "difficulty": "中",
+      "cost": "代码采用 MIT，需要运行记忆服务并准备存储。基础功能可不调用语言模型；可选的模型摘要、向量检索或远程部署会增加相应的服务与资源费用。",
+      "caution": "它会采集提示、工具调用等开发记录，先设置采集范围、服务地址和用户权限。不同工具的适配程度不同；记忆可能遗漏或过期，继续开发前仍要核对当前代码。",
+      "first_step": "先在测试项目中记录一个已完成决定和一个待办，结束会话后查看生成的知识页，再开启新会话检查能否准确找回，并核对当前文件。",
+      "diagram_title": "把上次进展接到下一次工作",
+      "diagram_steps": [
+        "开发进展与会话记录",
+        "整理知识页并提供检索",
+        "下次工作的交接摘要"
+      ],
+      "example": "为演示应用增加 CSV 导出时，可记录已选字段、放弃过的编码方案和剩余检查项。换一个编程助手后，先读取交接摘要，再对照当前导出代码继续处理。"
+    },
+    {
+      "rank": 4,
+      "repo": "thesysdev/openui",
+      "repo_id": "R_kgDONXs8_A",
+      "url": "https://github.com/thesysdev/openui",
+      "weekly_stars": 1353,
+      "total_stars": 12212,
+      "forks": 827,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-10-19T10:14:13Z",
+      "source_revision": "9823ec05d4b29bc78d101676dc16b44fe17f1830",
+      "evidence_url": "https://github.com/thesysdev/openui/blob/9823ec05d4b29bc78d101676dc16b44fe17f1830/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 18,
+          "captured_at": "2026-10-20T08:57:26.706242+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "让开发者规定 AI 可以使用哪些界面组件，再把模型输出逐步渲染成表单、表格或图表。",
+      "fit_short": "聊天内业务界面、组件渲染",
+      "project_fit": "已有网页产品想加入由 AI 组织的交互界面时，可用它定义允许的组件及参数，再接入模型和渲染器；适合研究受组件约束的界面生成。",
+      "difficulty": "高",
+      "cost": "代码采用 MIT，需要前端开发环境、组件定义和可用模型。框架支持多种前端技术，模型调用、业务后端和部署资源的费用另算。",
+      "caution": "界面渲染与真实业务操作需要分别实现和检查。模型给出的数字、字段和按钮状态都要核验；保存、确认等操作仍应由业务后端校验权限与输入。",
+      "first_step": "先只允许一个表格和一个筛选组件，用三条虚构库存记录测试生成与显示。人工核对字段、筛选行为和异常输出，再连接真实查询接口。",
+      "diagram_title": "用允许的组件组织交互回答",
+      "diagram_steps": [
+        "用户问题与允许的组件",
+        "模型输出组件结构",
+        "逐步显示的表格和表单"
+      ],
+      "example": "做库存查询助手时，可允许它展示商品表格和分类筛选框，让用户调整查询条件。组件如何显示由框架处理，查询接口与权限检查由自己的业务系统提供。"
+    },
+    {
+      "rank": 5,
+      "repo": "Kruk2/jasna",
+      "repo_id": "R_kgDOQ8ZDTg",
+      "url": "https://github.com/Kruk2/jasna",
+      "weekly_stars": 808,
+      "total_stars": 2892,
+      "forks": 211,
+      "language": "Python",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-10-18T11:43:28Z",
+      "source_revision": "099af50a3aac06f14db8d048efd8c6562e2c3d25",
+      "evidence_url": "https://github.com/Kruk2/jasna/blob/099af50a3aac06f14db8d048efd8c6562e2c3d25/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 11,
+          "captured_at": "2026-10-20T08:57:26.396946+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在 GPU 上检测视频中的马赛克区域，并用模型进行画面重建。",
+      "fit_short": "区域重建研究、GPU 视频流程",
+      "project_fit": "研究区域检测、模型重建和视频处理如何衔接时，可参考它的选区预览、处理队列和命令接口。先用自制测试素材判断适配情况，再决定是否值得继续研究。",
+      "difficulty": "高",
+      "cost": "公开应用代码主体按 AGPL-3.0 分发，基础模型可免费运行。需要受支持的 GPU 与驱动，AMD 支持仍为实验性；部分模型需付费支持者授权，模型和依赖另有许可。",
+      "caution": "重建结果应视作模型估计，不能用来证明被遮挡内容的原貌。官方支持者版包含专有保护组件，公开源码无法完整复现该发布包；二次开发要分别核对代码、模型和发布包条款。",
+      "first_step": "先读固定版本的 [许可边界](https://github.com/Kruk2/jasna/blob/099af50a3aac06f14db8d048efd8c6562e2c3d25/LICENSING.md)，核对硬件条件后，仅用基础流程测试几秒自制画面，并与保留的原片对照。",
+      "diagram_title": "观察模型怎样重建马赛克区域",
+      "diagram_steps": [
+        "自制测试片段与选区",
+        "检测马赛克并用模型重建",
+        "等待对照核验的视频"
+      ],
+      "example": "保留一段自制测试片的原版，给副本中的自绘图形加马赛克。处理后并排比较原片与输出，观察图形、颜色和运动细节有哪些偏差，作为重建方法的评估练习。"
+    }
+  ]
+}
