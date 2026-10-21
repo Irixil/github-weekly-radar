@@ -1,0 +1,215 @@
+{
+  "schema_version": 3,
+  "issue_date": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 119,
+  "eligible_count": 101,
+  "history_count": 59,
+  "unseen_count": 65,
+  "editor_note": "同时管理几个编程助手或比较修改方案，先看 **Orca**；把图像生成步骤保存复用，先看 **ComfyUI**；用自然语言搭建简单三维场景，先看 **MCP for Blender**。另外两项分别是 Rust 语言工具链和 Android 官方开发工作说明。",
+  "exclusions": [
+    {
+      "repo": "chthollyphile/folia-major",
+      "source_url": "https://github.com/chthollyphile/folia-major/blob/f3a90708afbec884934d8bca16bbd0a35feeb6a7/README.md",
+      "reason": "固定版本 LICENSE 为 AGPL-3.0，同版本 README 又限定个人学习、技术交流与非营利测试，并明确禁止商用。许可表述不一致，暂不收录，等待澄清。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "stablyai/orca",
+      "repo_id": "R_kgDORpCz1g",
+      "url": "https://github.com/stablyai/orca",
+      "weekly_stars": 8173,
+      "total_stars": 99756,
+      "forks": 6320,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-10-21T01:05:14Z",
+      "source_revision": "70b2197c97b164b16c618736a107967295e5af92",
+      "evidence_url": "https://github.com/stablyai/orca/blob/70b2197c97b164b16c618736a107967295e5af92/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 18,
+          "captured_at": "2026-10-21T09:05:45.394224+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把多个 AI 编程助手和各自的 Git 工作区放进同一个桌面工作台管理。",
+      "fit_short": "开发任务并行、方案比较",
+      "project_fit": "已经使用终端编程助手，需要同时处理几个小任务或比较实现方案时，可参考它的工作区管理、运行状态和代码差异查看方式。",
+      "difficulty": "中",
+      "cost": "应用代码采用 MIT，需准备可运行的编程助手及其模型配置。助手订阅或 API 调用按所选服务计费；同时运行多个任务也会增加调用量和本机资源占用。",
+      "caution": "各助手的工具和文件权限仍需按所用工具配置。工作区中的修改不能直接当成完成结果，合并前要人工审查代码差异，并核对实际检查记录。",
+      "first_step": "先只接入一个已有助手，在测试仓库完成一处小文案修改，确认目标文件与差异；之后再用第二个工作区比较另一种方案。",
+      "diagram_title": "把多个助手的工作集中查看",
+      "diagram_steps": [
+        "小需求与可用编程助手",
+        "在独立工作区分别处理",
+        "可比较的修改与任务状态"
+      ],
+      "example": "为演示页面尝试两种按钮布局时，可把同一个小需求交给两个独立工作区里的助手，分别查看修改、预览和检查结果，再选择一个方案合并。"
+    },
+    {
+      "rank": 2,
+      "repo": "Comfy-Org/ComfyUI",
+      "repo_id": "R_kgDOIygeJg",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "weekly_stars": 3364,
+      "total_stars": 140777,
+      "forks": 16664,
+      "language": "Python",
+      "license": "GPL-3.0",
+      "last_push_at": "2026-10-21T00:40:24Z",
+      "source_revision": "87ed5a066d9c4660ef42100fd01a888da6994856",
+      "evidence_url": "https://github.com/Comfy-Org/ComfyUI/blob/87ed5a066d9c4660ef42100fd01a888da6994856/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 14,
+          "captured_at": "2026-10-21T09:05:45.150172+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把图像生成与处理步骤连成节点流程，保存后反复使用，也能接进应用。",
+      "fit_short": "图像工作流、内容生产原型",
+      "project_fit": "需要反复组合模型、提示词、采样和图像处理步骤时，可把流程保存成节点图，后续替换输入复用；它也提供本地 API，方便接入其他工具。",
+      "difficulty": "中",
+      "cost": "核心代码采用 GPL-3.0，本地运行的硬件和内存要求取决于模型与工作流。模型、扩展节点和素材各有许可；官方云端与合作方 API 节点可能收费。",
+      "caution": "工作流可保存，结果仍受模型、参数和节点版本影响。采用前检查扩展节点与外部服务，更新后先验证兼容性；不能只根据核心代码许可判断素材和输出可否商用。",
+      "first_step": "先用官方基础文生图模板与许可明确的模型，以低分辨率输出一张测试图，再保存流程和参数，核对每个节点的作用。",
+      "diagram_title": "把一次生成保存成可复用流程",
+      "diagram_steps": [
+        "提示词、模型与节点流程",
+        "按节点采样并处理图像",
+        "生成图片与保存的流程"
+      ],
+      "example": "制作几张演示封面草图时，可固定图像尺寸与一套节点流程，只替换关于颜色和几何图形的提示词。把流程与模型版本一起记录，便于之后调整和比较。"
+    },
+    {
+      "rank": 3,
+      "repo": "rust-lang/rust",
+      "repo_id": "MDEwOlJlcG9zaXRvcnk3MjQ3MTI=",
+      "url": "https://github.com/rust-lang/rust",
+      "weekly_stars": 1273,
+      "total_stars": 120615,
+      "forks": 18659,
+      "language": "Rust",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-21T00:46:07Z",
+      "source_revision": "19833af7224424e8b53e288097d56b6af43d5bcf",
+      "evidence_url": "https://github.com/rust-lang/rust/blob/19833af7224424e8b53e288097d56b6af43d5bcf/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-10-21T09:05:46.895035+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "一种编程语言及其工具链，通过编译检查提早发现一部分类型和内存使用问题。",
+      "fit_short": "命令行工具、性能敏感模块",
+      "project_fit": "需要编写文件处理工具、底层模块或性能敏感服务时可以考虑；已有项目也可先选一小段独立逻辑，评估开发成本与实际收益。",
+      "difficulty": "高",
+      "cost": "工具链可免费使用，需学习类型、所有权和错误处理。Rust 主体使用 MIT/Apache-2.0 双许可，部分代码和第三方库另有声明；构建、运行与维护资源另算。",
+      "caution": "编译检查有明确范围，业务逻辑仍需要测试；使用 unsafe 或外部库时也需要额外审查。实际采用应选择合适的正式工具链，通常不必从本仓库自行编译编译器。",
+      "first_step": "按官方入门材料建立最小项目，先统计三行写在代码里的示例文本，核对结果后再加入文件读取与错误处理。",
+      "diagram_title": "先检查代码再构建可运行程序",
+      "diagram_steps": [
+        "Rust 代码与构建信息",
+        "检查类型并编译代码",
+        "可运行的程序与输出"
+      ],
+      "example": "需要统计一份自造日志中各类错误出现的次数时，可写一个小命令行程序读取文本并输出计数，再检查空输入、缺少文件和异常格式这些情况。"
+    },
+    {
+      "rank": 4,
+      "repo": "android/skills",
+      "repo_id": "R_kgDORocqWA",
+      "url": "https://github.com/android/skills",
+      "weekly_stars": 1255,
+      "total_stars": 9057,
+      "forks": 586,
+      "language": "Kotlin",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-20T15:20:03Z",
+      "source_revision": "a3f56b8fc83039c407e20a7b4789c2b6ea192d57",
+      "evidence_url": "https://github.com/android/skills/blob/a3f56b8fc83039c407e20a7b4789c2b6ea192d57/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-10-21T09:05:44.696385+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "Android 团队提供的专门工作说明，帮助 AI 助手按官方指导分析和处理安卓开发问题。",
+      "fit_short": "安卓专项排查、打包优化分析",
+      "project_fit": "安卓项目需要打包优化、界面适配或版本迁移等专门排查时，可让已有编程助手参考相应说明；运行与修改仍依赖实际工程和工具。",
+      "difficulty": "中",
+      "cost": "说明与资源采用 Apache-2.0，需要可用的 AI 编程助手和对应安卓工程工具链。部分分析还需 Python 等依赖；模型调用与构建资源费用另算。",
+      "caution": "例如 R8 打包优化分析会按构建插件和 R8 版本选择不同路径，部分旧版本只能得到启发式建议。报告不能代替正式包的构建与行为验证，也不能预先保证安装包能缩小多少。",
+      "first_step": "先读固定版本的 [R8 分析说明](https://github.com/android/skills/blob/a3f56b8fc83039c407e20a7b4789c2b6ea192d57/performance/r8-analyzer/SKILL.md)，对测试工程做一次只读规则审查，先看报告，再决定后续修改与验证。",
+      "diagram_title": "以安卓打包保留规则分析为例",
+      "diagram_steps": [
+        "构建配置与代码保留规则",
+        "按版本选择检查与分析",
+        "可复核的规则问题报告"
+      ],
+      "example": "安卓应用安装包变大时，可用 R8 分析说明检查是否有范围过大的“代码不能删除”规则或重复的库规则，先生成查证报告，再由开发者结合测试决定如何调整。"
+    },
+    {
+      "rank": 5,
+      "repo": "ahujasid/mcp-for-blender",
+      "repo_id": "R_kgDOOEqgHw",
+      "url": "https://github.com/ahujasid/mcp-for-blender",
+      "weekly_stars": 1172,
+      "total_stars": 31788,
+      "forks": 2904,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-10-20T14:06:32Z",
+      "source_revision": "5a3618fccb2d982d0dd61e7a1879912c3100073b",
+      "evidence_url": "https://github.com/ahujasid/mcp-for-blender/blob/5a3618fccb2d982d0dd61e7a1879912c3100073b/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 11,
+          "captured_at": "2026-10-21T09:05:45.150172+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "通过工具连接协议 MCP，把 AI 助手接到 Blender，按描述创建和修改三维场景。",
+      "fit_short": "三维场景原型、对象与材质调整",
+      "project_fit": "需要为游戏原型或产品演示搭建简单三维场景时，可研究它如何让助手操作对象、材质、灯光和镜头，并读取视图检查结果。它是第三方连接工具。",
+      "difficulty": "中",
+      "cost": "连接工具代码采用 MIT，需要 Blender 3.0+、Python 3.10+、uv 和支持 MCP 的 AI 客户端。模型调用、可选云端三维生成服务及外部资产的费用与许可另行核对。",
+      "caution": "工具能在 Blender 中运行生成的 Python 代码，先保存场景并用副本测试。默认仍有最小匿名使用统计，内容采集需另行同意；使用前可按文档检查或关闭采集设置。",
+      "first_step": "先在空白场景中只创建一个立方体和一个球体，要求助手调整位置与颜色，并用多个视角核对；确认基本操作后，再扩大场景。",
+      "diagram_title": "把场景描述变成 Blender 操作",
+      "diagram_steps": [
+        "场景要求与现有对象",
+        "助手写脚本操作场景",
+        "可编辑场景与预览图"
+      ],
+      "example": "为产品演示搭一个简易展台时，可让助手创建底座、放置几个几何体并设置灯光，然后查看不同角度和渲染预览，人工确认尺寸、位置和材质。"
+    }
+  ]
+}
