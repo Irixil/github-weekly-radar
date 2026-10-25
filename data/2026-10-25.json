@@ -1,0 +1,220 @@
+{
+  "issue_date": "2026-10-25",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 123,
+  "eligible_count": 109,
+  "history_count": 79,
+  "unseen_count": 70,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "想先弄清代码之间的关系，先看 **Graphify**；想在附近设备间传文件，先看 **LocalSend**；想研究 AI 助手客户端，先看 **Cindy**。另外两项分别提供开发插件与工作说明，以及 Android 安装包的资源检查工具。",
+  "exclusions": [
+    {
+      "repo": "iptv-org/iptv",
+      "source_url": "https://github.com/iptv-org/iptv/blob/12b8af1af80ce32e3ab53b586a0655eecb2f248d/README.md",
+      "reason": "固定版本 README 的 License 区显示 CC0 标识，根目录 LICENSE 则为 Unlicense。许可表述不一致，暂不收录，等待澄清。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "Graphify-Labs/graphify",
+      "repo_id": "R_kgDOR4-pDw",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "weekly_stars": 6868,
+      "total_stars": 134479,
+      "forks": 12837,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-23T17:59:28Z",
+      "source_revision": "92741d162b2094ffc2fed58cfbd8ee823e9da62c",
+      "evidence_url": "https://github.com/Graphify-Labs/graphify/blob/92741d162b2094ffc2fed58cfbd8ee823e9da62c/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 13,
+          "captured_at": "2026-10-25T09:02:50.155183+08:00"
+        },
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 4,
+          "captured_at": "2026-10-25T09:02:51.583148+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把代码中的导入、调用等关系连成可查询的图，帮助理解项目结构和追踪功能路径。",
+      "fit_short": "代码阅读、架构梳理、影响范围检查",
+      "project_fit": "接手不熟悉的代码，或想知道一个函数会影响哪些文件时，可参考它的静态解析、关系查询和图形导出；它也能把文档与媒体接入图中，但处理方式和成本不同。",
+      "difficulty": "中",
+      "cost": "采用 Apache-2.0，需要 Python 3.10+。只分析代码可在本地完成，无需语言模型；文档、图片等语义分析可能调用所配模型，产生额度消耗。Graphify Cloud 是另行提供的云服务，费用需单独核对。",
+      "caution": "动态调用、条件加载等关系要回看源代码；代码变更后需更新关系图。文档或媒体的语义分析还需核对模型供应商与数据去向，图上的连线也要抽样验证。",
+      "first_step": "先选一个公开示例仓库，只分析代码文件，检查三条已知的导入或调用关系是否与源码一致，再把关系图作为阅读辅助。",
+      "example": "理解一个虚构商城演示的登录流程时，可先沿调用关系找到账户查询和权限判断，再逐个回看对应文件，整理需要复核的链路。",
+      "diagram_title": "把代码文件连成可查询的关系图",
+      "diagram_steps": [
+        "示例代码与文件范围",
+        "解析引用和函数调用",
+        "可查询的代码关系图"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "localsend/localsend",
+      "repo_id": "R_kgDOIoAhgw",
+      "url": "https://github.com/localsend/localsend",
+      "weekly_stars": 833,
+      "total_stars": 95457,
+      "forks": 5370,
+      "language": "Dart",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-25T00:55:26Z",
+      "source_revision": "a2f9e7e7ae73640d3dea779135940656e725a394",
+      "evidence_url": "https://github.com/localsend/localsend/blob/a2f9e7e7ae73640d3dea779135940656e725a394/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/dart?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-10-25T09:02:54.002845+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "让能互通的局域网设备直接传文件和文字，不需要外部中转服务器。",
+      "fit_short": "跨设备传文件、局域网资料交接",
+      "project_fit": "手机、电脑等附近设备需要互传图片、文档或一段文字时可以关注；也可参考它如何组织设备发现、接收确认和本地传输流程。",
+      "difficulty": "低",
+      "cost": "程序免费，采用 Apache-2.0。发送与接收设备需使用兼容版本，并处于能够互通的局域网；不需要模型服务或云存储账号，设备存储与网络条件仍需自行准备。",
+      "caution": "同一个 Wi-Fi 名称不保证设备能够互相发现，访客网络隔离、系统权限或防火墙可能阻止通信。接收前核对设备与文件，传输后检查文件内容，避免误发给附近其他设备。",
+      "first_step": "先在两台自有设备间传一份无敏感内容的小测试文件，核对接收设备、文件名、大小和内容，再尝试更大的资料。",
+      "example": "为一次虚构课堂演示准备材料时，可把电脑上的公开课件发到同一局域网的平板，接收后打开文件核对，减少来回上传云盘的步骤。",
+      "diagram_title": "把文件直接送到附近设备",
+      "diagram_steps": [
+        "待传文件与接收设备",
+        "发现设备并确认传输",
+        "接收端保存的文件或文字"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "makecindy/cindy",
+      "repo_id": "R_kgDOTgdRUg",
+      "url": "https://github.com/makecindy/cindy",
+      "weekly_stars": 756,
+      "total_stars": 4106,
+      "forks": 588,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-25T00:14:02Z",
+      "source_revision": "784e8c477e13ebf5cc9fb40874310e8b49366fff",
+      "evidence_url": "https://github.com/makecindy/cindy/blob/784e8c477e13ebf5cc9fb40874310e8b49366fff/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 16,
+          "captured_at": "2026-10-25T09:02:50.851038+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "一个开源 AI 助手客户端，把编程助手、文件与工具集中到桌面和移动端工作区。",
+      "fit_short": "助手客户端、任务工作区与多端界面",
+      "project_fit": "想研究聊天、任务计划、工具执行和记忆怎样组织在一起时，可参考它的桌面端、移动端和共享包结构；后端服务不在本仓库内。",
+      "difficulty": "高",
+      "cost": "客户端免费，源代码采用 Apache-2.0；模型额度和 Cindy 云服务另算。源码开发需 Node.js 22.x、pnpm 10.x 与 Git LFS。模型、品牌素材及第三方组件有各自的授权条件。",
+      "caution": "默认服务器为官方云服务；跳过登录可使用本地助手，但依赖服务器的功能不可用。客户端能够接触本地文件和已登录应用，先限定操作范围，并核对模型供应商与数据去向。",
+      "first_step": "先读固定版本 README 的账号与数据说明，选择只含公开材料的练习目录，要求先列计划和摘要，逐条核对后再增加文件操作权限。",
+      "example": "整理一份虚构活动资料包时，可让助手读取说明和素材清单，先列执行计划，再生成给参与者看的说明草稿，人工检查是否遗漏时间和材料要求。",
+      "diagram_title": "把文件与任务放进助手工作区",
+      "diagram_steps": [
+        "公开示例文件与任务要求",
+        "调用助手并组织工具步骤",
+        "计划、文档与待复核结果"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "wshobson/agents",
+      "repo_id": "R_kgDOPSVUiA",
+      "url": "https://github.com/wshobson/agents",
+      "weekly_stars": 703,
+      "total_stars": 41643,
+      "forks": 4413,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-10-24T01:02:05Z",
+      "source_revision": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+      "evidence_url": "https://github.com/wshobson/agents/blob/0874a27b17a22e2b7c2e2bcd725768e0803cad06/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 9,
+          "captured_at": "2026-10-25T09:02:51.583148+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "按开发任务整理的插件、专门角色和工作说明集合，供编程助手按需使用。",
+      "fit_short": "代码审查、测试建议与开发分工",
+      "project_fit": "希望为 Python 开发、代码审查、测试或基础设施工作选择一组现成工作说明时，可以从它的插件目录中挑选；不同编程工具有各自的安装与适配方式。",
+      "difficulty": "中",
+      "cost": "本仓库组件采用 MIT，外部插件另查授权。实际运行需要受支持的编程助手，模型调用和外部工具服务另外计费；安装与适配环境按所选平台文档准备。",
+      "caution": "不同平台的默认模型、工具权限和组件能力有差异，先核对最终使用的配置。实际效果应在自己的小任务上验收，自带实验评测的分数也需结合人工检查。",
+      "first_step": "从目录中只挑一个代码审查插件，在虚构小项目上要求给出带文件依据的建议，核对模型与工具权限后再增加组件。",
+      "example": "检查一个计算购物总价的练习函数时，可选择审查和测试相关组件，要求指出空列表、折扣和错误输入该怎样检查，再人工判断建议是否合理。",
+      "diagram_title": "按任务选择角色与工作说明",
+      "diagram_steps": [
+        "任务目标与代码范围",
+        "选用角色与工作说明",
+        "审查、测试或实现建议"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "iBotPeaches/Apktool",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkzNzY2NzA2",
+      "url": "https://github.com/iBotPeaches/Apktool",
+      "weekly_stars": 687,
+      "total_stars": 26659,
+      "forks": 4140,
+      "language": "Java",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-17T10:46:18Z",
+      "source_revision": "fd9d5d4dc7e45fa7f984698ded7a03c554d0a7b3",
+      "evidence_url": "https://github.com/iBotPeaches/Apktool/blob/fd9d5d4dc7e45fa7f984698ded7a03c554d0a7b3/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/java?since=weekly",
+          "rank": 2,
+          "captured_at": "2026-10-25T09:02:55.724470+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把 Android 安装包里的资源和清单等内容解码为可检查的文件，也支持修改后重新构建。",
+      "fit_short": "授权安装包检查、资源与本地化排查",
+      "project_fit": "需要研究自有或获授权安装包的资源、语言文件或构建问题时，可参考它的解码和重建流程；适合具备 Android 资源结构基础的开发者。",
+      "difficulty": "高",
+      "cost": "采用 Apache-2.0，需要兼容所用版本的 Java 环境。源码编译、安装包重建和签名还需相应工具；工具许可不包含被处理应用的代码、图片等内容授权。",
+      "caution": "解码结果不等于找回完整原始工程，修改后也可能出现资源兼容或签名问题。只处理自有或获授权的安装包，并保留原包；重建成功仍需另外验证实际运行。",
+      "first_step": "先拿自己制作的最小演示安装包，只查看清单和一处文字资源，核对解码结果与已知原工程，再考虑修改和重建。",
+      "example": "排查演示应用某种语言缺少按钮文字时，可查看包内的语言资源与清单配置，对照原工程定位遗漏，再在自己的构建流程中验证修复。",
+      "diagram_title": "把安装包展开成可检查的资源",
+      "diagram_steps": [
+        "自有或获授权的安装包",
+        "解码资源并整理清单",
+        "可检查的资源与包结构"
+      ]
+    }
+  ]
+}
