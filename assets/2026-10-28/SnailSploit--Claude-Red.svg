@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-labelledby="title desc">
+<title id="title">按授权范围整理安全测试思路</title>
+<desc id="desc">授权范围与练习目标 → 参考工作说明规划测试 → 待复核的测试计划</desc>
+<style>text{font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#193446}.body{font-size:22px}.label{font-size:17px;font-weight:600}</style>
+<rect width="960" height="320" rx="16" fill="#f5f7f8"/>
+<text x="30" y="44" font-size="28" font-weight="650">按授权范围整理安全测试思路</text>
+<text x="30" y="75" font-size="15" fill="#536674">SnailSploit/Claude-Red · 工作方式示意</text>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#52788d" stroke-width="1.4"/></marker></defs>
+<rect x="30" y="105" width="280" height="150" rx="12" fill="#ffffff" stroke="#c5d2da"/>
+<text x="170" y="137" text-anchor="middle" class="label">给它什么</text>
+<text x="170" y="196" text-anchor="middle" class="body">授权范围与练习目标</text>
+<path d="M316 180 H334" fill="none" stroke="#52788d" stroke-width="2.4" marker-end="url(#arrow)"/>
+<rect x="340" y="105" width="280" height="150" rx="12" fill="#e8eff3" stroke="#c5d2da"/>
+<text x="480" y="137" text-anchor="middle" class="label">它怎么处理</text>
+<text x="480" y="196" text-anchor="middle" class="body">参考工作说明规划测试</text>
+<path d="M626 180 H644" fill="none" stroke="#52788d" stroke-width="2.4" marker-end="url(#arrow)"/>
+<rect x="650" y="105" width="280" height="150" rx="12" fill="#e4f0ec" stroke="#c5d2da"/>
+<text x="790" y="137" text-anchor="middle" class="label">得到什么</text>
+<text x="790" y="196" text-anchor="middle" class="body">待复核的测试计划</text>
+<text x="30" y="292" font-size="14" fill="#536674">三步看懂用途 · 通用说明图，不是软件运行截图</text>
+</svg>

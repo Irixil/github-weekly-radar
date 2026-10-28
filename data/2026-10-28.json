@@ -1,0 +1,209 @@
+{
+  "issue_date": "2026-10-28",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 121,
+  "eligible_count": 102,
+  "history_count": 89,
+  "unseen_count": 62,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "想研究 Android 应用在 Mac 上的兼容运行，先看 **Mac.apk**，并先读权限提醒；想统一管理社交内容排期，先看 **Postiz**；想组织图片创作方案，先看 **无限画布**。另外两项分别是授权安全测试工作说明与带有迁移提示的 Gemini CLI。",
+  "exclusions": [],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "kksimp/Mac.apk",
+      "repo_id": "R_kgDOShiozQ",
+      "url": "https://github.com/kksimp/Mac.apk",
+      "weekly_stars": 2060,
+      "total_stars": 3525,
+      "forks": 127,
+      "language": "Java",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-10-26T16:18:14Z",
+      "source_revision": "ce1499e8b856fb453c773acbf8584ad42307d312",
+      "evidence_url": "https://github.com/kksimp/Mac.apk/blob/ce1499e8b856fb453c773acbf8584ad42307d312/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/java?since=weekly",
+          "rank": 15,
+          "captured_at": "2026-10-28T09:01:54.795276+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在 Apple Silicon Mac 上提供 Android 应用兼容环境，把应用作为普通 Mac 进程和窗口运行。",
+      "fit_short": "Android 兼容研究、Mac 端应用测试",
+      "project_fit": "想了解 Android 应用如何在 macOS 上接入图形、输入和系统能力时，可参考它的框架重实现、运行时和兼容记录；是否能运行某个应用仍需单独核对。",
+      "difficulty": "高",
+      "cost": "官方应用免费，源代码采用 AGPL-3.0，并提供可选商业许可；商标与第三方库另有条款。固定 README 要求 Apple Silicon 和 macOS 26.4+，运行时及应用数据还需要磁盘空间。",
+      "caution": "APK 会以普通 Mac 程序的用户权限运行，没有手机式应用隔离，可能读写该用户可访问的文件。只评估可信来源或自有应用；兼容表与作者演示不代表所有应用都可用。",
+      "first_step": "先读兼容表与文件权限说明，在独立测试账号中用自有最小 Android 示例核对启动、输入和文件访问，记录失败点，再评估正式使用条件。",
+      "example": "研究一个自制便签演示应用的兼容性时，可检查窗口、键盘输入和测试文件保存是否符合预期，并把失败界面与日志整理成问题记录，不使用真实账号或重要资料。",
+      "diagram_title": "把 Android 应用接到 Mac 环境",
+      "diagram_steps": [
+        "可信或自有的应用包",
+        "适配运行时与系统调用",
+        "应用窗口与待查兼容问题"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "SnailSploit/Claude-Red",
+      "repo_id": "R_kgDORd96qw",
+      "url": "https://github.com/SnailSploit/Claude-Red",
+      "weekly_stars": 1994,
+      "total_stars": 9627,
+      "forks": 1298,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-10-12T15:02:40Z",
+      "source_revision": "a8de813edc9f66f60d44cfe42d47750e89d9930b",
+      "evidence_url": "https://github.com/SnailSploit/Claude-Red/blob/a8de813edc9f66f60d44cfe42d47750e89d9930b/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-10-28T09:01:51.755413+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 Claude 提供按安全测试主题组织的方法与工作说明，供获得授权的安全测试、攻防竞赛和研究参考。",
+      "fit_short": "授权安全研究、靶场训练与测试计划",
+      "project_fit": "需要系统整理某类测试的范围、步骤与证据要求时，可参考它按主题组织的技能文档；适合已有安全基础、能辨别测试权限与风险的人员。",
+      "difficulty": "高",
+      "cost": "说明文件采用 MIT，需要能使用这些工作说明的 Claude 环境。模型调用、外部测试工具和隔离练习环境需另行准备；选用不同内容时，依赖与权限也不同。",
+      "caution": "部分内容涉及主动探测和利用，只能限定在自有或明确获授权的环境。先审查会调用的工具、命令和数据去向，任何发现都需证据复核，不能把模型判断当成已确认漏洞。",
+      "first_step": "先选一份基础 Web 或 API 测试说明，在纸面写清授权范围、允许操作和停止条件，人工审阅后再在自建练习环境中评估。",
+      "example": "为自建练习站点的登录功能设计测试时，可先列清允许检查的页面、测试账号与数据边界，再用相关说明补充检查项，形成待人工审核的测试计划。",
+      "diagram_title": "按授权范围整理安全测试思路",
+      "diagram_steps": [
+        "授权范围与练习目标",
+        "参考工作说明规划测试",
+        "待复核的测试计划"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "gitroomhq/postiz-app",
+      "repo_id": "R_kgDOJ5QMpw",
+      "url": "https://github.com/gitroomhq/postiz-app",
+      "weekly_stars": 1698,
+      "total_stars": 39383,
+      "forks": 7519,
+      "language": "TypeScript",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-10-24T18:27:21Z",
+      "source_revision": "a5affe62c74e39c1e7ac960d50d8418b807d532c",
+      "evidence_url": "https://github.com/gitroomhq/postiz-app/blob/a5affe62c74e39c1e7ac960d50d8418b807d532c/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 19,
+          "captured_at": "2026-10-28T09:01:51.898781+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把多个社交平台的内容草稿、排期和发布状态放在一起管理，支持自托管与托管版。",
+      "fit_short": "内容排期、团队草稿与多渠道发布",
+      "project_fit": "需要把文案、素材、渠道和发布时间统一整理时，可参考它的日历、跨渠道排期、接口和状态记录；接入每个平台仍有各自的账号与应用授权要求。",
+      "difficulty": "高",
+      "cost": "源代码采用 AGPL-3.0。自托管需配置数据库、队列、存储等基础设施，社交平台可能需要开发者应用审核；AI、API 和托管云服务按所选供应方或方案计费。",
+      "caution": "保存草稿、进入队列和发布成功是不同状态，结果需从对应平台核对。接正式账号前检查渠道授权、时区、重复发布和内容权限；自托管也要维护更新与备份。",
+      "first_step": "先用三条虚构活动文案做排期样表，列清渠道、时区、审核状态和发布结果字段，再按官方文档评估账号接入。",
+      "example": "整理虚构读书会的一周内容时，可统一预告、提醒和回顾的草稿、素材及发布时间，人工确认后再接入发布流程，减少来回切换多个平台。",
+      "diagram_title": "把多渠道内容整理成发布排期",
+      "diagram_steps": [
+        "文案、素材与渠道安排",
+        "审核排期并按授权发布",
+        "发布状态与待核对结果"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "basketikun/infinite-canvas",
+      "repo_id": "R_kgDOShYuZA",
+      "url": "https://github.com/basketikun/infinite-canvas",
+      "weekly_stars": 1474,
+      "total_stars": 9260,
+      "forks": 2168,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-10-25T11:21:24Z",
+      "source_revision": "9cd3deacbcc598361807afc16c059a80dd18b6f9",
+      "evidence_url": "https://github.com/basketikun/infinite-canvas/blob/9cd3deacbcc598361807afc16c059a80dd18b6f9/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 16,
+          "captured_at": "2026-10-28T09:01:51.898781+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把图片、提示词和生成结果放进可连线的无限画布，用来组织和迭代 AI 图片方案。",
+      "fit_short": "视觉方案探索、图片工作流原型",
+      "project_fit": "需要把参考图、提示词和不同生成方向放在同一处比较时，可参考它的节点编排、分支、素材管理和画布助手；也支持自定义接口与可选的本地 Agent。",
+      "difficulty": "中",
+      "cost": "代码采用 MIT，本地开发与部署可参考 Bun 或 Docker 入口。图片、视频和问答生成调用所配置的接口，费用按供应方方案计算；可选本地 Agent 还需对应助手环境。",
+      "caution": "项目处于开发阶段，存储格式可能变化，重要画布应导出备份。使用生成服务前核对输入会发送到哪里，并审核远程插件来源；模型额度与素材授权需分别确认。",
+      "first_step": "先导入一张自有图片，练习拖拽、连线和导出备份，再核对服务地址与单次调用费用，最后考虑少量生成，观察结果是否符合预期。",
+      "example": "为虚构读书活动设计海报方案时，可把自有背景图和两版标题放在不同节点分支，对比参考图与生成结果，人工核对文字、布局和细节后再选版。",
+      "diagram_title": "把参考图与提示词组织成方案",
+      "diagram_steps": [
+        "自有图片与创作提示",
+        "编排节点并调用模型",
+        "可比较的方案与素材"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "google-gemini/gemini-cli",
+      "repo_id": "R_kgDOObWEYA",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "weekly_stars": 1248,
+      "total_stars": 108582,
+      "forks": 14855,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-28T00:59:30Z",
+      "source_revision": "fa5c17365754a4936c3b97429df798966305267d",
+      "evidence_url": "https://github.com/google-gemini/gemini-cli/blob/fa5c17365754a4936c3b97429df798966305267d/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 6,
+          "captured_at": "2026-10-28T09:01:51.898781+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在终端里读取项目、解释或修改代码的 AI 助手，也能通过工具和脚本接入开发流程。",
+      "fit_short": "终端助手研究、代码阅读与脚本接入",
+      "project_fit": "适合研究终端助手如何读取项目、对话和调用工具，也可参考它的非交互脚本入口；实际采用前需核对当前账号适用范围和版本支持。",
+      "difficulty": "中",
+      "cost": "代码采用 Apache-2.0，固定版本运行要求 Node.js 20+ 与有效认证。模型、API 或组织账号有各自的计费与额度规则，费用应按当前 Google 方案核对。",
+      "caution": "固定 README 对免费层与 Google One 用户给出了转向 Antigravity CLI 的提示，并注明未针对最新 Gemini 模型优化。先核对账号适用性，再限制助手可读写的目录与可执行命令。",
+      "first_step": "先读顶部迁移提示与认证说明，确认账号和目标模型仍适用，再在只有示例文件的练习目录中要求它只解释一个函数，逐条核对源码依据。",
+      "example": "阅读虚构小程序的文件名排序函数时，可要求助手说明输入、处理和返回值，列出对应源码位置，再人工检查它有没有忽略异常分支。",
+      "diagram_title": "把代码任务接到终端助手",
+      "diagram_steps": [
+        "示例代码与任务说明",
+        "读取项目并调用工具",
+        "解释、修改或命令结果"
+      ]
+    }
+  ]
+}
