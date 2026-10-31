@@ -1,0 +1,215 @@
+{
+  "issue_date": "2026-10-31",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 132,
+  "eligible_count": 115,
+  "history_count": 99,
+  "unseen_count": 76,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "想让编程助手按步骤澄清需求、实现和检查，先看 **Superpowers**；想把文字改得直接自然，先看 **Humanizer**；想整理产品页面和营销方案，先看 **marketingskills**。**OpenMausBot** 与 **OpenBot** 则分别提供聊天式多助手界面、可部署在自有环境的助手平台，采用前先看权限和服务费用。",
+  "exclusions": [
+    {
+      "repo": "ruvnet/RuView",
+      "source_url": "https://github.com/ruvnet/RuView/blob/5728b90949e60e3f908d996997d453147c1794e0/NOTICE",
+      "reason": "README 和根 LICENSE 写 MIT，NOTICE 却把整个仓库称为 MIT 或 Apache-2.0，许可表述不一致；本期先跳过，待上游说明统一后再评估。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "obra/superpowers",
+      "repo_id": "R_kgDOP_gcWw",
+      "url": "https://github.com/obra/superpowers",
+      "weekly_stars": 5474,
+      "total_stars": 309475,
+      "forks": 27535,
+      "language": "Shell",
+      "license": "MIT",
+      "last_push_at": "2026-10-29T23:35:34Z",
+      "source_revision": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "evidence_url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 4,
+          "captured_at": "2026-10-31T10:28:44.968239+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 AI 编程助手一套开发工作说明，把需求澄清、任务拆分、编码、测试和审查串成流程。",
+      "fit_short": "开发流程整理、编程助手协作",
+      "project_fit": "助手容易直接写代码、遗漏需求或缺少验证时，可参考它的需求讨论、实施计划、调试和审查说明，把一个改动拆成能检查结果的小任务。",
+      "difficulty": "中",
+      "cost": "说明与代码采用 MIT，需要支持相应 Skill 或插件的编程助手。模型订阅或 API 费用按助手方案计算；多轮规划、分工和审查可能增加调用量，也需要 Git 与项目自身的测试环境。",
+      "caution": "这些说明会改变助手的工作顺序，启用前先核对触发方式和适用范围。分工与测试记录都应回看实际代码和输出，不能把助手自述完成当成验收通过。",
+      "first_step": "先用示例仓库选一个小功能，写清预期行为，参照说明形成简短需求和任务清单；逐项查看差异与测试结果，再判断流程是否适合。",
+      "example": "给虚构便签程序增加按关键词筛选时，可先明确空关键词和无结果时的行为，再拆分界面、筛选逻辑与验证任务，最后逐项检查代码和测试输出。",
+      "diagram_title": "把一个开发需求拆成可检查步骤",
+      "diagram_steps": [
+        "功能需求与现有代码",
+        "澄清、拆任务并审查",
+        "实现改动与验证记录"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "milind-soni/OpenMausBot",
+      "repo_id": "R_kgDOT1lw9w",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "weekly_stars": 2863,
+      "total_stars": 8721,
+      "forks": 1204,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-10-30T22:54:18Z",
+      "source_revision": "7de00e425848d5f1a2a845cb4784851b87d8cad2",
+      "evidence_url": "https://github.com/milind-soni/OpenMausBot/blob/7de00e425848d5f1a2a845cb4784851b87d8cad2/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 19,
+          "captured_at": "2026-10-31T10:28:44.829720+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把不同 AI 助手放进聊天式桌面界面，集中查看任务进展、工具调用和需要人批准的操作。",
+      "fit_short": "多助手工作台、工具与审批交互",
+      "project_fit": "需要给不同任务配置不同助手、在聊天中看执行过程并处理审批时，可参考它的助手列表、模型选择、电脑面板和连接应用；适用能力取决于所选模型、系统与接入服务。",
+      "difficulty": "中",
+      "cost": "开源部分采用 Apache-2.0；enterprise 目录另有许可，生产使用相关功能需满足其条件，详见[许可边界](https://github.com/milind-soni/OpenMausBot/blob/7de00e425848d5f1a2a845cb4784851b87d8cad2/LICENSING.md)。默认用法需准备已登录的助手命令行程序；模型、云电脑、连接应用及云端语音服务按各自方案计费。",
+      "caution": "本地界面不代表所有处理都留在本机；模型、云电脑与连接应用各有数据去向和权限。项目仍在早期，不同系统的电脑控制能力不同，正式接入前应实测拒绝操作和取消任务是否生效。",
+      "first_step": "先核对一个助手环境与系统支持情况，在只有虚构文件的练习目录中完成一项整理任务，观察进度、审批和结果记录，再评估扩展工具权限。",
+      "example": "整理一组虚构活动资料时，可给一个助手只分配整理目录和拟定文件名的任务，在聊天中检查它提出的修改，再核对文件变化及任务记录。",
+      "diagram_title": "在聊天里查看助手操作和审批",
+      "diagram_steps": [
+        "任务说明与已授权工具",
+        "助手调用工具并提请审批",
+        "执行进展与待核对结果"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "blader/humanizer",
+      "repo_id": "R_kgDOQ8AnQQ",
+      "url": "https://github.com/blader/humanizer",
+      "weekly_stars": 2799,
+      "total_stars": 62743,
+      "forks": 4969,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-10-28T07:17:33Z",
+      "source_revision": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
+      "evidence_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 11,
+          "captured_at": "2026-10-31T10:28:44.680595+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 AI 助手一套改稿规则，删掉空话、重复和过度包装，让文字更直接，也可参考给定的风格样例。",
+      "fit_short": "公告改稿、文档表达与风格调整",
+      "project_fit": "已有内容基本正确，却读起来绕、口号多或句式重复时，可参考它的表达检查项，先修改语言，再逐项核对事实；也适合整理团队常见改稿问题。",
+      "difficulty": "低",
+      "cost": "工作说明与代码采用 MIT，需要能读取这些说明的 AI 助手。改稿使用的模型订阅或 API 按所选服务计费；提供风格样例和多轮修改会增加输入与调用量。",
+      "caution": "改写仍需人工检查人名、数字、日期、引文和专业术语。来源中的例子主要是英文，中文效果需要单独评估；语气自然和内容准确要分别核对，不以修改后的流畅程度判断事实。",
+      "first_step": "选一段公开且事实清楚的短公告，先列出必须保留的信息，再按检查项修改，对照原文标出每处删改，确认没有增加未经支持的细节。",
+      "example": "把虚构读书会预告里的夸张宣传和重复铺垫删掉，保留时间、地点、参加方式与费用，再检查修改稿是否把任何条件写漏或写错。",
+      "diagram_title": "把绕口原稿改成直接的表达",
+      "diagram_steps": [
+        "原稿与可选风格样例",
+        "检查空话并重写表达",
+        "待核对事实的修改稿"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "CopilotKit/OpenBot",
+      "repo_id": "R_kgDOT6ln0w",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "weekly_stars": 1653,
+      "total_stars": 8837,
+      "forks": 1110,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-10-30T22:06:51Z",
+      "source_revision": "743649efc3f21d7bf0badbe6af2bcd5daedd97ce",
+      "evidence_url": "https://github.com/CopilotKit/OpenBot/blob/743649efc3f21d7bf0badbe6af2bcd5daedd97ce/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 14,
+          "captured_at": "2026-10-31T10:28:44.829720+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在自有环境部署 AI 助手工作台，把聊天、浏览器操作、权限规则和执行记录放在一起管理。",
+      "fit_short": "自托管助手平台、权限与执行记录",
+      "project_fit": "需要把不同助手接入统一界面，并按人和任务管理工具权限时，可参考它的浏览器工作环境、审批规则、操作记录及统一的助手接入接口；已有助手也可按协议接入。",
+      "difficulty": "高",
+      "cost": "仓库代码采用 MIT，源码开发要求 Docker 与 Bun 1.4+；还需用于会话等能力的 CopilotKit Intelligence 服务与相应许可，并自行配置模型。数据库、浏览器容器、模型和外部连接服务各有资源或方案费用。",
+      "caution": "项目处于 Beta，实际能力受部署和规则配置影响。默认电脑环境按用户划分，单个助手可另选独立容器；接真实账号前，应核对数据会经过哪些服务，并验证允许、拒绝和人工接管的结果。",
+      "first_step": "先用虚构文件和测试网页定义一个小任务，只配置所需工具；评估部署条件后，分别检查一次允许操作和一次拒绝操作，再从记录中核对实际结果。",
+      "example": "让测试助手从一份虚构活动说明里提取事项并保存摘要时，可限制可读文件和保存位置，同时检查一次越界请求是否被拒绝，核对摘要与操作记录。",
+      "diagram_title": "把助手任务接到权限和执行记录",
+      "diagram_steps": [
+        "工作请求与工具权限",
+        "按规则审批并记录操作",
+        "任务结果与可追踪记录"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "coreyhaines31/marketingskills",
+      "repo_id": "R_kgDOQ6n2Jw",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "weekly_stars": 1330,
+      "total_stars": 57526,
+      "forks": 8481,
+      "language": "JavaScript",
+      "license": "MIT",
+      "last_push_at": "2026-10-31T00:53:07Z",
+      "source_revision": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "evidence_url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/javascript?since=weekly",
+          "rank": 8,
+          "captured_at": "2026-10-31T10:28:44.712529+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 AI 助手提供按主题组织的营销工作说明，帮助写页面文案、检查网站和设计增长实验。",
+      "fit_short": "产品文案、页面检查与营销方案",
+      "project_fit": "需要围绕产品、受众和目标整理首页、报名流程或内容计划时，可参考它的文案、页面检查、搜索优化与实验设计说明，把建议整理成待验证的改动清单。",
+      "difficulty": "低",
+      "cost": "工作说明与代码采用 MIT，需要支持 Skill 的 AI 助手。模型、搜索数据、广告和分析平台按所选服务分别计费；安装说明文件不会自动配置外部账号、接口或所需权限。",
+      "caution": "建议能否改善报名、转化或搜索表现，需要用实际数据验证。文案中的数字、承诺和案例应有来源；接入账号、发布内容或投入预算前，要逐项核对权限、费用和最终操作。",
+      "first_step": "先列清一个虚构产品的功能、受众与目标，只选文案或页面检查说明生成一份草稿；标出每条主张的依据和验证方法，再评估是否接外部工具。",
+      "example": "为虚构读书会写报名页时，可整理参加对象、活动安排和报名步骤，比较两版标题是否清楚，列出需要检查的页面问题，不预先宣称报名率会提高。",
+      "diagram_title": "按受众和事实整理营销草稿",
+      "diagram_steps": [
+        "受众、产品事实与目标",
+        "按主题梳理文案和检查项",
+        "文案草稿与待验证方案"
+      ]
+    }
+  ]
+}
