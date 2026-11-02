@@ -1,0 +1,225 @@
+{
+  "issue_date": "2026-11-02",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 128,
+  "eligible_count": 112,
+  "history_count": 104,
+  "unseen_count": 80,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "想做页面草稿与视觉检查，先看 **Hallmark**；想整理需求、计划和开发任务，先看 **Spec Kit**；想在终端理解和修改代码，先看 **Codex CLI**。日常语音输入可了解 **Handy**，安全告警处理原型可了解 **AiSOC**；两者采用前分别核对系统权限和日志数据范围。",
+  "exclusions": [
+    {
+      "repo": "YuJunZhiXue/dsh-purge",
+      "source_url": "https://github.com/YuJunZhiXue/dsh-purge/blob/c63ba4a7209629a7deb76a00a9219c4ca1fe0e80/README.md",
+      "reason": "根 LICENSE 与 NOTICE 标注 Apache-2.0，README 同时附有禁止原版转售等额外限制，补充商业说明也对销售另设条件；许可边界不一致，本期先跳过。"
+    },
+    {
+      "repo": "ruvnet/RuView",
+      "source_url": "https://github.com/ruvnet/RuView/blob/5728b90949e60e3f908d996997d453147c1794e0/NOTICE",
+      "reason": "README 和根 LICENSE 写 MIT，NOTICE 却把整个仓库称为 MIT 或 Apache-2.0，许可表述仍未统一，本期先跳过。"
+    },
+    {
+      "repo": "AstrBotDevs/AstrBot",
+      "source_url": "https://github.com/AstrBotDevs/AstrBot/blob/b3d7c5ef9804aca3eec99d0e4562907500cadcf0/EULA.md",
+      "reason": "根 LICENSE 采用 AGPLv3，EULA 又附有不可转让、不可再许可及额外用途限制；尚无法确认统一许可边界，本期先跳过，待上游澄清。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "Nutlope/hallmark",
+      "repo_id": "R_kgDOSOQ9xw",
+      "url": "https://github.com/Nutlope/hallmark",
+      "weekly_stars": 11566,
+      "total_stars": 45164,
+      "forks": 2399,
+      "language": "CSS",
+      "license": "MIT",
+      "last_push_at": "2026-10-29T16:50:04Z",
+      "source_revision": "4f6a46c6dc325d40ab268c93e25c7b96676ebccd",
+      "evidence_url": "https://github.com/Nutlope/hallmark/blob/4f6a46c6dc325d40ab268c93e25c7b96676ebccd/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 1,
+          "captured_at": "2026-11-02T14:16:46.800046+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 AI 编程助手提供页面设计工作说明，围绕页面目标选择视觉风格、生成页面并检查布局与交互细节。",
+      "fit_short": "活动页、产品介绍页与视觉检查",
+      "project_fit": "需要为一个小网站确定风格、改进布局或检查已有页面时，可参考它的主题、页面任务拆解与审查流程；适合先做一个能打开、能逐项核对的页面草稿。",
+      "difficulty": "中",
+      "cost": "代码与说明采用 MIT，需要支持相应 Skill 的编程助手及 Node.js 18+。浏览器检查还需 Chrome 与 Puppeteer Core；模型费用按助手方案计算。引用照片各有独立许可和署名要求。",
+      "caution": "视觉规则与自动检查不能代替真实业务路径验收。表单是否提交成功、链接是否到达正确页面、手机和键盘能否正常操作，都要单独检查；素材使用条件应回到原始来源核对。",
+      "first_step": "先用自有素材定义一个虚构活动页，写清报名按钮应去哪里；选择一种风格做出首屏，再核对手机布局、键盘焦点和按钮行为后扩展整页。",
+      "example": "制作虚构读书会介绍页时，可提供时间、主题和自有封面，选择一种视觉方向生成草稿，再检查报名入口、窄屏文字与信息是否完整。",
+      "diagram_title": "按页面目标生成并检查设计草稿",
+      "diagram_steps": [
+        "页面目标与自有素材",
+        "选风格、生成并检查",
+        "页面草稿与检查结果"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "beenuar/AiSOC",
+      "repo_id": "R_kgDOSSIbRw",
+      "url": "https://github.com/beenuar/AiSOC",
+      "weekly_stars": 2450,
+      "total_stars": 6391,
+      "forks": 656,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-11-02T05:50:34Z",
+      "source_revision": "7acc8653fdcae469bef327ee10eef737ebf1f4d0",
+      "evidence_url": "https://github.com/beenuar/AiSOC/blob/7acc8653fdcae469bef327ee10eef737ebf1f4d0/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 12,
+          "captured_at": "2026-11-02T14:16:44.169402+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把安全工具产生的日志和告警集中整理，关联成事件，再由 AI 辅助调查并提出供人审核的处置建议。",
+      "fit_short": "安全告警分析、调查流程原型",
+      "project_fit": "已有安全数据来源、希望把告警、相关记录和调查依据放在一起时，可参考它的数据接入、规则检测、事件关联和调查记录；适合具备安全与运维基础的人员评估。",
+      "difficulty": "高",
+      "cost": "代码采用 MIT。文档中的 core 部署需 Docker Compose v2，Docker 环境约 8 GB 内存、20 GB 可用磁盘，另需 Python 3.9+ 与 bash；默认包含本地模型，首次会下载模型。改接托管模型或真实数据服务时，费用按相应方案另计。",
+      "caution": "它只能分析已接入的数据；合成样例、规则能运行和真实检测效果要分别核对。日志与调查记录可能包含敏感信息，先限定采集范围、访问权限和模型去向；处置操作需明确授权并保留人工审核。",
+      "first_step": "先研究一组合成告警的数据流，列清输入、关联依据与输出建议；评估部署条件后再用样例核对调查记录、失败状态和审批流程，再考虑接入真实日志。",
+      "example": "用一组合成的登录异常告警，观察它如何关联同一测试主机的记录、形成调查依据和处置建议，由人工核对证据是否支持判断，记录误报与遗漏。",
+      "diagram_title": "把安全告警整理成可复核调查",
+      "diagram_steps": [
+        "授权范围内的安全日志",
+        "检测关联并辅助调查",
+        "事件依据与待审处置建议"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "github/spec-kit",
+      "repo_id": "R_kgDOPiFCnQ",
+      "url": "https://github.com/github/spec-kit",
+      "weekly_stars": 2098,
+      "total_stars": 145092,
+      "forks": 13004,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-10-30T16:19:58Z",
+      "source_revision": "7370e592f3cd9c06e5b698983957e227c75b30e2",
+      "evidence_url": "https://github.com/github/spec-kit/blob/7370e592f3cd9c06e5b698983957e227c75b30e2/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 7,
+          "captured_at": "2026-11-02T14:16:44.169402+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 AI 编程助手提供开发流程和模板，把功能想法整理成需求、计划、任务与验证记录，也可按需加入修错或想法评估流程。",
+      "fit_short": "需求整理、开发计划与修错记录",
+      "project_fit": "需要让多人或多轮开发围绕同一份目标继续工作时，可参考它的规格文档和任务拆分。功能开发、修错与想法评估有各自入口，可以按当前问题选择合适流程。",
+      "difficulty": "中",
+      "cost": "代码采用 MIT，需要 Python 3.11+、uv 和兼容的 AI 编程助手。模型订阅或 API 费用按助手方案计算；修错、评估和其他扩展按需添加，接入外部工具可能还有各自费用。",
+      "caution": "规格和任务清单仍需有人确认范围、约束及验收条件；文档齐全不代表实现正确。社区目录中的扩展是发现入口，采用前要阅读来源、权限和会执行的操作。",
+      "first_step": "先选一个示例小功能，写清用户要完成的动作、约束和预期结果，再参照模板拆出几项任务；逐项查看实现与验证记录，确认流程没有把小需求越扩越大。",
+      "example": "给虚构相册程序增加按日期分组时，可先规定日期来源、无日期照片的归属和排序方式，再拆出界面、分组逻辑与验证任务，核对每项结果。",
+      "diagram_title": "把功能想法整理成开发与验收任务",
+      "diagram_steps": [
+        "功能想法与明确约束",
+        "写规格并拆成执行任务",
+        "需求、计划与验证记录"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "openai/codex",
+      "repo_id": "R_kgDOOYsS4Q",
+      "url": "https://github.com/openai/codex",
+      "weekly_stars": 2011,
+      "total_stars": 132785,
+      "forks": 20982,
+      "language": "Rust",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-01T23:27:22Z",
+      "source_revision": "a09812981de703f18f38015cd5d500ab373f616c",
+      "evidence_url": "https://github.com/openai/codex/blob/a09812981de703f18f38015cd5d500ab373f616c/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 14,
+          "captured_at": "2026-11-02T14:16:47.009565+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在终端里读取项目、解释或修改代码并运行检查的 AI 编程助手，适合代码阅读、调试和小范围开发任务。",
+      "fit_short": "终端开发、代码理解与改动审查",
+      "project_fit": "需要理解陌生仓库、分析报错、检查代码差异或把重复开发任务接入脚本时，可参考它的项目上下文、工具调用和审查入口；应给每项任务明确的目标与验收条件。",
+      "difficulty": "中",
+      "cost": "客户端代码采用 Apache-2.0。使用 OpenAI 模型时，可通过有权限的 ChatGPT 计划或 API 账号认证；计划额度与 API 用量各有计费规则，详见[官方认证说明](https://learn.chatgpt.com/docs/auth?surface=cli)。可用功能和额度以当前账号为准。",
+      "caution": "读写文件、运行命令和联网都有实际权限边界，开始前应核对允许范围。模型解释与代码修改要对照源码、差异和测试复核，所选服务的数据处理规则也需与账号配置对应。",
+      "first_step": "在只有示例文件的仓库中，先要求它只解释一个函数并指出源码位置；确认理解后再选一个小改动，检查差异与实际测试输出，再考虑扩大任务。",
+      "example": "修复虚构待办程序的日期排序问题时，可先让助手解释现有比较规则，再检查最小改动，以及跨月、同日和缺失日期的测试结果。",
+      "diagram_title": "在终端理解代码并核对改动",
+      "diagram_steps": [
+        "示例代码与明确任务",
+        "读取文件并按权限操作",
+        "解释、改动与检查结果"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "cjpais/Handy",
+      "repo_id": "R_kgDON4t-Ng",
+      "url": "https://github.com/cjpais/Handy",
+      "weekly_stars": 1652,
+      "total_stars": 36794,
+      "forks": 3465,
+      "language": "Rust",
+      "license": "MIT",
+      "last_push_at": "2026-11-02T06:14:09Z",
+      "source_revision": "4c811d7e0e43da9462a983de757dd9f29a880f4f",
+      "evidence_url": "https://github.com/cjpais/Handy/blob/4c811d7e0e43da9462a983de757dd9f29a880f4f/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 5,
+          "captured_at": "2026-11-02T14:16:47.009565+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "按快捷键说话，在本机把语音转成文字并填入当前应用的输入框，基础转写可在模型准备好后离线使用。",
+      "fit_short": "日常语音输入、短文口述与转写",
+      "project_fit": "想把短口述快速放进笔记、草稿或其他输入框时，可参考它的快捷键录音、本地识别与文字粘贴流程；也适合研究跨平台语音输入工具的交互方式。",
+      "difficulty": "低",
+      "cost": "代码采用 MIT，基础应用免费，需要预先下载转写模型并准备对应磁盘和计算资源。使用需麦克风与相应输入权限；不同模型的语言支持、速度和资源需求不同，Linux 还可能需要额外文字输入组件。",
+      "caution": "转写准确率会受语言、噪声和术语影响，数字与专有名词尤其要复核。确认当前焦点窗口再录音，粘贴结果和剪贴板兼容性需要单独检查；后续应用或附加处理有各自的数据去向。",
+      "first_step": "先选支持目标语言的模型，在空白测试文档里口述一句不含敏感信息的话，检查文字、目标窗口与快捷键停止行为，再逐步测试数字和术语。",
+      "example": "把一段虚构活动安排口述成笔记时，可按快捷键说出时间、地点与三项待办，转写后核对数字、标点和粘贴位置，再整理成最终草稿。",
+      "diagram_title": "把短口述转成输入框中的文字",
+      "diagram_steps": [
+        "按快捷键录下的语音",
+        "本机模型识别并转写",
+        "填入输入框的文字"
+      ]
+    }
+  ]
+}
