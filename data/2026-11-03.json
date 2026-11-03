@@ -1,0 +1,225 @@
+{
+  "issue_date": "2026-11-03",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 127,
+  "eligible_count": 109,
+  "history_count": 109,
+  "unseen_count": 73,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "想把历史阅读中的年份、人物和地名放在同一张图上，先看 **江山时序**；想改进界面的布局、排版和文案，先看 **jakubkrehel/skills**。**herdr** 适合了解多个终端任务如何集中管理，**Macro** 适合研究团队资料与任务关联；**Shannon** 涉及主动安全测试，只在明确授权的隔离环境中评估。",
+  "exclusions": [
+    {
+      "repo": "YuJunZhiXue/dsh-purge",
+      "source_url": "https://github.com/YuJunZhiXue/dsh-purge/blob/217d60d3d61881079ea95bbe2c174f338a02182b/README.md",
+      "reason": "根 LICENSE 与 NOTICE 标注 Apache-2.0，README 同时附有禁止原版转售等额外限制，补充商业说明也对销售另设条件；许可边界仍不一致，本期先跳过。"
+    },
+    {
+      "repo": "ruvnet/RuView",
+      "source_url": "https://github.com/ruvnet/RuView/blob/5728b90949e60e3f908d996997d453147c1794e0/NOTICE",
+      "reason": "README 和根 LICENSE 写 MIT，NOTICE 却把整个仓库称为 MIT 或 Apache-2.0，许可表述仍未统一，本期先跳过。"
+    },
+    {
+      "repo": "AstrBotDevs/AstrBot",
+      "source_url": "https://github.com/AstrBotDevs/AstrBot/blob/6c942855cb06b6d43854e8b841859d60a5c6043e/EULA.md",
+      "reason": "根 LICENSE 采用 AGPLv3，EULA 又附有不可转让、不可再许可及额外用途限制；尚无法确认统一许可边界，本期先跳过，待上游澄清。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "DeanChensj/jiangshan-map",
+      "repo_id": "R_kgDOThuJPg",
+      "url": "https://github.com/DeanChensj/jiangshan-map",
+      "weekly_stars": 1995,
+      "total_stars": 3537,
+      "forks": 422,
+      "language": "JavaScript",
+      "license": "GPL-3.0",
+      "last_push_at": "2026-11-02T19:20:51Z",
+      "source_revision": "68b6db76f6be4ffec3c6aab8d6390821f78659f8",
+      "evidence_url": "https://github.com/DeanChensj/jiangshan-map/blob/68b6db76f6be4ffec3c6aab8d6390821f78659f8/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/javascript?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-11-03T08:59:38.504551+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把历史时间轴、古地名沿革和人物路线放在交互地图上，方便按年份和地点探索历史资料。",
+      "fit_short": "历史阅读、文化学习与时空展示",
+      "project_fit": "需要把一段历史叙事与地点变化联系起来时，可参考它的时间轴、地点卡片和人物路线；也适合在文化学习原型中研究时间、地图和资料如何联动。",
+      "difficulty": "低",
+      "cost": "核心项目采用 GPL-3.0，基础地图可用静态网页服务运行，不依赖模型账号。README 明确列出：部分 CHGIS、Hartwell 派生历史图层仅限学术、非商业使用；导出数据需 Node.js，采用前按具体图层核对原始许可。",
+      "caution": "历史边界和位置包含示意性近似，阅读时应回查资料来源。商用嵌入、数据再分发或精确地理判断前，要分别核对图层许可、来源和精度，不能把学习地图当成测绘结果。",
+      "first_step": "先选一个熟悉的古地名，切换两个时期查看名称和资料卡片，再与一份可靠文献核对；若考虑嵌入产品，先列清会使用的图层及其许可条件。",
+      "example": "阅读苏轼相关作品时，可搜索人物路线，切换到一个行程节点的年份，再查看相关古地名和地点卡片，回到原文核对时间与地名。",
+      "diagram_title": "把人物和古地名放回历史时间轴",
+      "diagram_steps": [
+        "年份、古地名或人物",
+        "联动时间轴与地图资料",
+        "地点沿革与人物路线"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "jakubkrehel/skills",
+      "repo_id": "R_kgDOTUP6_w",
+      "url": "https://github.com/jakubkrehel/skills",
+      "weekly_stars": 1707,
+      "total_stars": 10373,
+      "forks": 401,
+      "language": "Markdown",
+      "license": "MIT",
+      "last_push_at": "2026-11-02T01:29:43Z",
+      "source_revision": "60bf140e43c98b248e6594487384ec967e89d98a",
+      "evidence_url": "https://github.com/jakubkrehel/skills/blob/60bf140e43c98b248e6594487384ec967e89d98a/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 9,
+          "captured_at": "2026-11-03T08:59:39.170517+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 AI 助手提供一组界面设计工作说明，按布局、排版、色彩、文案和无障碍等主题审阅或改进界面。",
+      "fit_short": "界面审阅、视觉细节与交互文案",
+      "project_fit": "已有界面但不知道该先改哪里时，可参考它按问题排序的审阅方式；也可只选排版、颜色或表单文案等一个主题，帮助助手提出可检查的小改动。",
+      "difficulty": "低",
+      "cost": "说明与代码采用 MIT，需要能读取相应 Skill 的 AI 助手。模型订阅或 API 按助手方案计费；截图、浏览器验证和代码修改所需的工具与权限，需按选中的具体说明配置。",
+      "caution": "它提供工作说明，实际审阅与修改能力取决于助手环境。布局建议、无障碍检查和真实使用结果要分别核对，尤其应检查键盘焦点、错误提示、窄屏布局与现有设计规范是否一致。",
+      "first_step": "先拿一个示例表单或自有截图，只选布局或文案主题，得到一份排序明确的问题清单；挑一处修改，核对前后差异和实际行为后再扩大范围。",
+      "example": "检查虚构活动报名表时，可让助手找出标签不清楚、错误提示难理解或手机上排列拥挤的地方，再逐项确认修改是否保留原有字段和提交行为。",
+      "diagram_title": "按主题找出界面问题并检查改动",
+      "diagram_steps": [
+        "示例界面与改进目标",
+        "按主题审阅并提出改法",
+        "问题排序与待审阅改动"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "KeygraphHQ/shannon",
+      "repo_id": "R_kgDOP3uEcg",
+      "url": "https://github.com/KeygraphHQ/shannon",
+      "weekly_stars": 1627,
+      "total_stars": 50990,
+      "forks": 5930,
+      "language": "TypeScript",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-10-27T06:17:04Z",
+      "source_revision": "b9744f6cecc5429333873b86a6762f1d70c54fc2",
+      "evidence_url": "https://github.com/KeygraphHQ/shannon/blob/b9744f6cecc5429333873b86a6762f1d70c54fc2/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 14,
+          "captured_at": "2026-11-03T08:59:38.660035+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "结合应用源码和运行中的测试站点，由 AI 编排主动安全验证，输出需要人工复核的问题与复现证据。",
+      "fit_short": "授权测试、安全流程与报告审阅",
+      "project_fit": "拥有源码和隔离测试环境、希望研究代码分析如何衔接主动验证与证据报告时，可参考它的任务编排、工作区和报告结构；适合有安全测试经验的人员评估。",
+      "difficulty": "高",
+      "cost": "开源版本采用 AGPL-3.0，需要 Docker、Node.js 18+、可用模型服务及测试环境。模型调用和计算资源按自己的方案计费；托管版、商业许可及企业能力另有方案，不能仅按源码许可证判断全部费用。",
+      "caution": "它会主动创建数据、提交请求或改变测试站点状态，只能用于自有或获明确授权且有可丢弃数据的隔离环境，避免直接运行在生产系统。源码上下文会进入所选模型端点，报告内容与覆盖范围仍需人工核对。",
+      "first_step": "先阅读安全范围说明，列清自建练习站点、测试账号、允许操作和停止条件，核对模型数据去向与预算，再评估一份报告的证据能否由人复核。",
+      "example": "为自建的虚构练习站点安排测试时，可先限定测试账号和页面范围，查看报告是否给出足够证据，再由人工确认发现是否成立及哪些功能仍未覆盖。",
+      "diagram_title": "在授权环境验证代码安全问题",
+      "diagram_steps": [
+        "源码与已授权测试站点",
+        "分析代码并主动测试",
+        "待人工复核的问题报告"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "herdrdev/herdr",
+      "repo_id": "R_kgDORymbOg",
+      "url": "https://github.com/herdrdev/herdr",
+      "weekly_stars": 1612,
+      "total_stars": 47600,
+      "forks": 3816,
+      "language": "Rust",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-02T14:30:41Z",
+      "source_revision": "ee5bfb5041bb3e4a49d591c72308aae3c81ecdde",
+      "evidence_url": "https://github.com/herdrdev/herdr/blob/ee5bfb5041bb3e4a49d591c72308aae3c81ecdde/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 7,
+          "captured_at": "2026-11-03T08:59:40.698829+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "集中管理编程助手所在的终端窗口，由后台服务保留运行中的会话，并查看本地或远端主机上的任务状态。",
+      "fit_short": "多终端管理、远端任务与会话续接",
+      "project_fit": "同时处理多个开发任务、经常切换本地和 SSH 主机时，可参考它的分窗、任务状态和断开后重连方式，减少反复寻找等待输入或已经停下的终端。",
+      "difficulty": "中",
+      "cost": "程序采用 Apache-2.0，提供单个 Rust 可执行程序，需要自己的终端、助手环境和相应主机访问权限。助手模型订阅或 API、远端机器和网络资源仍按各自方案计算。",
+      "caution": "后台服务和所在主机需要继续运行。主机或服务重启后，恢复的是保存的布局及可续接的受支持会话，原进程不会存活；不同助手、终端和远端连接的状态识别与恢复能力应分别验证。",
+      "first_step": "先用两个只处理虚构文件的终端任务练习拆分、退出客户端和重连，核对任务是否仍在运行、状态显示是否准确，再考虑接入实际开发工作。",
+      "example": "把演示服务和检查任务放在两个窗格里，暂时断开客户端后重新连接，查看哪一项仍在运行、哪一项需要输入，并核对各自的终端输出。",
+      "diagram_title": "集中查看并续接终端任务",
+      "diagram_steps": [
+        "本地或远端的终端任务",
+        "后台托管并汇总任务状态",
+        "可重连窗口与待处理提示"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "macro-inc/macro",
+      "repo_id": "R_kgDOQRzRpg",
+      "url": "https://github.com/macro-inc/macro",
+      "weekly_stars": 1149,
+      "total_stars": 6096,
+      "forks": 566,
+      "language": "Rust",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-11-03T00:58:21Z",
+      "source_revision": "adc93c989465063fd5080647c98024703b3f5037",
+      "evidence_url": "https://github.com/macro-inc/macro/blob/adc93c989465063fd5080647c98024703b3f5037/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 5,
+          "captured_at": "2026-11-03T08:59:40.698829+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把团队消息、邮件、文档和任务放进同一个工作台，通过相互链接的资料给成员和 AI 助手提供上下文。",
+      "fit_short": "团队协作、资料关联与工作流研究",
+      "project_fit": "想在协作产品中把讨论、资料和任务连起来时，可参考它的双向链接、频道权限和协作文档结构；希望直接采用成品时，需要分别评估托管服务与完整自托管条件。",
+      "difficulty": "高",
+      "cost": "代码采用 AGPL-3.0。本地开发文档要求 Nix，完整本地栈还需 Docker、数据库等依赖；真实邮箱集成与助手接入需服务授权，详见[固定版本本地运行说明](https://github.com/macro-inc/macro/blob/adc93c989465063fd5080647c98024703b3f5037/docs/development/running-locally.md)。托管、外部服务与模型资源按相应方案计费。",
+      "caution": "本地前端可连接托管开发服务，采用前要选清实际数据运行在哪里。资料在频道中被引用后，可见范围可能改变；接真实邮箱或共享记忆前，核对成员权限、同步范围、模型去向和导出备份。",
+      "first_step": "先按本地运行说明评估独立本地栈，用两名虚构成员和一份测试文档验证引用、加入与退出频道后的可见范围，再考虑接入邮箱和模型。",
+      "example": "筹备虚构展览时，可把活动说明、讨论串和布展任务相互引用，检查成员能否看到相应资料，并把重要决定留在文档里，方便回查任务的来由。",
+      "diagram_title": "把讨论、资料和任务连在一起",
+      "diagram_steps": [
+        "虚构文档、消息与任务",
+        "相互引用并按权限协作",
+        "关联资料与协作记录"
+      ]
+    }
+  ]
+}
