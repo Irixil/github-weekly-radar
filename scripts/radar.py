@@ -64,7 +64,7 @@ class Trending(HTMLParser):
             self.heading = False
         if tag == "article" and self.row is not None:
             text = " ".join(self.row["text"])
-            gain = re.search(r"([\d,]+)\s+stars this week", text)
+            gain = re.search(r"([\d,]+)\s+stars? this week", text)
             if not self.row["repo"] or not gain:
                 raise ValueError("周榜行缺少仓库或本周 Star；停止，不能猜测。")
             self.rows.append({"repo": self.row["repo"], "source_rank": len(self.rows) + 1,
@@ -329,7 +329,10 @@ def render(issue):
 def self_check():
     parser = Trending()
     parser.feed('<article class="Box-row"><h2><a href="/a/one">a/one</a></h2><span>1,234 stars this week</span></article><article class="Box-row"><h2><a href="/b/two">b/two</a></h2><span>0 stars this week</span></article>')
-    assert [(r["repo"], r["weekly_stars"]) for r in parser.rows] == [("a/one", 1234), ("b/two", 0)]
+    parser.feed('<article class="Box-row"><h2><a href="/c/three">c/three</a></h2><span>1 star this week</span></article>')
+    assert [(r["repo"], r["weekly_stars"]) for r in parser.rows] == [
+        ("a/one", 1234), ("b/two", 0), ("c/three", 1),
+    ]
     try:
         Trending().feed('<article class="Box-row"><h2><a href="/a/one">one</a></h2></article>')
     except ValueError:

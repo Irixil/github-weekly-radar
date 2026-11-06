@@ -1,0 +1,225 @@
+{
+  "issue_date": "2026-11-06",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 140,
+  "eligible_count": 120,
+  "history_count": 119,
+  "unseen_count": 78,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "想梳理软件开发步骤，可先看 **gstack**。要给合并请求做审查，可看 **PR-Agent**。**Scenario Skills** 面向创作素材，**OpenMAIC** 面向互动课程初稿，**Codync** 可以从 iPhone 接续电脑上的助手任务。",
+  "exclusions": [
+    {
+      "repo": "D4Vinci/Scrapling",
+      "source_url": "https://github.com/D4Vinci/Scrapling/blob/bc602488b44e978da3266841e913af17577ec0fd/README.md",
+      "reason": "根 LICENSE 与 README 许可章节写 BSD-3-Clause。README 的免责声明却称仅供教育与研究，适用范围尚未统一，本期跳过。"
+    },
+    {
+      "repo": "HunYiSage/dsh-purge",
+      "source_url": "https://github.com/HunYiSage/dsh-purge/blob/fc6e787dda5cfbc48c342cf427831b403239b866/README.md",
+      "reason": "根 LICENSE 与 NOTICE 标注 Apache-2.0。README 另有限制原版转售的条款，商业说明也对销售等用途另设条件，许可表述尚未统一，本期跳过。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "garrytan/gstack",
+      "repo_id": "R_kgDORkolAw",
+      "url": "https://github.com/garrytan/gstack",
+      "weekly_stars": 1721,
+      "total_stars": 139946,
+      "forks": 20699,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-06T01:01:37Z",
+      "source_revision": "eaf1701da2d68b5c03136ff530aa228013eedb7c",
+      "evidence_url": "https://github.com/garrytan/gstack/blob/eaf1701da2d68b5c03136ff530aa228013eedb7c/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 6,
+          "captured_at": "2026-11-06T09:08:06.812965+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 AI 编程助手一套工作步骤，帮它梳理需求、审查改动、验证功能和准备发布。",
+      "fit_short": "功能规划、代码审查与发布检查",
+      "project_fit": "适合希望把开发过程分成明确步骤的团队。可以只采用需求梳理或代码审查，让每一步留下可核对的计划和问题。",
+      "difficulty": "中",
+      "cost": "主项目采用 MIT，常规安装需要 Git、Bun 和兼容的编程助手，Windows 还需 Node.js。模型和可选服务按各自方案计费。随附材料按各自许可处理。[固定版本第三方许可说明](https://github.com/garrytan/gstack/blob/eaf1701da2d68b5c03136ff530aa228013eedb7c/NOTICE.md)",
+      "caution": "不同助手支持的功能和权限限制有差异。部分步骤能改代码、操作浏览器或创建合并请求，外部复核还可能发送代码给所选模型服务。先确认允许的操作和数据范围。",
+      "first_step": "在练习仓库只做一次需求梳理，检查产出的方案是否说明了范围、待决定事项和验证方法。",
+      "example": "为演示应用规划 CSV 导出，让助手先列出筛选条件、空结果和大数据量时的行为，再把确定的规则整理成实施和测试清单。",
+      "diagram_title": "把功能想法整理成开发计划",
+      "diagram_steps": [
+        "功能需求与代码改动",
+        "分阶段梳理和审查",
+        "方案与待检查事项"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "scenario-labs/skills",
+      "repo_id": "R_kgDOT2LqbA",
+      "url": "https://github.com/scenario-labs/skills",
+      "weekly_stars": 1684,
+      "total_stars": 3062,
+      "forks": 271,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-11-05T23:21:04Z",
+      "source_revision": "f29bf06ab89088695ed3431ac99d20a090441a2f",
+      "evidence_url": "https://github.com/scenario-labs/skills/blob/f29bf06ab89088695ed3431ac99d20a090441a2f/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 17,
+          "captured_at": "2026-11-06T09:07:57.534854+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 AI 助手提供素材制作步骤，让它用 Scenario 选模型、生成图片或视频，并把结果放进素材库。",
+      "fit_short": "游戏素材打样、图片变体与视频草稿",
+      "project_fit": "适合要把文字需求和参考图变成一批可比较素材的工作。也能参考它的流程，把选模型、确认费用、检查结果和归档拆成独立步骤。",
+      "difficulty": "中",
+      "cost": "技能采用 MIT。云端生成需要 Scenario 账号和支持连接其工具服务的助手，按使用量消耗团队算力额度。使用 API 密钥需付费套餐。本地专家工具另需对应的创作软件。[官方连接与额度说明](https://help.scenario.com/articles/2664328768-getting-started-with-the-scenario-mcp-server) · [API 费用说明](https://help.scenario.com/articles/7934059476-api-usage-and-credits-compute-units)",
+      "caution": "参考图可能上传到所选工作区，生成任务会扣额度。先确认素材授权、工作区和模型的使用条件。交付前人工核对轮廓、文字和风格是否符合要求。",
+      "first_step": "先估算一张图标的用量，只做一张样图。缩到实际使用尺寸，检查主体能否辨认，再决定是否做变体。",
+      "example": "为虚构种植游戏制作浇水壶图标，给出蓝白配色和一张自制参考图，先选出合适的一版，再用同样的风格做其他道具。",
+      "diagram_title": "把素材需求变成可挑选的样图",
+      "diagram_steps": [
+        "素材需求与参考图",
+        "选模型生成并整理",
+        "可预览的素材样图"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "The-PR-Agent/pr-agent",
+      "repo_id": "R_kgDOJ4EDkg",
+      "url": "https://github.com/The-PR-Agent/pr-agent",
+      "weekly_stars": 1355,
+      "total_stars": 15093,
+      "forks": 2114,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-11-05T23:59:11Z",
+      "source_revision": "6de02f5036ce9b250222f8be65f42a20694ff972",
+      "evidence_url": "https://github.com/The-PR-Agent/pr-agent/blob/6de02f5036ce9b250222f8be65f42a20694ff972/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 16,
+          "captured_at": "2026-11-06T09:07:57.269633+08:00"
+        },
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 4,
+          "captured_at": "2026-11-06T09:07:57.534854+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "读取代码合并请求里的改动，生成摘要、审查反馈和改进建议，供开发者核对。",
+      "fit_short": "合并前审查、改动解释与测试补漏",
+      "project_fit": "适合合并请求较多、希望先看到主要改动和风险提示的团队。可先单独使用审查功能，再决定是否接入代码平台的自动检查。",
+      "difficulty": "中",
+      "cost": "采用 MIT，可用命令行、容器或代码平台的自动化流程。需要配置代码平台权限和可用的模型服务。模型用量和运行资源按所选方案计费。",
+      "caution": "较大的改动可能因模型输入限制被省略，先看报告的覆盖范围。有发布权限时可向合并请求写入反馈，连接外部模型时应核对代码发送范围。[固定版本审查说明](https://github.com/The-PR-Agent/pr-agent/blob/6de02f5036ce9b250222f8be65f42a20694ff972/docs/docs/tools/review.md)",
+      "first_step": "先在练习仓库挑一个只改几行代码的合并请求，手动触发一次审查，核对它引用的改动和提示理由。",
+      "example": "审查一份修改表单校验的合并请求时，让工具检查空输入是否漏测。开发者对照实际代码与测试，再决定是否补上用例。",
+      "diagram_title": "先找出代码改动里需要复核的点",
+      "diagram_steps": [
+        "合并请求的代码改动",
+        "模型归纳改动与风险",
+        "摘要与待复核建议"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "THU-MAIC/OpenMAIC",
+      "repo_id": "R_kgDORkIb9w",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "weekly_stars": 1018,
+      "total_stars": 42739,
+      "forks": 6574,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-05T19:49:30Z",
+      "source_revision": "8fc4fb7b20737121f495355a3a4ddc62b7baf141",
+      "evidence_url": "https://github.com/THU-MAIC/OpenMAIC/blob/8fc4fb7b20737121f495355a3a4ddc62b7baf141/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 17,
+          "captured_at": "2026-11-06T09:08:06.812965+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把主题或参考资料整理成互动课程初稿，内容可包含讲解、测验和可操作的示例。",
+      "fit_short": "课程备课、互动演示与自学材料",
+      "project_fit": "适合已有资料、想先搭出课程结构的教师或内容制作者。也可以用它研究大纲、讲解和练习如何组合成一节课。",
+      "difficulty": "高",
+      "cost": "主项目采用 MIT。该版本本地部署需要 Node.js 22.19+、pnpm 10+ 和 PostgreSQL 16。模型、配音与存储费用取决于所选方案。再分发时另核对随附的 LGPL 组件。",
+      "caution": "生成的讲解、公式、答案和交互行为需要人工验收。部署给多人使用时应明确课程归属、访问权限和模型数据去向。[固定版本托管说明](https://github.com/THU-MAIC/OpenMAIC/blob/8fc4fb7b20737121f495355a3a4ddc62b7baf141/packages/docs/content/docs/hosting.mdx)",
+      "first_step": "先用一页公开资料生成一段讲解和一道题，自己走完一遍，核对内容与答案后再扩成完整课程。",
+      "example": "用公开教材准备杠杆原理课，让模型先拟大纲，再做一个能改变力臂长度的演示和一道练习题。教师检查公式、示例和测验答案。",
+      "diagram_title": "把资料编成一节互动课程",
+      "diagram_steps": [
+        "主题与公开参考资料",
+        "先列大纲再生成场景",
+        "课程初稿与练习题"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "leepokai/Codync",
+      "repo_id": "R_kgDORqUUSA",
+      "url": "https://github.com/leepokai/Codync",
+      "weekly_stars": 909,
+      "total_stars": 1899,
+      "forks": 195,
+      "language": "Rust",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-05T22:10:51Z",
+      "source_revision": "e34b319afd44692e3826279d79121cec41d7968f",
+      "evidence_url": "https://github.com/leepokai/Codync/blob/e34b319afd44692e3826279d79121cec41d7968f/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 7,
+          "captured_at": "2026-11-06T09:07:58.914163+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把电脑上的编程助手接到 iPhone 或桌面聊天窗口，可以发任务、看进度和处理授权请求。",
+      "fit_short": "跨设备接续任务与审批",
+      "project_fit": "适合需要暂时离开电脑，又希望继续查看助手进度的人。也可以为不同的练习目录设置独立助手，分别限定它们的权限。",
+      "difficulty": "中",
+      "cost": "源码采用 Apache-2.0。电脑端需要主机程序和自备的编程助手，模型或订阅按助手提供方计费。官方云中继免费供个人使用，多租户服务需自行运行中继和账号服务。[固定版本云服务与商标说明](https://github.com/leepokai/Codync/blob/e34b319afd44692e3826279d79121cec41d7968f/TRADEMARK.md)",
+      "caution": "电脑端需保持在线，每台远端设备都要单独授权。助手可能在电脑上执行命令或改文件，先限定任务目录和权限，并核对所选模型会收到哪些资料。",
+      "first_step": "先用一个练习目录配对一台 iPhone，问一个只读问题。确认能看见进度和回复，再核对如何撤销设备授权。",
+      "example": "在 iPhone 上询问演示仓库里一次单元测试失败的原因，让电脑上的助手读取测试摘要并回复。如果助手请求运行命令，先查看申请的操作。",
+      "diagram_title": "在手机上接续电脑助手的任务",
+      "diagram_steps": [
+        "手机任务与设备授权",
+        "电脑助手执行并回传",
+        "进度、回复和审批请求"
+      ]
+    }
+  ]
+}
