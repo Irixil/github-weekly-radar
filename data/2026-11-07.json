@@ -1,0 +1,220 @@
+{
+  "issue_date": "2026-11-07",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 138,
+  "eligible_count": 119,
+  "history_count": 124,
+  "unseen_count": 77,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "想统一数据指标的计算口径，可先看 **Auto Ontology**。**Hex** 用于本机语音听写，**agent-browser** 可用于网页操作和验证。做游戏原型可参考 **Claude Code Game Studios**，把文稿整理成网页可看 **Garden Skills**。",
+  "exclusions": [
+    {
+      "repo": "D4Vinci/Scrapling",
+      "source_url": "https://github.com/D4Vinci/Scrapling/blob/bc602488b44e978da3266841e913af17577ec0fd/README.md",
+      "reason": "根 LICENSE 和 README 许可章节标注 BSD-3-Clause，但 README 免责声明称仅供教育与研究。用途范围尚未统一，本期跳过。"
+    },
+    {
+      "repo": "HunYiSage/dsh-purge",
+      "source_url": "https://github.com/HunYiSage/dsh-purge/blob/fc6e787dda5cfbc48c342cf427831b403239b866/README.md",
+      "reason": "根 LICENSE 和 NOTICE 标注 Apache-2.0，但 README 禁止原版转售，商业说明也对销售等用途另设条件。许可表述尚未统一，本期跳过。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "NVIDIA/auto-ontology",
+      "repo_id": "R_kgDOSOTJTw",
+      "url": "https://github.com/NVIDIA/auto-ontology",
+      "weekly_stars": 8035,
+      "total_stars": 9036,
+      "forks": 725,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-06T23:03:36Z",
+      "source_revision": "c447003f72a822301e927196a4ecb5b597c308d5",
+      "evidence_url": "https://github.com/NVIDIA/auto-ontology/blob/c447003f72a822301e927196a4ecb5b597c308d5/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 17,
+          "captured_at": "2026-11-07T09:01:02.340357+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把业务数据库的字段含义、指标算法和表间关系整理成可审核的目录，让 AI 按确认过的口径查询并说明依据。",
+      "fit_short": "数据口径统一、业务问数与来源追溯",
+      "project_fit": "同一个指标分散在多张表，接入问数助手前需要统一定义时，可以用它整理字段和算法，让相关人员核对后再用于回答。",
+      "difficulty": "高",
+      "cost": "主项目采用 Apache-2.0。快速部署需要 Docker Compose v2、uv 和可用的模型端点，目录存于 PostgreSQL。费用取决于托管模型用量或自建资源，外部服务和组件各有许可。[固定版本第三方说明](https://github.com/NVIDIA/auto-ontology/blob/c447003f72a822301e927196a4ecb5b597c308d5/THIRD_PARTY_NOTICES.md)",
+      "caution": "系统会读取表结构与样例值，初步推断的关系和公式需要人审。若通过界面添加连接且未配置 Vault，连接信息会以未加密形式存入目录数据库。先用只读样例库，并核对模型收到的数据。[固定版本连接说明](https://github.com/NVIDIA/auto-ontology/blob/c447003f72a822301e927196a4ecb5b597c308d5/docs/connections.md)",
+      "first_step": "先选一个公开样例库，只定义一项指标。准备几个已知答案的问题，对照生成的查询语句和结果。",
+      "example": "用样例订单库定义“已付款订单数”，确认按付款日期统计、按订单编号去重，再问某一周的订单数，与手工统计对照。",
+      "diagram_title": "让问数按同一套口径计算",
+      "diagram_steps": [
+        "表结构与业务问题",
+        "按确认口径生成查询",
+        "带来源的查询结果"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "Donchitos/Claude-Code-Game-Studios",
+      "repo_id": "R_kgDOROahWg",
+      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "weekly_stars": 6018,
+      "total_stars": 36128,
+      "forks": 4757,
+      "language": "Shell",
+      "license": "MIT",
+      "last_push_at": "2026-10-19T02:43:42Z",
+      "source_revision": "05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418",
+      "evidence_url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 2,
+          "captured_at": "2026-11-07T09:01:02.305602+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 Claude Code 一套游戏开发模板，把玩法设计、写代码和测试分给不同角色，并为各阶段设置检查点。",
+      "fit_short": "小型游戏原型、开发分工与试玩验收",
+      "project_fit": "适合想把游戏想法拆成可交付任务的小团队或独立开发者。先选一条玩法，再让设计、程序和测试围绕同一组验收条件推进。",
+      "difficulty": "中",
+      "cost": "模板采用 MIT。完整流程需要 Claude Code、Git、Python 3 和 Bash。还需按项目选择游戏引擎。助手、引擎和素材费用取决于实际选型。[固定版本环境要求](https://github.com/Donchitos/Claude-Code-Game-Studios/blob/05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418/.claude/docs/setup-requirements.md)",
+      "caution": "启动目录和自动化设置会影响检查和审批行为。先核对运行权限与任务范围，再实际试玩并确认画面、交互和重开流程。",
+      "first_step": "只做一个场景和一条玩法规则，让各角色分别写清任务、实现和验收方式，完成一次试玩再增加功能。",
+      "example": "做一个方块躲障碍原型时，先写清碰撞和失败条件，让程序角色实现，再让测试角色检查碰撞判定与重新开始。",
+      "diagram_title": "把一个玩法拆成开发和验收任务",
+      "diagram_steps": [
+        "设计目标与玩法规则",
+        "按角色分工并复核",
+        "开发任务与验收记录"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "anomalyco/hex",
+      "repo_id": "R_kgDOTcCg9w",
+      "url": "https://github.com/anomalyco/hex",
+      "weekly_stars": 4291,
+      "total_stars": 5536,
+      "forks": 325,
+      "language": "Rust",
+      "license": "MIT",
+      "last_push_at": "2026-11-06T20:25:37Z",
+      "source_revision": "49de3e167598c3e1548c2438a0f4a8597e685346",
+      "evidence_url": "https://github.com/anomalyco/hex/blob/49de3e167598c3e1548c2438a0f4a8597e685346/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 8,
+          "captured_at": "2026-11-07T09:01:02.754978+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "按住快捷键说话，Hex 在设备上把语音转成文字，松开后把结果粘贴到当前应用。",
+      "fit_short": "桌面听写、速记与草稿录入",
+      "project_fit": "适合想快速口述草稿、待办事项或短句的人，也可用于观察语音识别结果如何接到日常文字输入。",
+      "difficulty": "低",
+      "cost": "程序采用 MIT。首次使用要下载语音模型，需要麦克风和相应系统权限。基础听写使用本机资源。下载模型和第三方组件各有许可。[固定版本第三方说明](https://github.com/anomalyco/hex/blob/49de3e167598c3e1548c2438a0f4a8597e685346/THIRD_PARTY_NOTICES.md)",
+      "caution": "在目标应用里核对输入焦点、快捷键和粘贴权限。Windows 和 Linux 的指南标注为测试版，专名、数字和标点也值得逐项检查。[固定版本平台指南](https://github.com/anomalyco/hex/blob/49de3e167598c3e1548c2438a0f4a8597e685346/docs/README.md)",
+      "first_step": "先在空白文档中口述两句通用例句，确认文字进入预期窗口，再检查断句和数字。",
+      "example": "写一份活动通知时，先把三项准备事项口述到文本编辑器，再对照检查日期、活动名称和标点。",
+      "diagram_title": "把口述草稿输入当前应用",
+      "diagram_steps": [
+        "快捷键与口述语音",
+        "在设备上识别语音",
+        "当前窗口中的文字"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "vercel-labs/agent-browser",
+      "repo_id": "R_kgDOQ3j5Tg",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "weekly_stars": 1404,
+      "total_stars": 46314,
+      "forks": 3172,
+      "language": "Rust",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-06T23:49:51Z",
+      "source_revision": "d44f6989bf5e9a9a1c6dd6d97175f8c33b138eca",
+      "evidence_url": "https://github.com/vercel-labs/agent-browser/blob/d44f6989bf5e9a9a1c6dd6d97175f8c33b138eca/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 7,
+          "captured_at": "2026-11-07T09:01:02.754978+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "让助手用命令打开网页、找出能操作的元素并点击或填表，再读取页面变化。",
+      "fit_short": "网页自动化、产品测试与操作取证",
+      "project_fit": "适合用重复操作验证网页流程，也可以把操作前后的页面元素和截图留下来，帮助复查按钮、筛选条件和结果。",
+      "difficulty": "中",
+      "cost": "工具采用 Apache-2.0。默认使用 Chrome for Testing，本机操作需有可用的浏览器及系统依赖。接入 AI 助手或云浏览器时，相关服务费用另计。",
+      "caution": "页面变化后要重新获取元素编号。若连接已登录的浏览器，会以该会话的权限操作网页。先用隔离的测试会话，确认可操作的页面与动作。",
+      "first_step": "打开一个无需登录的样例页面，先读到一个链接，再点击并核对目标地址或可见文字。",
+      "example": "在测试商品页勾选“仅看有库存”，核对结果是否还出现缺货商品，并保留筛选前后的页面快照供复查。",
+      "diagram_title": "读懂网页元素再验证操作结果",
+      "diagram_steps": [
+        "网页地址与操作目标",
+        "识别元素并执行",
+        "页面变化与核对证据"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "ConardLi/garden-skills",
+      "repo_id": "R_kgDOSIk_Sw",
+      "url": "https://github.com/ConardLi/garden-skills",
+      "weekly_stars": 1124,
+      "total_stars": 14519,
+      "forks": 1673,
+      "language": "JavaScript",
+      "license": "MIT",
+      "last_push_at": "2026-10-25T13:45:33Z",
+      "source_revision": "2b9a89340b70f632d31c0f1c69fce94a7912423e",
+      "evidence_url": "https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/javascript?since=weekly",
+          "rank": 11,
+          "captured_at": "2026-11-07T09:01:02.308943+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 AI 助手一组制作说明，可以把素材整理成网页文章、演示或动效片段。",
+      "fit_short": "公开文稿排版、网页演示与动效",
+      "project_fit": "适合已有公开文稿、想改善阅读顺序和图文布局的场景。可先选文章技能，确定内容结构和保留范围，再生成便于分享的网页。",
+      "difficulty": "中",
+      "cost": "技能采用 MIT，需要能读取工作说明的 AI 助手。文章流程使用 Reacticle 组件生成 HTML，也可选 PDF。模型和外部工具的费用按所选流程计算。[固定版本文章技能说明](https://github.com/ConardLi/garden-skills/blob/2b9a89340b70f632d31c0f1c69fce94a7912423e/skills/beautiful-article/README.md)",
+      "caution": "不同文章类型的改写和摘录幅度有差别。先约定哪些原句和引用要保留，交付前检查事实、链接、外部图片使用范围和窄屏排版。",
+      "first_step": "先选一页公开 Markdown，只做一版网页文章。确定文章类型和保留范围，再比较原文与页面里的关键信息。",
+      "example": "把一页公开展览介绍改成可独立打开的网页，先确定标题、目录和图文顺序，再核对展期、地点和原始链接。",
+      "diagram_title": "把公开文稿整理成网页文章",
+      "diagram_steps": [
+        "公开文稿与版式要求",
+        "整理结构并设计版面",
+        "可独立打开的网页"
+      ]
+    }
+  ]
+}
