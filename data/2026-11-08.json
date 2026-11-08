@@ -1,0 +1,215 @@
+{
+  "issue_date": "2026-11-08",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 141,
+  "eligible_count": 123,
+  "history_count": 129,
+  "unseen_count": 78,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "想查资料并回到原文，可先看 **Open Notebook**。想在终端边改代码边跑检查，可看 **Oh My Pi**。**Google Skills** 提供 Google 产品的操作说明，**ZapFast** 用于桌面查看 WhatsApp 会话，**Kubernetes** 管理容器应用的运行与更新。",
+  "exclusions": [
+    {
+      "repo": "D4Vinci/Scrapling",
+      "source_url": "https://github.com/D4Vinci/Scrapling/blob/bc602488b44e978da3266841e913af17577ec0fd/README.md",
+      "reason": "根 LICENSE 和 README 许可章节标注 BSD-3-Clause，但 README 免责声明称仅供教育与研究。用途范围尚未统一，本期跳过。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "google/skills",
+      "repo_id": "R_kgDOR2K4PA",
+      "url": "https://github.com/google/skills",
+      "weekly_stars": 1477,
+      "total_stars": 23405,
+      "forks": 1955,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-07T14:41:39Z",
+      "source_revision": "2194d3b8b1f31975fef2f1a0ae6b9ab55bd7ceee",
+      "evidence_url": "https://github.com/google/skills/blob/2194d3b8b1f31975fef2f1a0ae6b9ab55bd7ceee/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 12,
+          "captured_at": "2026-11-08T09:01:14.902640+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 AI 助手提供 Google 产品的操作说明，帮助它按步骤拟配置、检查权限或排查问题。",
+      "fit_short": "云服务配置、权限梳理与排错",
+      "project_fit": "适合需要在多个 Google 产品文档中找具体步骤的开发者。可以针对一个任务选一项技能，先核对它生成的配置方案，再决定是否执行。",
+      "difficulty": "中",
+      "cost": "技能采用 Apache-2.0。需要能读取这类工作说明的助手，使用 npx 配置时需要 Node.js。若连接云项目并调用资源，云服务与模型按各自方案计费。",
+      "caution": "部分技能能生成或执行会改动云资源的操作。先核对目标项目、访问范围和费用，再审批具体配置。示例技能要求创建前确认。[固定版本云存储配置说明](https://github.com/google/skills/blob/2194d3b8b1f31975fef2f1a0ae6b9ab55bd7ceee/skills/cloud/google-cloud-storage-bucket-architect/SKILL.md)",
+      "first_step": "只选云存储配置技能，用虚构的归档需求生成一份方案，核对存储位置、访问范围和保留时间。",
+      "example": "为公开活动照片规划云存储，先描述文件量和哪些人可读，让助手拟出存储区域、访问规则与过期清理配置，再由管理员审核。",
+      "diagram_title": "从归档需求拟出云存储方案",
+      "diagram_steps": [
+        "存储需求与访问规则",
+        "按官方步骤拟配置",
+        "待审核的云存储方案"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "crmne/zapfast",
+      "repo_id": "R_kgDOUII_MQ",
+      "url": "https://github.com/crmne/zapfast",
+      "weekly_stars": 1018,
+      "total_stars": 3363,
+      "forks": 347,
+      "language": "Rust",
+      "license": "MIT",
+      "last_push_at": "2026-11-07T02:38:06Z",
+      "source_revision": "d85f73146b673ff09c093c655610f11e1c909f4c",
+      "evidence_url": "https://github.com/crmne/zapfast/blob/d85f73146b673ff09c093c655610f11e1c909f4c/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 13,
+          "captured_at": "2026-11-08T09:01:15.288227+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把 WhatsApp 账号关联到桌面应用，在电脑上看会话、切换号码并管理本机存档。",
+      "fit_short": "桌面查看会话、多账号切换与归档",
+      "project_fit": "适合想了解桌面聊天界面、键盘操作或本地历史保存方式的人。它能在同一窗口切换多个已关联号码，已保存的消息也可在本机查阅。",
+      "difficulty": "低",
+      "cost": "程序采用 MIT，提供 macOS、Windows 和 Linux 版本。需要现有 WhatsApp 账号和可关联的手机。运行主要用到设备、网络和本机存储，随附音效等按各自许可处理。[固定版本第三方许可](https://github.com/crmne/zapfast/blob/d85f73146b673ff09c093c655610f11e1c909f4c/THIRD-PARTY-NOTICES.md)",
+      "caution": "这是第三方客户端，项目文档提示有触发平台条款或账号受限的风险。聊天记录可保存在本机，导出前要核对保存位置和访问范围。",
+      "first_step": "先读设备关联和解除关联的说明。在允许的演示环境中，只核对已有会话的显示和撤销关联的方式。",
+      "example": "在无敏感信息的演示环境里，依次打开两个已有会话，查看最近消息，再核对本机能否找到已保存的历史。",
+      "diagram_title": "把手机会话接到桌面查看",
+      "diagram_steps": [
+        "手机账号与配对授权",
+        "同步近期消息到本机",
+        "桌面会话与本机存档"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "can1357/oh-my-pi",
+      "repo_id": "R_kgDOQxs0bQ",
+      "url": "https://github.com/can1357/oh-my-pi",
+      "weekly_stars": 869,
+      "total_stars": 38154,
+      "forks": 4314,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-08T00:14:29Z",
+      "source_revision": "24439066040e006eb08da7b204f0ac41c79d2de9",
+      "evidence_url": "https://github.com/can1357/oh-my-pi/blob/24439066040e006eb08da7b204f0ac41c79d2de9/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 13,
+          "captured_at": "2026-11-08T09:01:14.936526+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在终端里让 AI 助手读代码、预览改动并运行检查，可接不同模型。",
+      "fit_short": "代码修改、调试与差异复核",
+      "project_fit": "适合希望在同一个终端会话内定位代码问题、调整实现和检查结果的开发者。可先用一条小改动熟悉它的编辑预览和工具调用。",
+      "difficulty": "中",
+      "cost": "主项目采用 MIT，有预编译程序和 Bun 等安装方式。需要配置模型服务，远端用量按提供方计费，本地模型消耗设备资源。附带的第三方组件保留各自许可。[固定版本组件说明](https://github.com/can1357/oh-my-pi/blob/24439066040e006eb08da7b204f0ac41c79d2de9/packages/coding-agent/THIRD-PARTY-NOTICES.txt)",
+      "caution": "助手能执行命令和修改文件。接入前先限定工作目录与可用工具，复查写入、网络和外部模型的数据范围。",
+      "first_step": "在练习项目里给一个小函数提出明确修改要求，先看改动预览，再核对测试输出和实际改到的文件。",
+      "example": "调整演示项目对空输入的处理时，先看它建议改哪几行，再运行相关单元测试，核对正常输入的行为是否仍符合预期。",
+      "diagram_title": "在终端核对改动再运行检查",
+      "diagram_steps": [
+        "代码与修改要求",
+        "定位问题并预览改动",
+        "补丁和测试结果"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "lfnovo/open-notebook",
+      "repo_id": "R_kgDONDsQ1w",
+      "url": "https://github.com/lfnovo/open-notebook",
+      "weekly_stars": 707,
+      "total_stars": 41737,
+      "forks": 4798,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-08T00:08:01Z",
+      "source_revision": "e5381b0c4956810f6d7d35f08e50051fbde06192",
+      "evidence_url": "https://github.com/lfnovo/open-notebook/blob/e5381b0c4956810f6d7d35f08e50051fbde06192/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 17,
+          "captured_at": "2026-11-08T09:01:14.936526+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把文档、网页和音视频整理进可自托管的笔记本，再按资料搜索或提问。",
+      "fit_short": "公开资料整理、带引用问答与研究笔记",
+      "project_fit": "适合资料散在多个文件、需要一边提问一边找原文的人。按主题建笔记本，可控制哪些来源参与回答。",
+      "difficulty": "中",
+      "cost": "采用 MIT。常规部署使用 Docker Compose 和 SurrealDB，需要配置生成回答的语言模型和建立索引的向量模型。费用取决于云服务用量，或自建机器的算力与存储。",
+      "caution": "默认部署会在网络接口开放服务，且未设密码。先限制访问范围，再处理非公开资料。若选云端模型，核对发送内容与服务条款。回答中的引用也应回到原文检查。[固定版本安全配置](https://github.com/lfnovo/open-notebook/blob/e5381b0c4956810f6d7d35f08e50051fbde06192/docs/5-CONFIGURATION/security.md)",
+      "first_step": "只导入一份短的公开说明，问两个有明确答案的问题，打开引用所指的资料，找到能支持答案的原文。",
+      "example": "把两份公开设备说明放进同一个笔记本，问其中一个型号的保养步骤，点开引用核对适用型号、条件和原文顺序。",
+      "diagram_title": "从资料提问并回到原文核对",
+      "diagram_steps": [
+        "公开文档与研究问题",
+        "建索引并按资料回答",
+        "答案和原文出处"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "kubernetes/kubernetes",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkyMDU4MDQ5OA==",
+      "url": "https://github.com/kubernetes/kubernetes",
+      "weekly_stars": 669,
+      "total_stars": 128903,
+      "forks": 45755,
+      "language": "Go",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-07T19:25:38Z",
+      "source_revision": "6b5d04cd0bf7e9aa953dc4a13028878a8a48bd6a",
+      "evidence_url": "https://github.com/kubernetes/kubernetes/blob/6b5d04cd0bf7e9aa953dc4a13028878a8a48bd6a/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 17,
+          "captured_at": "2026-11-08T09:01:15.345937+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "按设定的副本数和版本调度容器，帮助应用部署、逐步更新并替换故障实例。",
+      "fit_short": "多实例服务部署、升级与运行管理",
+      "project_fit": "适合已有容器镜像、想统一管理多个实例或分批更新服务的团队。先声明期望的运行状态，再查看集群把实际状态调整到了哪里。",
+      "difficulty": "高",
+      "cost": "源码采用 Apache-2.0。需要可运行容器的集群和管理工具。小规模可用本机测试环境，正式运行的机器、网络、存储和托管服务按部署方案计费。",
+      "caution": "可用性依赖健康检查、资源配置和集群容量。保存状态的应用还要单独设计持久存储与备份。先在测试环境核对更新过程。[固定版本 Deployment 说明](https://github.com/kubernetes/website/blob/09b7af0f1d82bc812ad51b8b6033956fbaf73415/content/en/docs/concepts/workloads/controllers/deployment.md)",
+      "first_step": "在可丢弃的测试集群里运行一个演示服务，先确认副本数，再替换一次镜像，观察新旧实例的状态。",
+      "example": "把一个演示网页设为两个副本。更新镜像后，查看新实例何时就绪、旧实例何时退出，以及最终是否恢复到两个副本。",
+      "diagram_title": "按设定的副本数运行和更新应用",
+      "diagram_steps": [
+        "容器镜像与运行规则",
+        "持续对齐副本和版本",
+        "应用副本与更新状态"
+      ]
+    }
+  ]
+}
