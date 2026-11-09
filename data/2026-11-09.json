@@ -1,0 +1,215 @@
+{
+  "issue_date": "2026-11-09",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 137,
+  "eligible_count": 121,
+  "history_count": 134,
+  "unseen_count": 75,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "想让助手读取和操作桌面控件，可先看 **agent-desktop**。**Orkas** 把任务分给多个助手，**DS Harness Remote** 用于接续电脑上的编程会话。整理 Python 代码可看 **Ruff**，观察服务指标可看 **Prometheus**。",
+  "exclusions": [
+    {
+      "repo": "D4Vinci/Scrapling",
+      "source_url": "https://github.com/D4Vinci/Scrapling/blob/30cadb56a407fd631391441709ab792ebca52b08/README.md",
+      "reason": "根 LICENSE 和 README 许可章节标注 BSD-3-Clause，但 README 免责声明仍称仅供教育与研究。用途范围尚未统一，本期跳过。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "vercel-labs/agent-desktop",
+      "repo_id": "R_kgDORUIU8w",
+      "url": "https://github.com/vercel-labs/agent-desktop",
+      "weekly_stars": 13712,
+      "total_stars": 19661,
+      "forks": 1460,
+      "language": "Rust",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-08T20:44:28Z",
+      "source_revision": "b43ac4f6e892ef608f8851428613c4009f0e84c7",
+      "evidence_url": "https://github.com/vercel-labs/agent-desktop/blob/b43ac4f6e892ef608f8851428613c4009f0e84c7/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 7,
+          "captured_at": "2026-11-09T09:07:16.318797+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把桌面应用的按钮和输入框等控件读成结构化信息，让 AI 助手按控件标记点击、输入并查看变化。",
+      "fit_short": "桌面应用测试、重复操作与状态复查",
+      "project_fit": "适合需要复现桌面软件操作的开发者。可以把打开窗口、找到控件、执行动作和读回状态拆成可检查的步骤。",
+      "difficulty": "中",
+      "cost": "工具采用 Apache-2.0，提供命令行和 C 库。需要受支持的 macOS、Windows 或 Linux 环境，并按平台配置权限。macOS 需要辅助功能访问权限，接入助手时模型费用另计。",
+      "caution": "能读到哪些控件取决于应用和系统提供的辅助功能信息。操作后要重新读取窗口确认结果。快照、剪贴板和调试截图可能包含其他内容，公开记录前先检查。[固定版本概念说明](https://github.com/vercel-labs/agent-desktop/blob/b43ac4f6e892ef608f8851428613c4009f0e84c7/CONCEPTS.md)",
+      "first_step": "先在空白的练习应用中读取一次窗口，核对标题、按钮和输入框，再对一个可恢复的控件验证读回结果。",
+      "example": "在演示编辑器中找到“显示行号”复选框，切换后重新读取控件状态，再对照画面确认行号是否出现。",
+      "diagram_title": "读出桌面控件并检查操作结果",
+      "diagram_steps": [
+        "桌面窗口与操作目标",
+        "读取控件后执行",
+        "更新后的窗口状态"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "Orkas-AI/Orkas",
+      "repo_id": "R_kgDOSP2Ipg",
+      "url": "https://github.com/Orkas-AI/Orkas",
+      "weekly_stars": 2074,
+      "total_stars": 9111,
+      "forks": 528,
+      "language": "JavaScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-08T01:24:58Z",
+      "source_revision": "9ba0e36bd1cb2e40e306c3e26d744ffb061bbca3",
+      "evidence_url": "https://github.com/Orkas-AI/Orkas/blob/9ba0e36bd1cb2e40e306c3e26d744ffb061bbca3/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/javascript?since=weekly",
+          "rank": 4,
+          "captured_at": "2026-11-09T09:07:15.767692+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在桌面应用里把一项复杂工作拆给不同 AI 助手，再汇总文档、演示稿或其他产物。",
+      "fit_short": "多步骤任务、资料整理与初稿制作",
+      "project_fit": "适合经常把公开资料、提纲和成稿分开处理的人。项目可集中保存目标、规则、文件和待办，主助手据此分派任务。",
+      "difficulty": "中",
+      "cost": "源码采用 MIT。从源码运行需要 Node.js 22.12+ 和相应系统环境，可接云端或本地模型。模型用量按所选服务计费。云同步、共享项目和网页发布属于打包版功能，网页发布需付费套餐。",
+      "caution": "项目资料默认在本机保存，选用云模型或开启云同步时要核对发送范围。打开自动推进或连接外部工具前，先限制可读写的内容，并审阅每一步的产物。",
+      "first_step": "只用一页公开资料，安排提炼要点和生成演示提纲两个步骤，检查分工、来源和输出。",
+      "example": "把公开展览介绍交给整理资料的助手提取亮点，再由制作演示稿的助手做三页初稿，人工对照原文核对展期和名称。",
+      "diagram_title": "把一项工作拆给多个助手",
+      "diagram_steps": [
+        "任务目标与公开素材",
+        "拆分待办并分派",
+        "可审阅的文档初稿"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "liguobao/ds-harness-remote",
+      "repo_id": "R_kgDOT4gxmQ",
+      "url": "https://github.com/liguobao/ds-harness-remote",
+      "weekly_stars": 1091,
+      "total_stars": 2292,
+      "forks": 180,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-08T17:16:53Z",
+      "source_revision": "0a0ac9a1a647a171b79b19998d24bdd43bae9ea0",
+      "evidence_url": "https://github.com/liguobao/ds-harness-remote/blob/0a0ac9a1a647a171b79b19998d24bdd43bae9ea0/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 15,
+          "captured_at": "2026-11-09T09:07:14.648379+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把另一台设备连到电脑上的 DeepSeek Harness，接续原有编程会话并查看执行进度。",
+      "fit_short": "跨设备接续会话与远程查看进度",
+      "project_fit": "适合电脑保持在线、需要临时换设备查看任务的人。可以在网页或受支持的客户端里选主机和工作区，接回已有会话。",
+      "difficulty": "中",
+      "cost": "源码和插件采用 MIT。需要运行中的宿主程序、获授权的客户端和连接服务。可选项目托管服务或自建精简中继，主机、网络和模型用量按所选方案计算。[固定版本自建服务说明](https://github.com/liguobao/ds-harness-remote/blob/0a0ac9a1a647a171b79b19998d24bdd43bae9ea0/apps/server/README.md)",
+      "caution": "同账号新设备首次连接可自动建立信任，需核对设备列表。远程终端默认启用，以宿主电脑用户权限运行，独立于助手的操作审批。试用前检查终端开关和撤销方式。[固定版本设备信任说明](https://github.com/liguobao/ds-harness-remote/blob/0a0ac9a1a647a171b79b19998d24bdd43bae9ea0/docs/end-to-end-encryption.md)",
+      "first_step": "用隔离的练习工作区接续一个会话，只查看一条已有结果，再确认如何撤销测试设备的连接。",
+      "example": "在测试电脑保留一次单元测试会话，换到浏览器客户端查看同一条测试输出，核对接续的是正确的主机和工作区。",
+      "diagram_title": "从另一台设备接续原会话",
+      "diagram_steps": [
+        "已授权设备与会话",
+        "经加密通道接到主机",
+        "可接续的编程会话"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "astral-sh/ruff",
+      "repo_id": "R_kgDOHy0BzQ",
+      "url": "https://github.com/astral-sh/ruff",
+      "weekly_stars": 881,
+      "total_stars": 51118,
+      "forks": 2638,
+      "language": "Rust",
+      "license": "MIT",
+      "last_push_at": "2026-11-09T00:36:51Z",
+      "source_revision": "47daf1c20b23a76e415fb0b3f7ed2b6100ba7164",
+      "evidence_url": "https://github.com/astral-sh/ruff/blob/47daf1c20b23a76e415fb0b3f7ed2b6100ba7164/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 6,
+          "captured_at": "2026-11-09T09:07:16.318797+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "按规则找出 Python 代码里的问题，也可以统一代码格式并修复部分问题。",
+      "fit_short": "提交前检查、格式统一与代码整理",
+      "project_fit": "适合希望把未使用的导入、风格问题和格式检查放进开发流程的团队。可先在一个目录试用选定规则，再接入自动检查。",
+      "difficulty": "低",
+      "cost": "项目采用 MIT。可在本机命令行或自动检查环境中运行，主要使用本机或构建机器的资源。规则可放在项目配置文件里。",
+      "caution": "自动修复与格式化会写文件。先查看检查结果和启用的规则，只在小范围内应用修改，再运行项目测试。[固定版本规则与修复说明](https://github.com/astral-sh/ruff/blob/47daf1c20b23a76e415fb0b3f7ed2b6100ba7164/docs/linter.md)",
+      "first_step": "用一份含未使用导入的演示文件做一次 `ruff check`，核对行号、规则编号和提示内容。",
+      "example": "检查一个新增的 Python 文件，先定位未使用的导入，再决定是否移除并统一格式，最后复查差异。",
+      "diagram_title": "找出 Python 代码问题并整理格式",
+      "diagram_steps": [
+        "Python 代码与规则",
+        "检查问题或调整格式",
+        "问题清单或规范代码"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "prometheus/prometheus",
+      "repo_id": "MDEwOlJlcG9zaXRvcnk2ODM4OTIx",
+      "url": "https://github.com/prometheus/prometheus",
+      "weekly_stars": 832,
+      "total_stars": 67566,
+      "forks": 11011,
+      "language": "Go",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-08T14:49:16Z",
+      "source_revision": "1d4faeaf10281aa16c4a5e73e4bfda92f81bc366",
+      "evidence_url": "https://github.com/prometheus/prometheus/blob/1d4faeaf10281aa16c4a5e73e4bfda92f81bc366/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 2,
+          "captured_at": "2026-11-09T09:07:16.742614+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "定时采集服务指标，保存成可查询的时间序列，并按规则判断何时触发告警。",
+      "fit_short": "服务监控、趋势查询与告警规则",
+      "project_fit": "适合已经能输出请求量、延迟或错误计数的服务。可以把运行数据集中起来，对照时间变化定位异常出现的时段。",
+      "difficulty": "中",
+      "cost": "项目采用 Apache-2.0，可用二进制或容器运行。需要能访问的指标端点和存储空间，运行成本取决于采集频率、数据规模与保留时间。",
+      "caution": "先确认指标含义、采集是否成功和告警条件持续多久。向外发送通知通常还要接 Alertmanager。可以先在本地界面检查告警状态。[固定版本告警规则说明](https://github.com/prometheus/prometheus/blob/1d4faeaf10281aa16c4a5e73e4bfda92f81bc366/docs/configuration/alerting_rules.md)",
+      "first_step": "只配置一个演示指标端点，核对采集状态和一条指标曲线，再为它添加一条测试规则。",
+      "example": "采集测试服务的成功和失败请求数，查看失败比例随时间的变化，再用一个测试阈值观察规则何时进入告警状态。",
+      "diagram_title": "把服务指标变成趋势和告警状态",
+      "diagram_steps": [
+        "服务指标与采集规则",
+        "定时采集并查询",
+        "趋势与告警状态"
+      ]
+    }
+  ]
+}
