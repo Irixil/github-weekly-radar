@@ -1,0 +1,215 @@
+{
+  "issue_date": "2026-11-10",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 129,
+  "eligible_count": 111,
+  "history_count": 139,
+  "unseen_count": 71,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "搭网页可看 **Astryx** 的现成控件，梳理视频可看 **Watch** 的带时间点摘要。**RAGFlow** 能从文档里找答案和出处，**AppFlowy** 可用看板跟踪任务，**Go** 可以把重复的表格处理写成小工具。",
+  "exclusions": [
+    {
+      "repo": "D4Vinci/Scrapling",
+      "source_url": "https://github.com/D4Vinci/Scrapling/blob/c5121c7c06a8595ed3a0a9b7b7dcd6802b5ebfc5/README.md",
+      "reason": "根 LICENSE 和 README 的许可章节标注 BSD-3-Clause，但 README 的免责声明称仅供教育和研究。两处用途条件不一致，本期跳过。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "meta/astryx",
+      "repo_id": "R_kgDOQ2zHeg",
+      "url": "https://github.com/meta/astryx",
+      "weekly_stars": 5406,
+      "total_stars": 20091,
+      "forks": 1528,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-10T01:05:09Z",
+      "source_revision": "a0a09f9c2f3a60462d9578d8594e85ad78c3a24a",
+      "evidence_url": "https://github.com/meta/astryx/blob/a0a09f9c2f3a60462d9578d8594e85ad78c3a24a/packages/core/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 13,
+          "captured_at": "2026-11-10T09:08:18.697940+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "用现成的 React 控件和主题搭网页，让多个页面的按钮、表单和弹窗保持同一风格。",
+      "fit_short": "统一网页控件和主题",
+      "project_fit": "适合已经用 React 做网页，希望不同后台页面复用一套控件和样式的团队。",
+      "difficulty": "中",
+      "cost": "需要 React 19 或以上版本，并会用 React 组件。组件和主题可以按 MIT 许可使用。",
+      "caution": "接入旧页面时，先确认 React 版本和原有样式是否兼容。用键盘走一遍表单和弹窗，检查焦点是否容易跟踪。",
+      "first_step": "在一个示例页用默认主题放一个输入框、一个按钮和一个确认弹窗，再试着改主题色。",
+      "example": "做活动报名页时，用现成的输入框收集信息，让用户在确认弹窗里复核后再提交。活动详情页也可以沿用同一主题。",
+      "diagram_title": "用现成控件搭报名页",
+      "diagram_steps": [
+        "报名表单和主题",
+        "组合输入框和弹窗",
+        "同一风格的报名页"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "bradautomates/claude-video",
+      "repo_id": "R_kgDOSLJK_w",
+      "url": "https://github.com/bradautomates/claude-video",
+      "weekly_stars": 624,
+      "total_stars": 20358,
+      "forks": 2161,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-09-25T01:25:54Z",
+      "source_revision": "03ceb42f7fa2c4439aca01752118044baabffb8f",
+      "evidence_url": "https://github.com/bradautomates/claude-video/blob/03ceb42f7fa2c4439aca01752118044baabffb8f/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 13,
+          "captured_at": "2026-11-10T09:08:18.299675+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "让编程助手读短视频的画面和可用字幕，整理成带时间点的摘要。",
+      "fit_short": "从录屏提取关键步骤",
+      "project_fit": "适合把操作录屏改成简短教程，或在长视频里定位需要回看的片段。",
+      "difficulty": "中",
+      "cost": "需要能运行脚本的编程助手、Python 和 FFmpeg 等工具。读取网络视频还会用到 yt-dlp。助手用量及可选的云分析或转录服务可能计费。",
+      "caution": "抽取画面可能漏掉一闪而过的操作，小字和时间点值得回看原片。启用云分析前，先确认视频可以上传。",
+      "first_step": "用一段 30 秒的公开或合成录屏，只做画面摘要。对照原片核对两个动作的顺序和时间点。",
+      "example": "从一段设置教程里找出打开设置页和切换开关的时刻，把它们整理成两条带时间点的操作说明。",
+      "diagram_title": "从操作录屏找出关键步骤",
+      "diagram_steps": [
+        "一段操作录屏",
+        "按时间抽取画面",
+        "带时间点的摘要"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "infiniflow/ragflow",
+      "repo_id": "R_kgDOK4sStA",
+      "url": "https://github.com/infiniflow/ragflow",
+      "weekly_stars": 568,
+      "total_stars": 93899,
+      "forks": 11282,
+      "language": "Go",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-09T13:09:58Z",
+      "source_revision": "ed5a84fee9abc8091aea111d1195cf7768541ff1",
+      "evidence_url": "https://github.com/infiniflow/ragflow/blob/ed5a84fee9abc8091aea111d1195cf7768541ff1/docs/quickstart.mdx",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 11,
+          "captured_at": "2026-11-10T09:08:19.094406+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把文档做成可提问的资料库，回答时可以附上引用，方便打开原文核对。",
+      "fit_short": "查手册和规则出处",
+      "project_fit": "适合把手册、常见问题和制度文件整理到一起，让团队用自然语言找具体条款。",
+      "difficulty": "高",
+      "cost": "自建要会用 Docker。官方建议从 4 核、16 GB 内存和 50 GB 可用磁盘起步。还要配置对话和检索模型，选用外部模型服务时按服务计费。",
+      "caution": "扫描件和表格可能被拆错。关键答案要点开引用核对，并检查资料里找不到答案时会怎样回答。",
+      "first_step": "用两份文字版公开手册建一个资料库，开启引用。提三个已知答案的问题，逐条对照原文。",
+      "example": "把活动场地的设备借用规则放进资料库，问投影仪要提前多久申请，再点开回答引用的段落核对期限。",
+      "diagram_title": "从手册里找答案和出处",
+      "diagram_steps": [
+        "手册文件和问题",
+        "拆段并检索原文",
+        "答案和出处"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "AppFlowy-IO/AppFlowy",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkzNzc0OTY1NjI=",
+      "url": "https://github.com/AppFlowy-IO/AppFlowy",
+      "weekly_stars": 518,
+      "total_stars": 78593,
+      "forks": 6230,
+      "language": "Dart",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-11-02T23:40:52Z",
+      "source_revision": "8fcee27d9bd93aad4ee0191d5d8d915d6a9a4e93",
+      "evidence_url": "https://github.com/AppFlowy-IO/AppFlowy/blob/8fcee27d9bd93aad4ee0191d5d8d915d6a9a4e93/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/dart?since=weekly",
+          "rank": 4,
+          "captured_at": "2026-11-10T09:08:20.373989+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把笔记、文档和任务看板放在一个工作区，方便边记信息边跟踪进度。",
+      "fit_short": "整理笔记和任务进度",
+      "project_fit": "适合需要把项目笔记和待办放在一起，或希望自行托管协作空间的小团队。",
+      "difficulty": "低",
+      "cost": "桌面客户端开源可下载。自行托管需要服务器和维护，托管服务和 AI 功能的费用看所选方案。",
+      "caution": "多人一起用时，先确认同步方式和空间权限。若准备修改并对外提供服务，先核对 AGPL 条款。",
+      "first_step": "建一个小看板，放三张样例任务卡，试走一轮待办、进行中、完成的状态变化。",
+      "example": "筹备一次分享会时，把订场地、备讲稿和发通知建成任务卡。把卡片移到对应状态列，大家就能看见还有什么待做。",
+      "diagram_title": "把筹备任务排成看板",
+      "diagram_steps": [
+        "筹备任务清单",
+        "按状态把卡片分列",
+        "活动进度看板"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "golang/go",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkyMzA5Njk1OQ==",
+      "url": "https://github.com/golang/go",
+      "weekly_stars": 479,
+      "total_stars": 139822,
+      "forks": 20230,
+      "language": "Go",
+      "license": "BSD-3-Clause",
+      "last_push_at": "2026-11-09T23:05:21Z",
+      "source_revision": "6e61706b976dff01299814ed319bbea95722009e",
+      "evidence_url": "https://github.com/golang/go/blob/6e61706b976dff01299814ed319bbea95722009e/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-11-10T09:08:19.094406+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "Go 是一门带编译工具和标准库的编程语言，可用来写命令行工具和后台服务。",
+      "fit_short": "把重复的文件处理做成工具",
+      "project_fit": "适合能写代码、想把重复的文件处理自动化，或想开发服务接口的团队。",
+      "difficulty": "中",
+      "cost": "需要编程基础。Go 工具链和标准库开源可用，部署到服务器时另计主机资源。",
+      "caution": "使用官方稳定版工具链。标准库可以读 CSV，列名检查、数字转换和汇总规则仍需在程序里写清。",
+      "first_step": "拿一张只有两类商品的样例表，用标准库的 `encoding/csv` 读出数据，再用手算结果核对分类合计。",
+      "example": "写一个小程序读取每周导出的销售表，按商品类别加总销量，输出一份清单给运营核对。",
+      "diagram_title": "把销售表汇总成分类清单",
+      "diagram_steps": [
+        "销售表和 Go 代码",
+        "读表并分类加总",
+        "分类销量清单"
+      ]
+    }
+  ]
+}
