@@ -1,0 +1,215 @@
+{
+  "issue_date": "2026-11-11",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 132,
+  "eligible_count": 114,
+  "history_count": 144,
+  "unseen_count": 72,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "准备活动账号时，可以用 **Sherlock** 查同名公开页面。**Open Generative AI** 能做图片草稿，**Claude Quickstarts** 展示 AI 如何操作测试桌面，**Nushell** 能筛选终端里的文件清单，**无线麦 SayAll** 把遥控器语音接到 Mac。",
+  "exclusions": [
+    {
+      "repo": "D4Vinci/Scrapling",
+      "source_url": "https://github.com/D4Vinci/Scrapling/blob/c5121c7c06a8595ed3a0a9b7b7dcd6802b5ebfc5/README.md",
+      "reason": "根许可证标注 BSD-3-Clause，README 的免责声明写明仅供教育和研究。两处用途条件不一致，本期跳过。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "sherlock-project/sherlock",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkxNjI5OTg0Nzk=",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "weekly_stars": 13213,
+      "total_stars": 109093,
+      "forks": 12671,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-11-10T05:13:55Z",
+      "source_revision": "c588d7c8b476df9f9c84912a05d1430fb8cdcdae",
+      "evidence_url": "https://github.com/sherlock-project/sherlock/blob/c588d7c8b476df9f9c84912a05d1430fb8cdcdae/docs/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 14,
+          "captured_at": "2026-11-11T10:30:59.644418+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "输入一个用户名，在多个公开网站查找同名账号，输出可能匹配的页面链接。",
+      "fit_short": "核对活动账号名称",
+      "project_fit": "适合在注册品牌或活动账号前，先检查准备使用的名称是否已经出现在目标站点。",
+      "difficulty": "中",
+      "cost": "工具开源免费。查询需要联网，使用时要会在终端输入命令。",
+      "caution": "同名账号可能属于不同主体，结果需要逐个点开核对。查询覆盖范围和结果也会随站点变化。",
+      "first_step": "选一个打算用于公开活动的名称，只查准备入驻的两三个站点，再用浏览器核对返回的页面。",
+      "example": "筹备一场社区市集时，先检查拟用的活动用户名在哪些站点已有同名主页，把需要进一步确认的链接列出来。",
+      "diagram_title": "查公开站点上的同名账号",
+      "diagram_steps": [
+        "候选用户名",
+        "逐站检查同名页面",
+        "可能匹配的链接"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "Anil-matcha/Open-Generative-AI",
+      "repo_id": "R_kgDOJg7yeg",
+      "url": "https://github.com/Anil-matcha/Open-Generative-AI",
+      "weekly_stars": 1789,
+      "total_stars": 33939,
+      "forks": 6456,
+      "language": "JavaScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-10T11:51:53Z",
+      "source_revision": "fab6798327c01263a66f781d722da9003cbfdb7e",
+      "evidence_url": "https://github.com/Anil-matcha/Open-Generative-AI/blob/fab6798327c01263a66f781d722da9003cbfdb7e/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/javascript?since=weekly",
+          "rank": 3,
+          "captured_at": "2026-11-11T10:30:59.275770+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把图片和视频生成放进一个界面，可用文字描述或参考图制作素材草稿。",
+      "fit_short": "制作海报背景或分镜草稿",
+      "project_fit": "适合在设计初期快速看几个画面方向，再决定哪些草稿值得继续精修。",
+      "difficulty": "中",
+      "cost": "应用开源。桌面端可用兼容的本地图像模型，需要下载模型并占用磁盘和内存。选用云模型时，费用取决于所用服务。",
+      "caution": "交付前核对所选模型的使用条款。选择云生成时，先确认上传的参考素材有权交给服务处理。",
+      "first_step": "用一句画面描述生成一张小尺寸底图，先看主题位置和留白能否满足版面需求。",
+      "example": "为周末植物市集做海报时，用「绿色叶片集中在下方，上方留白」生成背景草稿，再用排版工具加上日期和地点。",
+      "diagram_title": "从一句描述生成海报背景",
+      "diagram_steps": [
+        "海报画面描述",
+        "调用图像模型",
+        "一张背景草稿"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "anthropics/claude-quickstarts",
+      "repo_id": "R_kgDOMqMnmg",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "weekly_stars": 1253,
+      "total_stars": 20534,
+      "forks": 3471,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-11-06T19:37:57Z",
+      "source_revision": "4a4224bdf0e9cfb3332167b69c90457403813625",
+      "evidence_url": "https://github.com/anthropics/claude-quickstarts/blob/4a4224bdf0e9cfb3332167b69c90457403813625/computer-use-demo/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 12,
+          "captured_at": "2026-11-11T10:30:59.644418+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "提供用 Claude 开发应用的参考工程，其中桌面演示让模型通过截图、点击和输入完成操作。",
+      "fit_short": "了解 AI 如何操作桌面",
+      "project_fit": "适合想学习怎样把模型接到界面操作流程，并观察模型看到了什么、选择了哪个动作的开发者。",
+      "difficulty": "高",
+      "cost": "桌面演示需要会运行 Docker 容器，并配置支持的 Claude 服务。示例代码开源，实际模型调用按所选服务计费。",
+      "caution": "网页上的文字可能干扰模型判断。演示时使用隔离的桌面和公开样例，逐步核对模型点了哪里。",
+      "first_step": "先看官方演示的截图和点击工具说明。把试验目标限定为在演示页面找到一个按钮，并记录模型选择的动作。",
+      "example": "在测试桌面打开一页公开演示表单，让模型在搜索框填入「示例」并点查询，随后用截图核对它是否点对。",
+      "diagram_title": "让模型在测试桌面完成查询",
+      "diagram_steps": [
+        "查询任务和页面",
+        "看截图、点击和输入",
+        "查询结果截图"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "nushell/nushell",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkxODYwMjQyOTg=",
+      "url": "https://github.com/nushell/nushell",
+      "weekly_stars": 461,
+      "total_stars": 41082,
+      "forks": 2354,
+      "language": "Rust",
+      "license": "MIT",
+      "last_push_at": "2026-11-11T00:25:29Z",
+      "source_revision": "a4819256a2d875ca42c8600242388da291f3beaa",
+      "evidence_url": "https://github.com/nushell/nushell/blob/a4819256a2d875ca42c8600242388da291f3beaa/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-11-11T10:31:00.985782+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把终端命令的结果整理成表格，方便按文件类型、大小等字段筛选。",
+      "fit_short": "筛选终端输出和文件清单",
+      "project_fit": "适合经常从文件或进程列表找特定条目，想按列处理终端输出的人。",
+      "difficulty": "中",
+      "cost": "终端工具开源免费，可在 Windows、macOS 和 Linux 使用。需要会用基本终端命令。",
+      "caution": "有些外部程序只输出纯文本。需要按列筛选时，先确认数据已经被解析成相应的列。",
+      "first_step": "在一个样例目录先用 `ls` 看表格，再用 `where` 只保留目录行，对照文件管理器核对结果。",
+      "example": "整理活动素材时，在终端列出素材目录的条目，按类型只留下子目录，核对每类素材是否已经建了对应文件夹。",
+      "diagram_title": "从素材目录筛出子目录清单",
+      "diagram_steps": [
+        "素材目录",
+        "列出条目并筛目录",
+        "子目录清单"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "HD838A/remote-mic-app",
+      "repo_id": "R_kgDOTgORrQ",
+      "url": "https://github.com/HD838A/remote-mic-app",
+      "weekly_stars": 433,
+      "total_stars": 2793,
+      "forks": 288,
+      "language": "Swift",
+      "license": "GPL-3.0",
+      "last_push_at": "2026-11-10T23:31:04Z",
+      "source_revision": "62910f36af608dec17e92971b3aa56356cc495dc",
+      "evidence_url": "https://github.com/HD838A/remote-mic-app/blob/62910f36af608dec17e92971b3aa56356cc495dc/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/swift?since=weekly",
+          "rank": 1,
+          "captured_at": "2026-11-11T10:31:19.814492+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把兼容的蓝牙语音遥控器当作 Mac 的无线麦克风，把收音交给听写或录音应用。",
+      "fit_short": "用蓝牙遥控器给 Mac 收音",
+      "project_fit": "适合手边有兼容遥控器，希望离开键盘也能按键口述一句话的 Mac 用户。",
+      "difficulty": "中",
+      "cost": "需要兼容遥控器和虚拟麦克风。Apple Silicon Mac 需 macOS 14 起，Intel Mac 需 macOS 13 起。macOS 软件代码开源，硬件另计。",
+      "caution": "目标应用要选用同一个虚拟麦克风，并核对触发方式。转录是否联网取决于所选听写工具。代码采用 GPL-3.0-only，应用图标另有授权条件。",
+      "first_step": "先核对遥控器型号。连接后在 QuickTime Player 的新建录音界面按住遥控器语音键，说一句样例话，观察输入电平。",
+      "example": "演示结束后，按住遥控器语音键口述一条待办，让 Mac 上已选对麦克风的听写工具把它录入空白笔记。",
+      "diagram_title": "把遥控器收到的声音送进 Mac",
+      "diagram_steps": [
+        "语音遥控器的音频",
+        "转给虚拟麦克风",
+        "Mac 应用收到音频"
+      ]
+    }
+  ]
+}
