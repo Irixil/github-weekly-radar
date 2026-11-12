@@ -1,0 +1,225 @@
+{
+  "issue_date": "2026-11-12",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 125,
+  "eligible_count": 108,
+  "history_count": 149,
+  "unseen_count": 63,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "**MuJoCo** 可以先模拟机械动作，**GBrain** 用来找回项目笔记。**Google Maps Scraper** 能把地图搜索结果整理成表，**Sniffnet** 帮你看网络流量，**Vite** 用来预览和打包网页。",
+  "exclusions": [
+    {
+      "repo": "D4Vinci/Scrapling",
+      "source_url": "https://github.com/D4Vinci/Scrapling/blob/bb223f2f5fc8f743772751a5ce283ef7851ca6be/README.md",
+      "reason": "根许可证标注 BSD-3-Clause，README 的免责声明写明仅供教育和研究。两处用途条件不一致，本期跳过。"
+    },
+    {
+      "repo": "ruvnet/RuView",
+      "source_url": "https://github.com/ruvnet/RuView/blob/ce8d296c98083528ef75f445f7e7c7e3c7b9ce84/NOTICE",
+      "reason": "根 LICENSE 提供 MIT 文本，NOTICE 将整个仓库的许可写作 MIT 或 Apache-2.0。仓库许可说明不一致，本期跳过。"
+    },
+    {
+      "repo": "bggRGjQaUbCoE/PiliPlus",
+      "source_url": "https://github.com/bggRGjQaUbCoE/PiliPlus/blob/cab0114a21ce7fad5b90b9a4d788d35d313d25f9/README.md",
+      "reason": "根 LICENSE 为 GPL-3.0，README 声明仅供学习和测试，并要求下载后 24 小时内删除。两处使用条件不一致，本期跳过。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "google-deepmind/mujoco",
+      "repo_id": "MDEwOlJlcG9zaXRvcnk0MDA1MDExMzY=",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "weekly_stars": 1535,
+      "total_stars": 17650,
+      "forks": 2172,
+      "language": "C++",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-11T15:48:20Z",
+      "source_revision": "71bc51ce2194ddcdf876de5ecd05bdf57a75e93b",
+      "evidence_url": "https://github.com/google-deepmind/mujoco/blob/71bc51ce2194ddcdf876de5ecd05bdf57a75e93b/doc/overview.rst",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 12,
+          "captured_at": "2026-11-12T09:57:55.179745+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在电脑里模拟机械结构的运动和接触，方便观察关节、碰撞和摩擦怎样影响动作。",
+      "fit_short": "在仿真里比较机械动作",
+      "project_fit": "适合做机器人控制或机械机构原型，先比较几种控制设定，再决定真机要验证哪些动作。",
+      "difficulty": "高",
+      "cost": "引擎开源免费。用 Python 编写仿真需要 3.11 或更高版本。搭自己的机械模型要懂关节、质量和接触参数。",
+      "caution": "仿真结果受模型参数影响。准备把动作搬到真机时，先核对模型里的质量、摩擦和限位设定。",
+      "first_step": "打开官方的平面和方块示例，先观察方块下落和接触地面，再记录它在哪一步接触。",
+      "example": "做抓取原型时，用同一个方块模型比较夹爪的两种控制设定，观察方块有没有滑落。",
+      "diagram_title": "先在电脑里模拟夹取",
+      "diagram_steps": [
+        "夹爪和方块模型",
+        "计算运动和接触",
+        "夹取动作与轨迹"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "garrytan/gbrain",
+      "repo_id": "R_kgDOR6Xyow",
+      "url": "https://github.com/garrytan/gbrain",
+      "weekly_stars": 1187,
+      "total_stars": 32703,
+      "forks": 4875,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-12T01:53:07Z",
+      "source_revision": "47cbca02f919ae93e0137235f88ec1af14f4492b",
+      "evidence_url": "https://github.com/garrytan/gbrain/blob/47cbca02f919ae93e0137235f88ec1af14f4492b/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 7,
+          "captured_at": "2026-11-12T09:57:54.647480+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把事实、笔记和出处存进可搜索的资料库，让人和 AI 助手能找回之前记下的信息。",
+      "fit_short": "找回项目笔记和决策出处",
+      "project_fit": "适合长期积累项目笔记，想让多次工作会话共用一批资料，并且可以打开原笔记核对的人。",
+      "difficulty": "中",
+      "cost": "可免费自托管，需要 Bun 1.4.4 或更高版本和基本的终端操作。本地关键词检索无需模型服务。选用托管、外部模型检索或回答生成时，费用取决于所用服务。",
+      "caution": "索引可能还在重建。搜不到时先确认导入和索引状态。选用外部检索或回答服务前，核对哪些文本会发给服务商。",
+      "first_step": "用本地关键词模式导入三篇虚构的 Markdown 笔记，搜索只出现过一次的词，再核对找回了哪一篇。",
+      "example": "项目组记过为什么选 CSV 导出。按关键词搜「导出格式」，找到记过这个决定的笔记，再打开原文确认原因。",
+      "diagram_title": "从笔记里找回决策依据",
+      "diagram_steps": [
+        "笔记和搜索词",
+        "建索引并匹配词",
+        "相关笔记和出处"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "gosom/google-maps-scraper",
+      "repo_id": "R_kgDOJaClcA",
+      "url": "https://github.com/gosom/google-maps-scraper",
+      "weekly_stars": 597,
+      "total_stars": 7920,
+      "forks": 1248,
+      "language": "Go",
+      "license": "MIT",
+      "last_push_at": "2026-11-08T10:51:13Z",
+      "source_revision": "e0c1d501e49cdcd5c6b2cecd2a032831f6ee9ba8",
+      "evidence_url": "https://github.com/gosom/google-maps-scraper/blob/e0c1d501e49cdcd5c6b2cecd2a032831f6ee9ba8/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-11-12T09:57:56.570340+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "从 Google 地图的搜索结果提取地点名称、地址和网址等字段，可导出成表格。",
+      "fit_short": "整理获准使用的地点查询结果",
+      "project_fit": "适合已有明确数据使用授权，需要把允许获取的地点查询结果整理成结构化清单的场景。",
+      "difficulty": "中",
+      "cost": "工具开源免费。自建需准备 Docker 或项目支持的运行环境，服务器等费用取决于部署方式。",
+      "caution": "Google 地图条款对批量下载和再分发设有限制。采集前核对条款及相关授权，再确定需要保留的字段。[Google 地图附加条款](https://maps.google.com/help/terms_maps/)",
+      "first_step": "按官方字段说明用三条虚构记录做一张样表，确认名称、地址和官网链接是否够用。",
+      "example": "在获准使用的场地查询中，用「会议场地」作为搜索词，导出名称和地址交给活动策划逐条复核。",
+      "diagram_title": "把地点查询结果整理成表",
+      "diagram_steps": [
+        "地点搜索词",
+        "提取名称和地址",
+        "地点清单表格"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "GyulyVGC/sniffnet",
+      "repo_id": "R_kgDOHvz5Qw",
+      "url": "https://github.com/GyulyVGC/sniffnet",
+      "weekly_stars": 550,
+      "total_stars": 42467,
+      "forks": 1998,
+      "language": "Rust",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-09T23:41:33Z",
+      "source_revision": "f62af85e53253fd9983d4d04948c97cadf8a5356",
+      "evidence_url": "https://github.com/GyulyVGC/sniffnet/blob/f62af85e53253fd9983d4d04948c97cadf8a5356/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 14,
+          "captured_at": "2026-11-12T09:57:56.276552+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "监看选定网卡上的网络流量，用曲线和连接列表显示流量变化。",
+      "fit_short": "排查电脑的网络流量",
+      "project_fit": "适合想知道自己电脑在某个时段用了多少网络流量，以及哪些连接值得进一步排查的人。",
+      "difficulty": "低",
+      "cost": "桌面工具可免费使用，代码采用 MIT 或 Apache-2.0 双许可。抓包可能需要系统授予权限。",
+      "caution": "先选对网卡再比较流量。导出的抓包文件可能包含网络地址，分享前先核对内容。",
+      "first_step": "选自己电脑正在用的网卡，先看一分钟空闲流量，再在同一网卡下对比打开一个网页时的变化。",
+      "example": "播放一段公开视频前后，比较同一网卡的下载曲线，并打开连接列表查看变化出现在什么连接上。",
+      "diagram_title": "查看电脑的流量变化",
+      "diagram_steps": [
+        "所选网卡的流量",
+        "按连接统计用量",
+        "流量图和连接列表"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "vitejs/vite",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkyNTc0ODU0MjI=",
+      "url": "https://github.com/vitejs/vite",
+      "weekly_stars": 397,
+      "total_stars": 83871,
+      "forks": 9791,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-12T01:54:44Z",
+      "source_revision": "bd32fea2cb171cf993c70b4dd12097d5166b3b28",
+      "evidence_url": "https://github.com/vitejs/vite/blob/bd32fea2cb171cf993c70b4dd12097d5166b3b28/docs/guide/index.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-11-12T09:57:54.647480+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给网页项目提供开发时的浏览器预览，保存改动后更新页面，也能打包生成上线用的文件。",
+      "fit_short": "预览并打包前端网页",
+      "project_fit": "适合做活动页或后台页面，希望一边改代码一边看效果，并能生成可部署网页文件的前端开发者。",
+      "difficulty": "中",
+      "cost": "Vite 开源免费。需要满足项目要求的 Node.js 版本和基本的网页开发知识。页面上线后可能产生托管费用。",
+      "caution": "模板和插件可能有各自的版本要求。开发预览通过后，再用构建预览核对上线文件。",
+      "first_step": "拿官方示例页改一行文字，先看开发预览是否更新，再生成一次构建并打开构建预览。",
+      "example": "做活动报名页时，修改提交按钮的文案，保存后在浏览器看效果，再打包出交给托管服务的网页文件。",
+      "diagram_title": "预览网页改动并生成发布文件",
+      "diagram_steps": [
+        "报名页源文件",
+        "启动预览并打包",
+        "预览和上线文件"
+      ]
+    }
+  ]
+}
