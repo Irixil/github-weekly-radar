@@ -1,0 +1,225 @@
+{
+  "issue_date": "2026-11-13",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 128,
+  "eligible_count": 110,
+  "history_count": 154,
+  "unseen_count": 68,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "**HA-MCP** 能让 AI 助手查看智能家居状态。**Modern Web Guidance** 帮编程助手查浏览器兼容性，**NVKE** 创建并管理 Kubernetes 集群，**RustDesk** 用来远程协助，**OpenSandbox** 给 AI 生成的代码单独准备运行环境。",
+  "exclusions": [
+    {
+      "repo": "D4Vinci/Scrapling",
+      "source_url": "https://github.com/D4Vinci/Scrapling/blob/bb223f2f5fc8f743772751a5ce283ef7851ca6be/README.md",
+      "reason": "根许可证为 BSD-3-Clause，README 免责声明限定为教育和研究用途。用途条件不一致，本期跳过。"
+    },
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "source_url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/b928d68c36ff77d40797dee4f12d765cec0a3b19/README.md",
+      "reason": "根许可证为 MIT，README 免责声明写明项目仅供学习和研究使用。用途条件不一致，本期跳过。"
+    },
+    {
+      "repo": "ruvnet/RuView",
+      "source_url": "https://github.com/ruvnet/RuView/blob/094e1400719ded1283c67d23b9c737f6738a3244/NOTICE",
+      "reason": "根 LICENSE 提供 MIT 文本，NOTICE 将整个仓库写为 MIT 或 Apache-2.0。许可说明不一致，本期跳过。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "homeassistant-ai/ha-mcp",
+      "repo_id": "R_kgDOPvq5vQ",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "weekly_stars": 2244,
+      "total_stars": 7690,
+      "forks": 466,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-11-13T01:00:38Z",
+      "source_revision": "40e86d65750ad8cfa4ed5ea933a5fbb82dec6ce2",
+      "evidence_url": "https://github.com/homeassistant-ai/ha-mcp/blob/40e86d65750ad8cfa4ed5ea933a5fbb82dec6ce2/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 7,
+          "captured_at": "2026-11-13T09:21:41.874094+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把 Home Assistant 接到 AI 助手，让助手用自然语言查设备状态，也能按授权控制设备。",
+      "fit_short": "查看智能家居设备状态",
+      "project_fit": "适合已经用 Home Assistant 管理设备，希望用一句话查看设备状态或排查自动化规则的人。",
+      "difficulty": "中",
+      "cost": "连接工具开源。需要支持 MCP 的 AI 助手，连接自己的设备还需要 Home Assistant。费用取决于所用助手和远程接入方式。",
+      "caution": "先用只读方式查状态。设备数据会交给所用的 AI 客户端处理，接入真实设备前先查看客户端的数据设置。",
+      "first_step": "先在官方演示环境选一个灯具，问它当前是开还是关，再到设备页面核对状态。",
+      "example": "离开会议室前，问助手「演示区的灯现在开着吗？」助手从 Home Assistant 读取灯具状态，方便值班人员确认。",
+      "diagram_title": "用一句话查看灯具状态",
+      "diagram_steps": [
+        "关于灯具的问题",
+        "查找并读取设备",
+        "灯具开关状态"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "GoogleChrome/modern-web-guidance-src",
+      "repo_id": "R_kgDORCp1Rw",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "weekly_stars": 1341,
+      "total_stars": 3041,
+      "forks": 200,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-13T01:30:43Z",
+      "source_revision": "3bb177a6de62b7fd8cd0432c33756e6f3c9ece9d",
+      "evidence_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/3bb177a6de62b7fd8cd0432c33756e6f3c9ece9d/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 12,
+          "captured_at": "2026-11-13T09:21:41.642959+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给编程助手提供现代网页开发指南，帮助它查到浏览器支持情况和兼容写法。",
+      "fit_short": "为网页功能查兼容方案",
+      "project_fit": "适合做网页界面时，需要了解某个功能在哪些浏览器能用，以及旧版本可以采用什么写法的开发者。",
+      "difficulty": "中",
+      "cost": "工具开源。固定版本的命令行工具要求 Node.js 22.18 或更高版本。使用关键词或语义搜索指南无需另外调用模型服务，编程助手的费用按所用方案计算。",
+      "caution": "用目标浏览器复查建议。官方说明用量统计可包含搜索词，可按文档关闭。代码和指南分别采用 Apache-2.0 和 CC BY 4.0。",
+      "first_step": "先查弹窗背景动画这一条指南，记下它建议的实现和回退写法，再用一个空白示例页对照。",
+      "example": "给报名表加弹窗时，先搜索怎样为弹窗背景加淡入效果，看看指南对目标浏览器和兼容方案的建议。",
+      "diagram_title": "给弹窗动画查兼容写法",
+      "diagram_steps": [
+        "弹窗动画需求",
+        "查指南和兼容数据",
+        "实现与回退建议"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "dsx-ai-factory/nvke",
+      "repo_id": "R_kgDOTt0kEA",
+      "url": "https://github.com/dsx-ai-factory/nvke",
+      "weekly_stars": 1124,
+      "total_stars": 1206,
+      "forks": 155,
+      "language": "Go",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-13T01:25:54Z",
+      "source_revision": "230d67b058537626a9d02dfbd1276a02b75fd7bf",
+      "evidence_url": "https://github.com/dsx-ai-factory/nvke/blob/230d67b058537626a9d02dfbd1276a02b75fd7bf/docs/get-started/quickstart-local.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 4,
+          "captured_at": "2026-11-13T09:21:43.183014+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在自有基础设施上创建和管理 Kubernetes 集群，让不同团队各自运行服务或计算任务。",
+      "fit_short": "给团队分配独立集群",
+      "project_fit": "适合负责内部计算平台的团队，想通过统一入口创建和管理多套 Kubernetes 集群。",
+      "difficulty": "高",
+      "cost": "管理软件开源。官方本地模拟需要 Linux、Docker、至少 6 个 CPU、12 GiB 可用内存和 100 GiB 可用磁盘。正式运行还涉及硬件和运维成本。",
+      "caution": "当前是预览版。先用模拟机器检查建集群流程，上真实机器前再核对网络、驱动和升级限制。",
+      "first_step": "按本地模拟指南规划一个控制节点和一个工作节点，创建后检查两个节点是否都进入就绪状态。",
+      "example": "平台团队想给图像处理小组分配一套独立环境，可先在模拟器提交集群规格，核对创建后的节点清单。",
+      "diagram_title": "按规格创建一套独立集群",
+      "diagram_steps": [
+        "集群规格",
+        "分配机器并组集群",
+        "可访问的独立集群"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "rustdesk/rustdesk",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkyOTkzNTQyMDc=",
+      "url": "https://github.com/rustdesk/rustdesk",
+      "weekly_stars": 967,
+      "total_stars": 129226,
+      "forks": 20616,
+      "language": "Rust",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-11-12T13:02:45Z",
+      "source_revision": "3ccb4c4b5b5a8422276dd5f6f211b42e05ec9534",
+      "evidence_url": "https://github.com/rustdesk/rustdesk/blob/3ccb4c4b5b5a8422276dd5f6f211b42e05ec9534/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 11,
+          "captured_at": "2026-11-13T09:21:43.229961+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "从一台设备查看和操作另一台设备的桌面，便于远程协助排查问题。",
+      "fit_short": "远程查看并操作桌面",
+      "project_fit": "适合两端都同意连接，需要远程演示设置步骤或协助排查桌面问题的场景。",
+      "difficulty": "中",
+      "cost": "客户端开源。自行托管中转服务需要服务器资源，Server Pro 提供付费方案。[RustDesk 官方方案](https://rustdesk.com/pricing.html)",
+      "caution": "先核对连接对象，按需开启键盘、鼠标、文件传输和剪贴板权限。[RustDesk 客户端文档](https://rustdesk.com/docs/en/client/)",
+      "first_step": "让对方在一台测试电脑上确认连接，先只看屏幕，再试一次经过授权的点击。",
+      "example": "同事找不到演示软件的设置页，先请他确认远程会话，再打开对应菜单，边操作边说明下一步。",
+      "diagram_title": "远程协助打开设置页",
+      "diagram_steps": [
+        "对方确认连接",
+        "传送画面和操作",
+        "远程桌面会话"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "opensandbox-group/OpenSandbox",
+      "repo_id": "R_kgDOQqSjUg",
+      "url": "https://github.com/opensandbox-group/OpenSandbox",
+      "weekly_stars": 794,
+      "total_stars": 17254,
+      "forks": 1641,
+      "language": "Go",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-13T00:33:15Z",
+      "source_revision": "db708c218771a8d311356f0e96552c15df6e097a",
+      "evidence_url": "https://github.com/opensandbox-group/OpenSandbox/blob/db708c218771a8d311356f0e96552c15df6e097a/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 8,
+          "captured_at": "2026-11-13T09:21:43.183014+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 AI 应用提供隔离的工作环境，可在里面运行命令、读写文件并拿回结果。",
+      "fit_short": "隔离运行 AI 生成的代码",
+      "project_fit": "适合搭建会执行代码的助手，需要明确每个任务能访问哪些文件和网络的开发团队。",
+      "difficulty": "高",
+      "cost": "工具开源。本地示例需要 Docker 和 Python 3.10 或更高版本。长期运行要预留容器所需的计算和存储资源。",
+      "caution": "运行陌生代码前，限制任务的网络、文件挂载和资源用量，再检查隔离配置是否符合需求。",
+      "first_step": "在一个空环境运行只打印一句话的示例命令，确认能读到输出，随后销毁该环境。",
+      "example": "让代码助手在隔离环境里统计一份虚构清单的行数，只放入样例文件，再从日志读取输出。",
+      "diagram_title": "把测试脚本放到隔离环境运行",
+      "diagram_steps": [
+        "脚本和样例文件",
+        "在隔离环境运行",
+        "命令输出与日志"
+      ]
+    }
+  ]
+}
