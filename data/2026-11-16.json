@@ -1,0 +1,230 @@
+{
+  "issue_date": "2026-11-16",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 121,
+  "eligible_count": 106,
+  "history_count": 164,
+  "unseen_count": 65,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "**Sure** 可以把收支和余额放到一处。**Open Code Review** 用来查代码改动，**Plannotator** 适合逐段批注 AI 的计划，**Qwen Code** 能在终端帮你改代码和补测试，**Tailcat** 可以在两台电脑之间临时传文字或文件。",
+  "exclusions": [
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "source_url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/c820915ea0119b1b7952652d7fb148575400f2d9/README.md",
+      "reason": "根许可证为 MIT，README 免责声明限定项目仅供学习和研究。用途条件不一致，本期跳过。"
+    },
+    {
+      "repo": "tradermonty/claude-trading-skills",
+      "source_url": "https://github.com/tradermonty/claude-trading-skills/blob/340514edd2df922d3e834886a62745e55a409027/README.md",
+      "reason": "根许可证为 MIT，README 将仓库用途限定为教育、研究与流程改进。用途条件不一致，本期跳过。"
+    },
+    {
+      "repo": "ruvnet/RuView",
+      "source_url": "https://github.com/ruvnet/RuView/blob/3bae24a1231e0d9809e84eb35edba7231b8d1913/NOTICE",
+      "reason": "根 LICENSE 提供 MIT 文本，NOTICE 将整个仓库许可写为 MIT 或 Apache-2.0。两处说明不一致，本期跳过。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "we-promise/sure",
+      "repo_id": "R_kgDOPRMXrw",
+      "url": "https://github.com/we-promise/sure",
+      "weekly_stars": 4556,
+      "total_stars": 15751,
+      "forks": 1380,
+      "language": "Ruby",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-11-15T23:58:07Z",
+      "source_revision": "755ce258cd5bd0f2e63b153a80c963412d0769b4",
+      "evidence_url": "https://github.com/we-promise/sure/blob/755ce258cd5bd0f2e63b153a80c963412d0769b4/docs/onboarding/guide.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 7,
+          "captured_at": "2026-11-16T11:23:13.491933+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在一个地方记下各账户的收支，看交易明细和余额变化。",
+      "fit_short": "整理收支记录与账户余额",
+      "project_fit": "适合想在自己的服务器上管理账本，愿意手动录入或按需配置账户同步的人。",
+      "example": "做一份虚构的家庭账本，记入一笔收入和两笔日常支出，再看交易历史和余额有没有对上。",
+      "difficulty": "中",
+      "cost": "代码开源，自建通常需要 Docker Compose 和一台可持续运行的电脑或服务器。存储和备份由使用者自行承担。",
+      "caution": "账目含有敏感信息。接入真实账户前先限制访问，核对同步设置，并试一次从备份恢复。",
+      "first_step": "建一个样例账户，手动记一笔虚构支出，在历史记录里确认金额和日期。",
+      "diagram_title": "把进账和支出记进同一账本",
+      "diagram_steps": [
+        "账户和流水",
+        "登记并汇总收支",
+        "明细和余额走势"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "alibaba/open-code-review",
+      "repo_id": "R_kgDOSgbPIg",
+      "url": "https://github.com/alibaba/open-code-review",
+      "weekly_stars": 2238,
+      "total_stars": 52240,
+      "forks": 4126,
+      "language": "Go",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-16T02:35:37Z",
+      "source_revision": "7e5ce06c88de5ce81df5dc4f24e2e485b517fae8",
+      "evidence_url": "https://github.com/alibaba/open-code-review/blob/7e5ce06c88de5ce81df5dc4f24e2e485b517fae8/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 1,
+          "captured_at": "2026-11-16T11:23:14.694459+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "读取 Git 提交中的代码改动，让 AI 按行给出审查意见。",
+      "fit_short": "合并前审查改动",
+      "project_fit": "适合维护代码仓库的团队，想先检查一笔提交可能带来的漏判、边界错误和其他问题，再由审阅者决定怎么处理。",
+      "example": "活动报名接口加了一条人数上限规则。审查这笔提交，看看空输入和超过上限的输入有没有被处理，再按文件和行号核对。",
+      "difficulty": "中",
+      "cost": "工具开源，需要 Git 2.41 或更高版本。可配置模型服务，也可由编程助手调用自己的模型。费用取决于所用服务。",
+      "caution": "模型可能读到改动之外的相关文件。用外部模型前先核对代码范围和授权，收到意见后再用测试确认。",
+      "first_step": "选一个可公开的样例仓库和一笔小改动，指定只审这笔提交，逐条查看评论指向的位置。",
+      "diagram_title": "给一笔改动做代码审查",
+      "diagram_steps": [
+        "一笔代码提交",
+        "读改动和上下文",
+        "带行号的审查意见"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "backnotprop/plannotator",
+      "repo_id": "R_kgDOQv43sg",
+      "url": "https://github.com/backnotprop/plannotator",
+      "weekly_stars": 1719,
+      "total_stars": 11953,
+      "forks": 1088,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-16T03:19:33Z",
+      "source_revision": "3893fea37b1256c8a3773e8aa1ad4622844db647",
+      "evidence_url": "https://github.com/backnotprop/plannotator/blob/3893fea37b1256c8a3773e8aa1ad4622844db647/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 4,
+          "captured_at": "2026-11-16T11:23:13.491933+08:00"
+        },
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 2,
+          "captured_at": "2026-11-16T11:23:12.843533+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在浏览器里逐段批注 AI 助手的计划或文档，再把意见发回原会话。",
+      "fit_short": "给 AI 的工作计划加批注",
+      "project_fit": "适合让助手先写方案、自己再逐段把关的流程，尤其是需要指出究竟是哪句话有问题时。",
+      "example": "审核预约页面方案时，选中提交步骤，标注「重复预约时要提示用户」，让助手按该处意见修订。",
+      "difficulty": "低",
+      "cost": "本地工具可按 Apache-2.0 或 MIT 使用。接入计划流程需要兼容的编程助手，模型用量取决于所用服务。",
+      "caution": "使用分享或 AI 审阅前，先确认链接和文档内容会发送到哪里。",
+      "first_step": "用一页样例计划，高亮一句模糊要求并写下具体意见，核对意见是否回到对应会话。",
+      "diagram_title": "在计划原文上写修改意见",
+      "diagram_steps": [
+        "助手的计划草稿",
+        "选中段落并批注",
+        "意见回到助手"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "QwenLM/qwen-code",
+      "repo_id": "R_kgDOPB-92Q",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "weekly_stars": 1469,
+      "total_stars": 30553,
+      "forks": 3538,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-16T03:02:14Z",
+      "source_revision": "7f48cdeb514de5b1e14a4f82bab13fd3fe2a5cdc",
+      "evidence_url": "https://github.com/QwenLM/qwen-code/blob/7f48cdeb514de5b1e14a4f82bab13fd3fe2a5cdc/docs/users/common-workflow.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 5,
+          "captured_at": "2026-11-16T11:23:12.843533+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在终端和 AI 一起读项目、修改代码和运行测试。",
+      "fit_short": "给小改动补自动化测试",
+      "project_fit": "适合在已有代码项目里查问题、加功能或补测试，并希望由人决定哪些改动和命令可以执行的人。",
+      "example": "给一个文本读取工具补测试，交代「遇到空行要跳过」。助手查看现有测试写法，添加用例，再运行相应测试。",
+      "difficulty": "中",
+      "cost": "客户端开源。通过 npm 安装需要 Node.js 22 或更高版本。模型可用支持的订阅、按量服务或本地模型，开销取决于所选方式。",
+      "caution": "先确认它能访问哪些文件和执行哪些命令。看清修改内容后，再批准需要的操作。",
+      "first_step": "选一个样例项目，请它先找出已有测试的位置，再只补一个边界用例。",
+      "diagram_title": "让编程助手补一个测试",
+      "diagram_steps": [
+        "样例代码和要求",
+        "读测试并补用例",
+        "新增用例和结果"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "tailscale/tailcat",
+      "repo_id": "R_kgDONHoN8A",
+      "url": "https://github.com/tailscale/tailcat",
+      "weekly_stars": 1148,
+      "total_stars": 9952,
+      "forks": 459,
+      "language": "Go",
+      "license": "BSD-3-Clause",
+      "last_push_at": "2026-11-15T05:25:13Z",
+      "source_revision": "e00cdde6ff787f801361ff85ed085775c775d4c5",
+      "evidence_url": "https://github.com/tailscale/tailcat/blob/e00cdde6ff787f801361ff85ed085775c775d4c5/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-11-16T11:23:14.694459+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "让两台电脑通过加密连接临时传输文字、文件或指定的网络流量。",
+      "fit_short": "在两台测试机之间传数据",
+      "project_fit": "适合临时在两台获准使用的机器之间传小文件或测试文字，也能转发指定服务的流量。",
+      "example": "让两台测试机连起来，把一条虚构的日志从一台发到另一台，在终端查看接收到的文字。",
+      "difficulty": "中",
+      "cost": "命令行工具开源，两端需要能联网，无需 Tailscale 账户。默认提供有速率限制的免费中转，自建中转需要服务器。",
+      "caution": "临时连接地址应只给指定接收方，测试结束后关闭监听。实际能否直连取决于两端网络。",
+      "first_step": "用两台自有测试机传一句样例文字，对照接收内容后结束连接。",
+      "diagram_title": "临时把文字传给另一台电脑",
+      "diagram_steps": [
+        "连接地址和文字",
+        "建立加密连接",
+        "另一端收到文字"
+      ]
+    }
+  ]
+}
