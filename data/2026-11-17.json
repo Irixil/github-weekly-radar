@@ -1,0 +1,225 @@
+{
+  "issue_date": "2026-11-17",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 123,
+  "eligible_count": 109,
+  "history_count": 169,
+  "unseen_count": 69,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "**Univer** 可在网页里嵌入可编辑表格，**Chrome DevTools for agents** 帮助手查页面报错，**AG-UI** 让界面逐段显示助手回复，**Uptime Kuma** 定期检查网站是否在线，**Stitch Design Skills** 能从源码整理设计规范。",
+  "exclusions": [
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "source_url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/aa7228986f0ac8fc78e9147be81dddb277ef342d/README.md",
+      "reason": "根许可证为 MIT，README 免责声明限定项目仅供学习和研究。两处用途条件不一致，本期跳过。"
+    },
+    {
+      "repo": "tradermonty/claude-trading-skills",
+      "source_url": "https://github.com/tradermonty/claude-trading-skills/blob/60399452891edf47c1da5ce93c7664b31e3b001e/README.md",
+      "reason": "根许可证为 MIT，README 将仓库用途限定为教育、研究与流程改进。两处用途条件不一致，本期跳过。"
+    },
+    {
+      "repo": "ruvnet/RuView",
+      "source_url": "https://github.com/ruvnet/RuView/blob/3bae24a1231e0d9809e84eb35edba7231b8d1913/NOTICE",
+      "reason": "根 LICENSE 提供 MIT 文本，NOTICE 将整个仓库写为 MIT 或 Apache-2.0。许可说明不一致，本期跳过。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "dream-num/univer",
+      "repo_id": "R_kgDOIF8T9Q",
+      "url": "https://github.com/dream-num/univer",
+      "weekly_stars": 4765,
+      "total_stars": 27801,
+      "forks": 2526,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-16T17:59:43Z",
+      "source_revision": "582f0c25898a7e2f2d5952919caede69b3eb259e",
+      "evidence_url": "https://github.com/dream-num/univer/blob/582f0c25898a7e2f2d5952919caede69b3eb259e/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 14,
+          "captured_at": "2026-11-17T09:25:58.218935+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把可编辑的电子表格嵌进网页，支持输入数据、使用公式和设置格式。",
+      "fit_short": "在自己的网页里加表格",
+      "project_fit": "适合网页产品需要让用户直接填表、筛选或计算的场景，比如报价、排班和清单录入。",
+      "example": "做一个报价页，在表格里录入数量和单价，用公式算总金额。修改数量后，可以直接在页面上看合计的变化。",
+      "difficulty": "中",
+      "cost": "需要懂 JavaScript 和网页构建。基础表格编辑器可以用 Apache-2.0 开源组件搭建，商业扩展另有许可和费用。",
+      "caution": "接入前核对所需功能属于哪个版本。相关 Univer 组件应使用匹配的版本。",
+      "first_step": "在样例页嵌入官方基础表格，填两行虚构数据，加一个求和公式，再改一格验证重算。",
+      "diagram_title": "在网页上填报价并算合计",
+      "diagram_steps": [
+        "数量和单价",
+        "编辑单元格并计算",
+        "可编辑的报价表"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "repo_id": "R_kgDOPt7f_g",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "weekly_stars": 2593,
+      "total_stars": 57693,
+      "forks": 4851,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-16T17:21:41Z",
+      "source_revision": "dc0055828a9fcdcf8c3e65f7ecd1847c53fd972a",
+      "evidence_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/dc0055828a9fcdcf8c3e65f7ecd1847c53fd972a/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 6,
+          "captured_at": "2026-11-17T09:25:58.218935+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "让编程助手查看 Chrome 里的页面报错、网络请求和性能记录。",
+      "fit_short": "协助定位网页报错",
+      "project_fit": "适合正在排查网页的人，尤其是只有在浏览器里才能复现的按钮报错或接口请求失败。",
+      "example": "在测试网页点下按钮后页面没反应，让助手读取控制台错误和对应代码位置，再回到代码核对原因。",
+      "difficulty": "中",
+      "cost": "工具开源，需要 Chrome 稳定版或更新版本，以及长期支持版 Node.js 和 npm。通过助手使用时，需要它可以接入 MCP 提供的工具，模型费用按所用服务计算。",
+      "caution": "助手可读取连接的浏览器内容。调试时优先用只打开测试页的浏览器环境。",
+      "first_step": "打开一个带已知脚本错误的样例页，让助手列出一条控制台错误，再与 Chrome 开发者工具对照。",
+      "diagram_title": "从浏览器控制台找到报错",
+      "diagram_steps": [
+        "测试页面和操作",
+        "读取控制台日志",
+        "报错和代码位置"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "ag-ui-protocol/ag-ui",
+      "repo_id": "R_kgDOOmBWgw",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "weekly_stars": 1569,
+      "total_stars": 19023,
+      "forks": 1966,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-16T19:12:15Z",
+      "source_revision": "79530a25f3476d0abb93cb00761906fda757a2d5",
+      "evidence_url": "https://github.com/ag-ui-protocol/ag-ui/blob/79530a25f3476d0abb93cb00761906fda757a2d5/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-11-17T09:25:58.218935+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "用一套统一的消息格式，把 AI 助手的回复片段、工具调用和完成状态送到前端。",
+      "fit_short": "让界面跟上助手的工作进度",
+      "project_fit": "适合给 AI 应用做交互界面，希望用户在任务进行中看到回复和状态变化。",
+      "example": "做一个问答页面，助手开始工作时显示加载状态，收到文本片段就逐段追加，收到完成消息时关闭加载提示。",
+      "difficulty": "中",
+      "cost": "协议和配套工具开源。要会连接前后端并处理连续消息。官方有模拟消息示例，可先验证这条链路，再按需接入模型服务。",
+      "caution": "界面如何显示、失败后如何恢复，需要在应用里实现。先核对开始、正文和结束事件在界面上的表现。",
+      "first_step": "用官方模拟服务发一段短回复，在小页面验证文字出现的顺序和完成提示。",
+      "diagram_title": "让回复边生成边出现在页面上",
+      "diagram_steps": [
+        "问题和助手回复",
+        "把回复分段发送",
+        "逐段出现的文字"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "louislam/uptime-kuma",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkzODI0OTYzNjE=",
+      "url": "https://github.com/louislam/uptime-kuma",
+      "weekly_stars": 1123,
+      "total_stars": 94502,
+      "forks": 8856,
+      "language": "JavaScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-17T00:04:38Z",
+      "source_revision": "e6ea9509e68b31a996f3fdf5c24cfba24340962b",
+      "evidence_url": "https://github.com/louislam/uptime-kuma/blob/e6ea9509e68b31a996f3fdf5c24cfba24340962b/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/javascript?since=weekly",
+          "rank": 4,
+          "captured_at": "2026-11-17T09:25:58.170902+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "按设定间隔检查网址或服务是否可访问，在面板上记录状态，也能配置故障提醒。",
+      "fit_short": "定期检查网站是否在线",
+      "project_fit": "适合维护小型网站或接口的人，想持续看到成功和失败记录，方便回看问题出现的时间。",
+      "example": "给帮助中心首页建一条 HTTP 检查。访问失败时，到面板看哪一段时间开始异常，再去查网站日志。",
+      "difficulty": "低",
+      "cost": "软件开源，可用 Docker 自建。持续监控需要一台常在线的机器，主机和所选通知渠道可能产生费用。",
+      "caution": "结果反映的是监控机访问该地址的情况。外地用户报错时，结合用户所在网络和网站日志核对。",
+      "first_step": "给自己维护的测试站加一条 HTTP 检查，等一轮后核对网址和成功记录。",
+      "diagram_title": "定期检查帮助中心能否打开",
+      "diagram_steps": [
+        "网址和检查间隔",
+        "定时访问并记录",
+        "在线和异常记录"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "google-labs-code/stitch-skills",
+      "repo_id": "R_kgDOQ7Opvg",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "weekly_stars": 943,
+      "total_stars": 9739,
+      "forks": 1241,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-08-17T20:20:23Z",
+      "source_revision": "0337446dadde6f8c94210444e2aa9d546126480f",
+      "evidence_url": "https://github.com/google-labs-code/stitch-skills/blob/0337446dadde6f8c94210444e2aa9d546126480f/plugins/stitch-design/skills/extract-design-md/SKILL.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 8,
+          "captured_at": "2026-11-17T09:25:58.218935+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 AI 助手提供网页设计流程，可以从已有前端源码整理出颜色、字号和间距等规范。",
+      "fit_short": "为已有网页整理设计规范",
+      "project_fit": "适合接手一个已有网页项目时，把散在样式和组件里的设计规则整理成一份可参考的文档。",
+      "example": "接手活动网站后，让助手读主题和按钮样式，把主色、标题字号和按钮间距写进 `DESIGN.md`，给新页面作参考。",
+      "difficulty": "中",
+      "cost": "流程文件开源。整理规范需要兼容的助手和可读取的前端源文件。连接 Stitch 做在线设计或上传时，还要配置对应服务，费用取决于所用助手和服务。",
+      "caution": "生成的文档有可能把某个页面的写法当作通用规则。抽查源文件，分清全站规则和单页特例。",
+      "first_step": "用一个公开样例项目，只提取按钮的颜色、字号和间距，对照源码确认几项取值。",
+      "diagram_title": "把已有样式整理成设计规范",
+      "diagram_steps": [
+        "前端样式和组件",
+        "归纳颜色字号间距",
+        "设计规范文档"
+      ]
+    }
+  ]
+}
