@@ -1,0 +1,225 @@
+{
+  "issue_date": "2026-11-18",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 120,
+  "eligible_count": 103,
+  "history_count": 174,
+  "unseen_count": 62,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "**Claude-BugHunter** 帮助整理安全测试报告，**last30days-skill** 汇总近 30 天的公开讨论，**Airgorah** 检查自有实验 Wi-Fi 的接入点和终端，**Omnigraph** 沿关系查找结论依据，**Arcane** 在网页查看容器状态和日志。",
+  "exclusions": [
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "source_url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/cc85897bb44909b0b7582dcbd564dbb417c562f2/README.md",
+      "reason": "根许可证为 MIT，README 免责声明限定项目仅供学习和研究。两处用途条件不一致，本期跳过。"
+    },
+    {
+      "repo": "tradermonty/claude-trading-skills",
+      "source_url": "https://github.com/tradermonty/claude-trading-skills/blob/a627d17dd1d8fde1c8fa73b3cc69ffe83b33cb71/README.md",
+      "reason": "根许可证为 MIT，README 将仓库用途限定为教育、研究与流程改进。两处用途条件不一致，本期跳过。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "elementalsouls/Claude-BugHunter",
+      "repo_id": "R_kgDOSUzdDA",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "weekly_stars": 2508,
+      "total_stars": 9298,
+      "forks": 1358,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-11-17T13:33:22Z",
+      "source_revision": "5d91c812ee25efc0c1d5191377632e3aed7e8d2d",
+      "evidence_url": "https://github.com/elementalsouls/Claude-BugHunter/blob/5d91c812ee25efc0c1d5191377632e3aed7e8d2d/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 7,
+          "captured_at": "2026-11-18T08:57:31.398139+08:00"
+        },
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 3,
+          "captured_at": "2026-11-18T08:57:31.334021+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 Claude Code 补充安全测试工作说明，帮助核对发现并写成有证据的漏洞报告。",
+      "fit_short": "整理授权测试中的安全发现",
+      "project_fit": "适合已有安全测试基础的人，想把零散发现整理成别人能复查的报告，或统一团队的报告格式。",
+      "example": "在授权测试中发现一处权限问题，把已确认的现象和测试记录交给助手，按模板整理复现步骤、影响和修复建议，再由测试人员逐项核实。",
+      "difficulty": "高",
+      "cost": "需要 Claude Code 及相应付费额度；命令行工具还需 Python 3.9+。代码采用 MIT，方法文档等内容采用 CC BY 4.0，复用内容要署名并保留来源。",
+      "caution": "只在授权范围内测试。助手给出的判断和报告需要人工复核，不能把推测写成已证实的漏洞。",
+      "first_step": "先读[官方报告模板](https://github.com/elementalsouls/Claude-BugHunter/blob/5d91c812ee25efc0c1d5191377632e3aed7e8d2d/skills/report-writing/SKILL.md)，用一份虚构测试记录检查复现步骤、证据和影响是否齐全。",
+      "diagram_title": "把安全发现整理成可复查报告",
+      "diagram_steps": [
+        "授权测试记录",
+        "按模板整理证据",
+        "待人工复核的报告"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "mvanhorn/last30days-skill",
+      "repo_id": "R_kgDOQ__jdA",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "weekly_stars": 1548,
+      "total_stars": 69062,
+      "forks": 6145,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-11-17T22:37:11Z",
+      "source_revision": "a854f3bcb2c4344d7498426d653378510f8b253a",
+      "evidence_url": "https://github.com/mvanhorn/last30days-skill/blob/a854f3bcb2c4344d7498426d653378510f8b253a/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 5,
+          "captured_at": "2026-11-18T08:57:31.334021+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "围绕一个主题查找近 30 天的公开讨论和资料，整理成带出处的简报。",
+      "fit_short": "为选型或内容调研找近期资料",
+      "project_fit": "适合做技术选型、选题和市场观察，先集中找到近期讨论，再决定哪些原文值得细读。",
+      "example": "调研“静态网站生成工具”，让它整理近 30 天的开发者讨论、发布日期和原文链接，形成一份选型时可回查的阅读清单。",
+      "difficulty": "中",
+      "cost": "MIT 开源，基础运行需 Python 3.12+，其他依赖随来源而定。部分来源无密钥可用；助手模型、付费搜索和抓取服务按配置另计费用。",
+      "caution": "来源可能受访问或登录条件限制，摘要要回看原文。检索词会发给选用的搜索服务，启用模型重排时还会发送检索片段。",
+      "first_step": "按[来源配置说明](https://github.com/mvanhorn/last30days-skill/blob/a854f3bcb2c4344d7498426d653378510f8b253a/CONFIGURATION.md#source-requirements)选一个公开技术主题，先从无密钥来源试查，手动核对三条结果的原文和日期。",
+      "diagram_title": "从近期讨论整理一份阅读清单",
+      "diagram_steps": [
+        "主题和时间范围",
+        "检索并整理公开资料",
+        "带出处的近期简报"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "martin-olivier/airgorah",
+      "repo_id": "R_kgDOIGVm7g",
+      "url": "https://github.com/martin-olivier/airgorah",
+      "weekly_stars": 1468,
+      "total_stars": 6601,
+      "forks": 1093,
+      "language": "Rust",
+      "license": "MIT",
+      "last_push_at": "2026-11-17T19:32:54Z",
+      "source_revision": "f5833ff068e7703fac33cc20442e2ceda190c3eb",
+      "evidence_url": "https://github.com/martin-olivier/airgorah/blob/f5833ff068e7703fac33cc20442e2ceda190c3eb/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 8,
+          "captured_at": "2026-11-18T08:57:33.503808+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "用图形界面检查 Wi-Fi 安全，可查看附近接入点和连接的终端。",
+      "fit_short": "检查自有实验 Wi-Fi 的设备",
+      "project_fit": "适合有无线网络基础的人，在自有实验网络中核对接入点和设备，了解无线安全检查的流程。",
+      "example": "给自有实验 Wi-Fi 连上两台已知设备，用界面查看接入点和终端列表，再与手头的设备清单逐项对照。",
+      "difficulty": "高",
+      "cost": "MIT 开源，仅支持 Linux。需要支持监听模式和数据包注入的无线网卡，部分操作需要系统授权；可能需要另购兼容网卡。",
+      "caution": "工具也有断开连接、密码测试等主动功能，可能影响网络。只在明确授权的范围使用，先从设备观察开始。",
+      "first_step": "先按官方要求确认 Linux 和网卡兼容性，在自有实验网络查看接入点与终端，对照两台已知设备。",
+      "diagram_title": "看清实验 Wi-Fi 接入了哪些设备",
+      "diagram_steps": [
+        "自有实验无线网络",
+        "观察接入点和终端",
+        "可核对的设备列表"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "ModernRelay/omnigraph",
+      "repo_id": "R_kgDOR_S01w",
+      "url": "https://github.com/ModernRelay/omnigraph",
+      "weekly_stars": 956,
+      "total_stars": 2971,
+      "forks": 331,
+      "language": "Rust",
+      "license": "MIT",
+      "last_push_at": "2026-11-17T20:16:17Z",
+      "source_revision": "42013036b50ecfff3d63f071f32db951be9cbd54",
+      "evidence_url": "https://github.com/ModernRelay/omnigraph/blob/42013036b50ecfff3d63f071f32db951be9cbd54/docs/user/quickstart.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 6,
+          "captured_at": "2026-11-18T08:57:33.503808+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把资料、结论及其关系存成可查询的数据，沿关系找回结论的依据。",
+      "fit_short": "给知识查询保留依据关系",
+      "project_fit": "适合资料之间存在明确关系的知识库或 AI 应用，比如需要回答“这条结论由哪些记录支持”。",
+      "example": "用虚构数据，把一份性能测试记录和一份运行记录连到“页面响应更快”的结论。查询这个结论时，返回两份材料的名称，方便回看依据。",
+      "difficulty": "高",
+      "cost": "MIT 开源，需要懂命令行，并定义数据类型和关系。可先用本地文件保存小型数据，正式部署另计机器和存储成本。",
+      "caution": "资料与结论之间的关系需要录入或由应用建立。查出支持材料后，仍需判断材料是否真实、是否足以支撑结论。",
+      "first_step": "照[官方快速入门](https://github.com/ModernRelay/omnigraph/blob/42013036b50ecfff3d63f071f32db951be9cbd54/docs/user/quickstart.md)，用两份虚构材料、一条结论和两条支持关系，查询材料名称。",
+      "diagram_title": "沿着结论找回支持材料",
+      "diagram_steps": [
+        "材料及其支持关系",
+        "保存关系并查询",
+        "结论对应的材料"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "getarcaneapp/arcane",
+      "repo_id": "R_kgDOOcBTVQ",
+      "url": "https://github.com/getarcaneapp/arcane",
+      "weekly_stars": 856,
+      "total_stars": 9329,
+      "forks": 513,
+      "language": "Go",
+      "license": "BSD-3-Clause",
+      "last_push_at": "2026-11-18T00:43:33Z",
+      "source_revision": "7e31e1820b7299629154a34ff546402e01e42f56",
+      "evidence_url": "https://github.com/getarcaneapp/arcane/blob/7e31e1820b7299629154a34ff546402e01e42f56/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 2,
+          "captured_at": "2026-11-18T08:57:33.758384+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在网页里管理 Docker 容器，查看运行状态和日志。",
+      "fit_short": "集中查看容器状态与报错",
+      "project_fit": "适合已经用 Docker 部署小型服务，希望通过网页完成日常查看和管理的人。",
+      "example": "一个测试网站的容器启动后退出，在面板找到这个容器，查看状态和最近日志，把其中的错误提示交给开发人员排查。",
+      "difficulty": "中",
+      "cost": "BSD-3-Clause 开源，需要会使用 Docker，并准备运行面板的主机和存储；自行部署需承担相应资源成本。",
+      "caution": "面板需要较高的 Docker 管理权限，应保护访问入口。所读 main 文档属于 v3，采用前核对目标版本对应的配置。",
+      "first_step": "先读[官方基本部署示例](https://github.com/getarcaneapp/arcane/blob/7e31e1820b7299629154a34ff546402e01e42f56/docker/examples/compose.basic.yaml)，在隔离测试环境接入一个样例容器，只核对状态和日志。",
+      "diagram_title": "从网页查看容器状态和日志",
+      "diagram_steps": [
+        "测试容器",
+        "读取状态和运行日志",
+        "供排查的错误线索"
+      ]
+    }
+  ]
+}
