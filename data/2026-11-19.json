@@ -1,0 +1,220 @@
+{
+  "issue_date": "2026-11-19",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 117,
+  "eligible_count": 103,
+  "history_count": 179,
+  "unseen_count": 62,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "**Svelte** 适合做会随数据更新的网页组件，**Agent Substrate** 管理可暂停和恢复的任务环境，**Mailflare** 管理域名来信和共享邮箱，**Whisper** 把录音转成文字，**container** 让 Apple 芯片 Mac 运行 Linux 容器。",
+  "exclusions": [
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "source_url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/3acb2c5b585cc038bad7ed3fcdb9a7f898667ff0/README.md",
+      "reason": "根许可证为 MIT，README 免责声明限定项目仅供学习和研究。两处用途条件不一致，本期跳过。"
+    },
+    {
+      "repo": "tradermonty/claude-trading-skills",
+      "source_url": "https://github.com/tradermonty/claude-trading-skills/blob/34b848b41f5741435bb4791692a6c0c7a66c0597/README.md",
+      "reason": "根许可证为 MIT，README 将仓库用途限定为教育、研究与流程改进。两处用途条件不一致，本期跳过。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "sveltejs/svelte",
+      "repo_id": "MDEwOlJlcG9zaXRvcnk3NDI5MzMyMQ==",
+      "url": "https://github.com/sveltejs/svelte",
+      "weekly_stars": 1433,
+      "total_stars": 89617,
+      "forks": 6210,
+      "language": "JavaScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-18T23:17:50Z",
+      "source_revision": "a0823d965a7894b621e0e30ad845ddd5a05d9d39",
+      "evidence_url": "https://github.com/sveltejs/svelte/blob/a0823d965a7894b621e0e30ad845ddd5a05d9d39/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/javascript?since=weekly",
+          "rank": 9,
+          "captured_at": "2026-11-19T09:02:55.044540+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "用组件搭建网页交互，数据变化时自动更新对应的页面内容。",
+      "fit_short": "网页表单和交互小组件",
+      "project_fit": "适合做报价页、筛选面板和小工具，希望把显示内容、样式与交互逻辑放在组件里维护。",
+      "example": "做一个报价小组件，用户点击按钮增减数量，页面同步显示数量和合计金额，方便确认这次选择要花多少钱。",
+      "difficulty": "中",
+      "cost": "框架采用 MIT，需懂 HTML、CSS 和 JavaScript。本地开发还需 Node.js 工具链，页面托管和外部服务按实际使用另计费用。",
+      "caution": "账户权限、数据保存和服务端接口需要与后端方案一起设计；组件示例应与目标 Svelte 版本匹配。",
+      "first_step": "按[官方入门](https://github.com/sveltejs/svelte/blob/a0823d965a7894b621e0e30ad845ddd5a05d9d39/documentation/docs/01-introduction/02-getting-started.md)做一个数量加减按钮，再参照[派生值文档](https://github.com/sveltejs/svelte/blob/a0823d965a7894b621e0e30ad845ddd5a05d9d39/documentation/docs/02-runes/03-$derived.md)显示数量乘单价，核对合计是否同步变化。",
+      "diagram_title": "改动数量时，让合计一起更新",
+      "diagram_steps": [
+        "数量和单价",
+        "计算并更新页面",
+        "同步变化的合计"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "agent-substrate/substrate",
+      "repo_id": "R_kgDOScsbIw",
+      "url": "https://github.com/agent-substrate/substrate",
+      "weekly_stars": 1092,
+      "total_stars": 7615,
+      "forks": 835,
+      "language": "Go",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-19T00:52:44Z",
+      "source_revision": "40af7d0cc0218dfd952b8f40d0dec81a62a21e6b",
+      "evidence_url": "https://github.com/agent-substrate/substrate/blob/40af7d0cc0218dfd952b8f40d0dec81a62a21e6b/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 3,
+          "captured_at": "2026-11-19T09:02:56.729587+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给多个任务提供隔离的运行环境，能保存状态并暂停闲置任务，收到请求后再恢复。",
+      "fit_short": "管理会等待和继续的 AI 任务",
+      "project_fit": "适合已有容器集群的团队，需要运行多个有状态的 AI 助手或工具任务，并控制它们之间的隔离和联网范围。",
+      "example": "在测试集群运行官方计数器，访问一次记为 1，暂停后再访问继续计数，用它检查任务恢复后能否接着原状态工作。",
+      "difficulty": "高",
+      "cost": "Apache-2.0 开源，需熟悉 Kubernetes（容器集群管理）和网络权限；开发示例还用到 Go、kubectl 和 Docker。集群、快照存储与网络有资源成本，接入模型时另计费用。",
+      "caution": "安全文档中仍有开发中的边界控制；暂停后能恢复哪些状态，也取决于快照配置。先用无敏感数据验证。",
+      "first_step": "在独立开发集群按[官方计数器示例](https://github.com/agent-substrate/substrate/blob/40af7d0cc0218dfd952b8f40d0dec81a62a21e6b/demos/counter/README.md)做一次暂停和恢复，核对内存与文件计数是否连续，再考虑接入 AI 任务。",
+      "diagram_title": "让暂停的任务接着原状态工作",
+      "diagram_steps": [
+        "带状态的任务",
+        "保存并恢复任务状态",
+        "接着原进度运行"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "hieunc229/mailflare",
+      "repo_id": "R_kgDOSnz3ig",
+      "url": "https://github.com/hieunc229/mailflare",
+      "weekly_stars": 991,
+      "total_stars": 7106,
+      "forks": 1233,
+      "language": "TypeScript",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-11-18T19:11:20Z",
+      "source_revision": "06799fdaefe24390bdb2ae4483ba9bf748042fff",
+      "evidence_url": "https://github.com/hieunc229/mailflare/blob/06799fdaefe24390bdb2ae4483ba9bf748042fff/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 16,
+          "captured_at": "2026-11-19T09:02:54.782811+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把自有域名的邮件接收、分类和共享邮箱放进自己部署的网页里管理。",
+      "fit_short": "小团队的域名邮箱和邮件协作",
+      "project_fit": "适合想集中处理公共咨询邮件的小团队，并且愿意维护域名、收发服务、权限和备份。",
+      "example": "把产品咨询邮件收进一个共享邮箱，按收件规则分类，让有权限的同事在同一处查看和处理，再由人工决定如何回复。",
+      "difficulty": "高",
+      "cost": "采用 AGPL-3.0，需自有域名、DNS 配置和部署能力。域名、主机、存储及邮件提供商按实际资源计费，可选 AI 服务另计费用。",
+      "caution": "修改后提供网络服务，要遵守 AGPL 的源码提供要求。共享邮箱需核对权限和备份，启用 AI 前还要确认模型服务及邮件访问范围。",
+      "first_step": "先读[Docker 自托管说明](https://github.com/hieunc229/mailflare/blob/06799fdaefe24390bdb2ae4483ba9bf748042fff/docs/self-hosting.md)，在隔离测试环境添加专用测试域名和一个样例邮箱，先核对页面、成员权限和备份位置。",
+      "diagram_title": "把域名来信集中到共享邮箱",
+      "diagram_steps": [
+        "域名收到的邮件",
+        "按规则接收和分类",
+        "可协作的共享邮箱"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "openai/whisper",
+      "repo_id": "R_kgDOIAstBQ",
+      "url": "https://github.com/openai/whisper",
+      "weekly_stars": 910,
+      "total_stars": 113015,
+      "forks": 13688,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-08-31T17:19:19Z",
+      "source_revision": "86098128c0b4f24f0e2aa2994de830614b474227",
+      "evidence_url": "https://github.com/openai/whisper/blob/86098128c0b4f24f0e2aa2994de830614b474227/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 13,
+          "captured_at": "2026-11-19T09:02:55.230169+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把录音里的说话内容转成文字，支持多种语言，也提供译成英文的语音翻译功能。",
+      "fit_short": "录音整理和字幕初稿",
+      "project_fit": "适合把获授权的课程、访谈或产品演示录音变成可编辑文字，再交给人工校对和整理。",
+      "example": "把一段获授权的中文课程片段转成文字，人工核对术语、名字和数字后，用作字幕初稿或内容检索材料。",
+      "difficulty": "中",
+      "cost": "代码和模型权重采用 MIT。需要 Python、PyTorch、ffmpeg 并下载模型；本机推理的成本主要是硬件、存储和运行资源，大模型需要更多内存或显存。",
+      "caution": "可能把没说过的话写进结果，也可能重复或误识别。重要内容要回听原音；语音翻译目标是英文，turbo 模型不支持这项翻译任务。",
+      "first_step": "按[官方命令行用法](https://github.com/openai/whisper/blob/86098128c0b4f24f0e2aa2994de830614b474227/README.md#command-line-usage)，用一段 30 秒、已知原文的普通话样例做转写，逐句核对，尤其检查人名和数字。",
+      "diagram_title": "把语音录音变成可校对文字",
+      "diagram_steps": [
+        "获授权的语音录音",
+        "识别语音生成文字",
+        "待校对的文字稿"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "apple/container",
+      "repo_id": "R_kgDOOzc9Sg",
+      "url": "https://github.com/apple/container",
+      "weekly_stars": 812,
+      "total_stars": 51945,
+      "forks": 1848,
+      "language": "Swift",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-13T12:58:29Z",
+      "source_revision": "16e8d488ee1d9ede35ab9cf21b9973ffdc9361b3",
+      "evidence_url": "https://github.com/apple/container/blob/16e8d488ee1d9ede35ab9cf21b9973ffdc9361b3/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/swift?since=weekly",
+          "rank": 1,
+          "captured_at": "2026-11-19T09:02:56.760209+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在 Apple 芯片 Mac 上运行 Linux 容器镜像，每个容器放在轻量虚拟机里。",
+      "fit_short": "在 Mac 上试跑 Linux 程序",
+      "project_fit": "适合使用 Apple 芯片 Mac 的开发者，在本机测试 Linux 命令行工具或网页服务。",
+      "example": "按官方教程把一个简单网页服务打成 Linux 镜像，在 Mac 上启动容器并访问页面，用来检查服务能否在打包环境中运行。",
+      "difficulty": "中",
+      "cost": "Apache-2.0 开源，需要 Apple 芯片 Mac 和 macOS 26 或更新系统。需预留镜像、Linux 内核及运行容器所需的存储和内存。",
+      "caution": "先核对镜像架构、网络连接和目录挂载。项目仍在持续开发，跨大版本升级前要查看兼容性说明。",
+      "first_step": "参照[官方首次运行示例](https://github.com/apple/container/blob/16e8d488ee1d9ede35ab9cf21b9973ffdc9361b3/README.md#run-your-first-container)，先让 Alpine 容器输出一行文字并退出，确认启动与清理流程，再尝试网页服务。",
+      "diagram_title": "在 Mac 上试跑 Linux 程序",
+      "diagram_steps": [
+        "Linux 容器镜像",
+        "在轻量虚拟机中运行",
+        "可测试的 Linux 程序"
+      ]
+    }
+  ]
+}
