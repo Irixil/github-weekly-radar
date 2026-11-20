@@ -1,0 +1,220 @@
+{
+  "issue_date": "2026-11-20",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 113,
+  "eligible_count": 95,
+  "history_count": 184,
+  "unseen_count": 60,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "**MiniMind** 帮助理解小模型训练，**HermesEnabler** 用于手表表盘兼容性实验，**AutoClip** 把长视频整理成候选短片，**Docker Compose** 统一启动多个应用服务，**Claude Code Templates** 提供可挑选的助手配置。想先做一个直观的小验证，可以从视频内置示例或容器配置入手。",
+  "exclusions": [
+    {
+      "repo": "tradermonty/claude-trading-skills",
+      "source_url": "https://github.com/tradermonty/claude-trading-skills/blob/f95e770591b56fd83b9917175f5a7e8fe9ac47dc/README.md",
+      "reason": "根许可证为 MIT，README 将仓库用途限定为教育、研究与流程改进。两处用途条件不一致，本期跳过。"
+    },
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "source_url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/92f0209ec5325c152a7532d714a69e09d102399a/README.md",
+      "reason": "根许可证为 MIT，README 免责声明限定项目仅供学习和研究。两处用途条件不一致，本期跳过。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "jingyaogong/minimind",
+      "repo_id": "R_kgDOMbt5gA",
+      "url": "https://github.com/jingyaogong/minimind",
+      "weekly_stars": 1612,
+      "total_stars": 66867,
+      "forks": 8783,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-18T15:09:40Z",
+      "source_revision": "cc9629e5f464ef46ef9411bfac916364e0a6dff1",
+      "evidence_url": "https://github.com/jingyaogong/minimind/blob/cc9629e5f464ef46ef9411bfac916364e0a6dff1/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 7,
+          "captured_at": "2026-11-20T09:01:32.657319+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "用文本教小模型生成回答，提供训练、微调和测试的示例代码。",
+      "fit_short": "理解模型训练与小规模实验",
+      "project_fit": "适合想理解语言模型训练的人，或需要先用小模型探索数据格式、训练步骤和评估方法的团队。",
+      "example": "准备一小组自编问答，用它练习指令微调，再用固定问题对照训练前后的回答，学习数据与输出之间的关系。",
+      "difficulty": "高",
+      "cost": "代码采用 Apache-2.0，需 Python、PyTorch 和深度学习基础。训练建议准备可用 GPU；耗时与费用取决于硬件、数据和训练阶段，下载的数据和权重需另核对许可。",
+      "caution": "训练配置、初始模型和数据版本要匹配，并用固定测试题检查回答。小样例适合验证流程，实际回答质量与训练耗时需要另测。",
+      "first_step": "先读[官方入门](https://github.com/jingyaogong/minimind/blob/cc9629e5f464ef46ef9411bfac916364e0a6dff1/README.md)，整理十条虚构问答并对照数据格式核对字段；确认设备和预算后，再考虑少量训练步骤。",
+      "diagram_title": "用问答样例练习模型微调",
+      "diagram_steps": [
+        "文本与问答样例",
+        "训练或微调小模型",
+        "可测试的模型文件"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "pookjw/HermesEnabler",
+      "repo_id": "R_kgDONdgGxQ",
+      "url": "https://github.com/pookjw/HermesEnabler",
+      "weekly_stars": 904,
+      "total_stars": 2250,
+      "forks": 189,
+      "language": "Objective-C",
+      "license": "MIT",
+      "last_push_at": "2026-11-19T02:24:27Z",
+      "source_revision": "f428f91d7270f53f738429a17fb6a5d51f924284",
+      "evidence_url": "https://github.com/pookjw/HermesEnabler/blob/f428f91d7270f53f738429a17fb6a5d51f924284/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-11-20T09:01:31.368084+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "实验性地调整 Apple Watch 的设备配置，研究 Hermès、Ultra 等表盘的可用状态。",
+      "fit_short": "手表表盘与设备兼容性研究",
+      "project_fit": "主要面向 watchOS 系统研究者，适合观察设备标识与表盘可用性的关系；普通业务应用的直接复用价值有限。",
+      "example": "在备用手表上记录型号、系统构建和原始备份，对照配置调整前后哪些表盘选项发生变化，用于研究设备识别差异。",
+      "difficulty": "高",
+      "cost": "代码采用 MIT，需要配对的 iPhone、兼容 Apple Watch，以及签名或构建工具。本期源版本列出的支持范围为 watchOS 27.0 至 27.3 beta 1，watchOS 26 不支持；主要成本是设备和研究时间。",
+      "caution": "改动可能影响其他表盘和显示布局，效果受机型与系统构建限制。官方要求删除应用前先恢复设备配置备份。",
+      "first_step": "先读[官方表盘研究说明](https://github.com/pookjw/HermesEnabler/blob/f428f91d7270f53f738429a17fb6a5d51f924284/Research/WatchFaces/README.md)，核对型号、系统版本和备份恢复方案，再决定是否在备用设备上试验。",
+      "diagram_title": "研究设备配置怎样影响表盘",
+      "diagram_steps": [
+        "兼容的测试手表",
+        "备份并调整表盘配置",
+        "待验证的表盘状态"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "zhouxiaoka/autoclip",
+      "repo_id": "R_kgDOPIwfLw",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "weekly_stars": 717,
+      "total_stars": 11227,
+      "forks": 1938,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-11-19T22:43:30Z",
+      "source_revision": "cd8e6bed18d87a81273d48bcd165751708ac715c",
+      "evidence_url": "https://github.com/zhouxiaoka/autoclip/blob/cd8e6bed18d87a81273d48bcd165751708ac715c/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 15,
+          "captured_at": "2026-11-20T09:01:32.657319+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把长视频整理成候选短片，配字幕、封面和发布文案，便于人工检查后导出。",
+      "fit_short": "访谈、演示和播客的短片制作",
+      "project_fit": "适合手里有自制或获授权的长视频，希望先生成一批候选片段，再人工挑选和校对的内容团队。",
+      "example": "将一段自制产品访谈生成几个候选片段，选择竖版输出，逐段检查是否保留完整观点，再下载短片和配套文案。",
+      "difficulty": "中",
+      "cost": "项目采用 MIT，剪辑和渲染使用本机资源。正式处理素材需配置分析模型，字幕可本地转写或用云端服务；本地模型需要相应硬件，云端按所选服务商用量计费。",
+      "caution": "自动片段仍需检查上下文、字幕和素材授权。云端分析或转写会发送相应文字、抽样画面或音频；使用统计与崩溃报告设有开关。",
+      "first_step": "按[官方快速开始](https://github.com/zhouxiaoka/autoclip/blob/cd8e6bed18d87a81273d48bcd165751708ac715c/README.md)，先打开软件内置示例，不填 API 密钥，检查字幕、画幅和切点，再换成一段自有短素材。",
+      "diagram_title": "把一段长视频整理成候选短片",
+      "diagram_steps": [
+        "自有长视频与字幕",
+        "选片段并剪辑渲染",
+        "短片和配套文案"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "docker/compose",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkxNTA0NTc1MQ==",
+      "url": "https://github.com/docker/compose",
+      "weekly_stars": 641,
+      "total_stars": 39047,
+      "forks": 6054,
+      "language": "Go",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-18T14:30:27Z",
+      "source_revision": "469ab94d72326565c6dfdf304a72882115011800",
+      "evidence_url": "https://github.com/docker/compose/blob/469ab94d72326565c6dfdf304a72882115011800/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 13,
+          "captured_at": "2026-11-20T09:01:33.199467+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "用一份配置描述多个容器服务，并一起启动、查看日志或停止。",
+      "fit_short": "网页、数据库和缓存的联合运行",
+      "project_fit": "适合本地开发、演示或小规模自托管，应用由网页、数据库、缓存等多个服务组成，希望保留一份可复用的启动配置。",
+      "example": "一个演示应用需要网页服务和 Redis 缓存，把两者写进同一份配置，统一启动，再通过日志和网页访问检查它们能否配合工作。",
+      "difficulty": "中",
+      "cost": "Compose 采用 Apache-2.0，需要 Docker 运行环境和基础容器知识。资源成本来自运行容器的机器、存储与网络，运行环境的费用按所选方案核对。",
+      "caution": "端口、环境变量、健康检查和数据卷需要明确配置。清理容器前先确认数据保存位置，删除数据卷会影响其中的内容。",
+      "first_step": "照[官方快速入门](https://github.com/docker/compose/blob/469ab94d72326565c6dfdf304a72882115011800/README.md)，从两个不含真实数据的样例服务开始，核对配置、启动和日志，再测试停止后的数据保留情况。",
+      "diagram_title": "让多个服务按同一份配置运行",
+      "diagram_steps": [
+        "多个服务的配置",
+        "按配置启动容器组",
+        "可联调的应用环境"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "davila7/claude-code-templates",
+      "repo_id": "R_kgDOPGh7XA",
+      "url": "https://github.com/davila7/claude-code-templates",
+      "weekly_stars": 615,
+      "total_stars": 34014,
+      "forks": 4056,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-11-19T19:23:50Z",
+      "source_revision": "915ebd2c8ff332955104345472dd43bb5018771d",
+      "evidence_url": "https://github.com/davila7/claude-code-templates/blob/915ebd2c8ff332955104345472dd43bb5018771d/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 9,
+          "captured_at": "2026-11-20T09:01:32.657319+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "提供可预览的 Claude Code 配置目录，把角色说明、技能和工具连接配置引入项目。",
+      "fit_short": "给编程助手配置固定工作方式",
+      "project_fit": "适合已有 Claude Code 使用基础，希望为代码审查、文档整理等任务选取现成配置，再按团队要求修改的人。",
+      "example": "为一个演示项目选择代码审查角色，让助手按固定检查点审阅一小段代码，再人工核对建议，决定哪些改动值得采用。",
+      "difficulty": "中",
+      "cost": "安装工具采用 MIT，收录组件保留各自许可。按 npx 入门需 Node.js 和 Claude Code；模型用量及连接的第三方服务按各自条件计费。",
+      "caution": "模板可能请求执行命令和写文件权限，先看内容再接入。只加载任务需要的组件，并单独核对来源、许可和所连服务。",
+      "first_step": "先预览[代码审查角色模板](https://github.com/davila7/claude-code-templates/blob/915ebd2c8ff332955104345472dd43bb5018771d/cli-tool/components/agents/development-tools/code-reviewer.md)，列出它要求读取、写入和执行的操作，再在无真实数据的演示项目只引入这一项，检查配置改动。",
+      "diagram_title": "为助手挑选一套工作说明",
+      "diagram_steps": [
+        "想要的助手工作方式",
+        "挑选并写入配置模板",
+        "可复用的助手配置"
+      ]
+    }
+  ]
+}
