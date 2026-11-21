@@ -1,0 +1,235 @@
+{
+  "issue_date": "2026-11-21",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 113,
+  "eligible_count": 95,
+  "history_count": 189,
+  "unseen_count": 55,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "**Search** 可以并排对照文档和网页，**jQuery** 适合给已有页面补交互，**Buzz** 把团队讨论和 AI 助手放在同一工作区，**A2UI** 把助手消息变成可交互界面，**OpenWorker** 提供带权限和审批设置的桌面助手及开发 SDK。",
+  "exclusions": [
+    {
+      "repo": "tradermonty/claude-trading-skills",
+      "source_url": "https://github.com/tradermonty/claude-trading-skills/blob/901985468f4dd4a9c45f460345b7df1991302b24/README.md",
+      "reason": "根许可证为 MIT，README 将用途限定为教育、研究与流程改进。用途范围表述不一致，本期跳过。"
+    },
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "source_url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/fe3c03f7337971a639dfde23cfa11ff03a722606/README.md",
+      "reason": "根许可证为 MIT，README 免责声明限定项目仅供学习和研究。用途范围表述不一致，本期跳过。"
+    },
+    {
+      "repo": "soxoj/maigret",
+      "source_url": "https://github.com/soxoj/maigret/blob/441becf5358cd14d144365ddbb11c9a98a401d07/README.md",
+      "reason": "README 的商用章节称 MIT 商用不受限制，免责声明又写仅供教育及合法目的。用途范围表述未统一，本期暂不收录。"
+    },
+    {
+      "repo": "bggRGjQaUbCoE/PiliPlus",
+      "source_url": "https://github.com/bggRGjQaUbCoE/PiliPlus/blob/217fb54f51f6764176319bbdedab2a7522d75401/README.md",
+      "reason": "根许可证为 GPL-3.0，README 又限定仅用于学习测试，并要求下载后 24 小时内删除。两处使用条件不一致，本期跳过。"
+    },
+    {
+      "repo": "z7786/wenxi",
+      "source_url": "https://github.com/z7786/wenxi/blob/66a175b172ac3620a5e1baa07035fecedd7502b7/docs/LICENSING.md",
+      "reason": "许可范围文档明确说明，内置第三方 SDK 的组合分发兼容性仍待确认。无法确认整包许可条件，本期暂不收录。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "driceroland/Search",
+      "repo_id": "R_kgDOUiXqxw",
+      "url": "https://github.com/driceroland/Search",
+      "weekly_stars": 520,
+      "total_stars": 3574,
+      "forks": 365,
+      "language": "Swift",
+      "license": "MIT",
+      "last_push_at": "2026-11-20T23:45:56Z",
+      "source_revision": "dbb8345d1703c71f70ba9c3e26196a6e316294b7",
+      "evidence_url": "https://github.com/driceroland/Search/blob/dbb8345d1703c71f70ba9c3e26196a6e316294b7/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/swift?since=weekly",
+          "rank": 7,
+          "captured_at": "2026-11-21T08:58:59.583813+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "基于 Mac 自带的 WebKit 浏览网页，提供标签管理、并排分屏和阅读模式。",
+      "fit_short": "对照阅读资料与网页",
+      "project_fit": "适合在 Mac 上经常对照文档和网页的人，也适合研究 Swift 与 WebKit 原生浏览器实现的开发者。",
+      "example": "把一个开源项目的说明页和演示页并排打开，一边阅读用法，一边查看页面表现，把常看的页面固定为标签。",
+      "difficulty": "低",
+      "cost": "应用免费，代码采用 MIT。基础浏览需要 macOS 14 或更新系统，扩展功能需要 macOS 15.4 或更新系统；自行编译还需 Xcode 与 Swift 工具链。",
+      "caution": "先测试常用网站和扩展的兼容性，并核对扩展访问权限。分发改版时，按 README 的品牌要求更名。",
+      "first_step": "参照[官方功能说明](https://github.com/driceroland/Search/blob/dbb8345d1703c71f70ba9c3e26196a6e316294b7/README.md)，打开两个公开页面试一次分屏，退出后重新打开，检查标签恢复和页面兼容性。",
+      "diagram_title": "把文档和演示页放在一起看",
+      "diagram_steps": [
+        "两个公开网页",
+        "用分屏与标签组织",
+        "可并排对照的页面"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "jquery/jquery",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkxNjcxNzQ=",
+      "url": "https://github.com/jquery/jquery",
+      "weekly_stars": 520,
+      "total_stars": 60107,
+      "forks": 20650,
+      "language": "JavaScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-17T19:00:49Z",
+      "source_revision": "effd615f0009e927dfd1f41d04fb6073478076d4",
+      "evidence_url": "https://github.com/jquery/jquery/blob/effd615f0009e927dfd1f41d04fb6073478076d4/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/javascript?since=weekly",
+          "rank": 4,
+          "captured_at": "2026-11-21T08:58:57.804061+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "用 JavaScript 选中网页元素、响应点击和输入事件，并更新页面内容。",
+      "fit_short": "给已有网页补小范围交互",
+      "project_fit": "适合维护已有网页或旧系统，想给列表、按钮和表单增加交互，也适合仍依赖 jQuery 插件的项目。",
+      "example": "给一个静态商品清单加搜索框，输入关键词时只显示匹配条目，让页面上的列表随输入变化。",
+      "difficulty": "中",
+      "cost": "库采用 MIT，需 HTML、CSS 和 JavaScript 基础。可在已有网页中引入，主要资源费用来自页面托管和所调用的业务接口。",
+      "caution": "本期源版本属于 4.x，旧插件升级前需核对兼容性。精简或自定义构建中包含的方法可能不同。",
+      "first_step": "先用三个虚构条目的静态页绑定输入事件，只检查筛选后的显示与隐藏；可对照[官方显示与隐藏实现](https://github.com/jquery/jquery/blob/effd615f0009e927dfd1f41d04fb6073478076d4/src/css/showHide.js)确认所用方法。",
+      "diagram_title": "给静态列表加一个筛选框",
+      "diagram_steps": [
+        "列表和用户输入",
+        "绑定事件并更新元素",
+        "随输入变化的列表"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "block/buzz",
+      "repo_id": "R_kgDORgXb2g",
+      "url": "https://github.com/block/buzz",
+      "weekly_stars": 436,
+      "total_stars": 37632,
+      "forks": 4964,
+      "language": "Rust",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-21T00:58:44Z",
+      "source_revision": "8a3912f1511a46faf30b4cef774c634529e9f2f1",
+      "evidence_url": "https://github.com/block/buzz/blob/8a3912f1511a46faf30b4cef774c634529e9f2f1/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/rust?since=weekly",
+          "rank": 2,
+          "captured_at": "2026-11-21T08:58:59.165086+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把人和 AI 助手放进同一工作区，在频道、讨论线程和可搜索的记录中协作。",
+      "fit_short": "保留人与助手的协作记录",
+      "project_fit": "适合需要围绕项目持续讨论、追溯处理依据的团队，并且愿意自行维护工作区服务。",
+      "example": "为一项虚构功能建频道，成员在同一线程提出问题，让已接入的助手整理相关消息链接，团队依据原记录继续讨论。",
+      "difficulty": "高",
+      "cost": "代码采用 Apache-2.0。自行部署需中继服务、PostgreSQL、Redis 和对象存储；桌面客户端在另一个官方仓库。主机、存储、网络及接入的模型服务另计费用。",
+      "caution": "README 将移动端和工作流审批流程列为仍在完善的功能。先限定助手能进入的频道和能执行的操作，再接入真实仓库或资料。",
+      "first_step": "按[官方部署说明](https://github.com/block/buzz/blob/8a3912f1511a46faf30b4cef774c634529e9f2f1/deploy/compose/README.md)建立独立测试工作区，只放虚构消息，检查一个频道的讨论线程与搜索，再考虑接入权限受限的助手。",
+      "diagram_title": "让讨论和助手工作留在同一处",
+      "diagram_steps": [
+        "团队消息和助手",
+        "按频道协作并留记录",
+        "可搜索的项目讨论"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "a2ui-project/a2ui",
+      "repo_id": "R_kgDOP2Xf8g",
+      "url": "https://github.com/a2ui-project/a2ui",
+      "weekly_stars": 413,
+      "total_stars": 17695,
+      "forks": 1432,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-21T00:57:06Z",
+      "source_revision": "5ff1b05f02d39f969b52a942e78e864ef3ac01fa",
+      "evidence_url": "https://github.com/a2ui-project/a2ui/blob/5ff1b05f02d39f969b52a942e78e864ef3ac01fa/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 8,
+          "captured_at": "2026-11-21T08:58:57.777313+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把助手发来的界面描述和数据，渲染成应用允许的卡片、按钮与表单。",
+      "fit_short": "让 AI 应用用界面引导操作",
+      "project_fit": "适合 AI 应用需要让用户选择、确认或填表的场景，希望前端按统一消息格式展示界面。",
+      "example": "做一个活动报名演示，让助手返回日期选项和确认按钮的界面描述。前端展示选择，把用户操作传回应用，再由业务接口处理报名。",
+      "difficulty": "中",
+      "cost": "主体采用 Apache-2.0，需前端开发能力及配套渲染器。官方有固定消息样例，可先验证显示；接入真实模型和业务服务时另计相应费用。",
+      "caution": "消息格式、组件目录和渲染器版本需要匹配。按钮触发的业务操作及权限，仍需应用自行校验。",
+      "first_step": "先照[React 固定消息样例](https://github.com/a2ui-project/a2ui/blob/5ff1b05f02d39f969b52a942e78e864ef3ac01fa/typescript/renderers/react/README.md)渲染标题和说明文字，修改一处数据观察界面更新，再扩展到交互组件。",
+      "diagram_title": "把助手消息变成可交互界面",
+      "diagram_steps": [
+        "界面描述和数据",
+        "映射允许使用的组件",
+        "可交互的卡片表单"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "andrewyng/openworker",
+      "repo_id": "R_kgDOTdnv7w",
+      "url": "https://github.com/andrewyng/openworker",
+      "weekly_stars": 398,
+      "total_stars": 19489,
+      "forks": 2790,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-11-20T23:39:00Z",
+      "source_revision": "d1b8cd69ceccb10e75bb58ea133a5cf7cb981b89",
+      "evidence_url": "https://github.com/andrewyng/openworker/blob/d1b8cd69ceccb10e75bb58ea133a5cf7cb981b89/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 5,
+          "captured_at": "2026-11-21T08:58:57.743135+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "让桌面助手在指定文件和工具中分步完成任务，也提供工具调用、审批和会话管理的开发 SDK。",
+      "fit_short": "桌面任务助手与 Agent 应用开发",
+      "project_fit": "适合需要 AI 处理文件并保留操作记录的人，也适合想在产品中复用工具调用、审批和会话机制的开发者。",
+      "example": "给助手一个只含虚构会议笔记的演示目录，先整理提纲和待办，确认后再写出摘要文件，并核对读取与写入记录。",
+      "difficulty": "中",
+      "cost": "代码采用 MIT。桌面版文档支持 Apple 芯片 Mac 和 Windows，需要配置云端模型或本地模型服务；模型用量、本地算力及外部连接服务按所选方案承担成本。",
+      "caution": "使用云端模型时，任务所需的文件内容可能发给提供商。先限定目录、工具和审批规则，并按支持情况配置可选沙箱；桌面版仍处于公开测试阶段。",
+      "first_step": "照[官方首个任务示例](https://github.com/andrewyng/openworker/blob/d1b8cd69ceccb10e75bb58ea133a5cf7cb981b89/README.md)，只授权一个放有虚构笔记的目录，要求先给计划、写入前确认，最后核对摘要与操作记录。",
+      "diagram_title": "在指定文件夹里完成一个小任务",
+      "diagram_steps": [
+        "虚构笔记和目录权限",
+        "分步处理并请求审批",
+        "待核对的摘要和记录"
+      ]
+    }
+  ]
+}
