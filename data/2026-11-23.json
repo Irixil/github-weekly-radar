@@ -1,0 +1,235 @@
+{
+  "issue_date": "2026-11-23",
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 114,
+  "eligible_count": 96,
+  "history_count": 199,
+  "unseen_count": 47,
+  "schema_version": 3,
+  "timezone": "Asia/Shanghai",
+  "editor_note": "**Ardia** 提供分屏、扩展与网页调试体验，**Gopeed** 统一管理下载，**Kelivo** 集中使用不同模型，**QMD** 检索本地 Markdown，**Stats** 观察 Mac 资源占用。想从小范围验证开始，可先看 QMD 的关键词搜索或 Stats 的只读监控。",
+  "exclusions": [
+    {
+      "repo": "tradermonty/claude-trading-skills",
+      "source_url": "https://github.com/tradermonty/claude-trading-skills/blob/bb4a8ff60c2054cc8b41807ae648041ff0922938/README.md",
+      "reason": "根许可证为 MIT，README 将用途限定为教育、研究与流程改进。用途范围表述不一致，本期跳过。"
+    },
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "source_url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/603a55e6ddac16aef96f4216847f87323c58d0cb/README.md",
+      "reason": "根许可证为 MIT，README 免责声明限定项目仅供学习和研究。用途范围表述不一致，本期跳过。"
+    },
+    {
+      "repo": "soxoj/maigret",
+      "source_url": "https://github.com/soxoj/maigret/blob/25125121b668de2505294f414892d2db06ddcaa8/README.md",
+      "reason": "README 的商用章节称 MIT 商用不受限制，免责声明又写仅供教育及合法目的。用途范围表述未统一，本期暂不收录。"
+    },
+    {
+      "repo": "bggRGjQaUbCoE/PiliPlus",
+      "source_url": "https://github.com/bggRGjQaUbCoE/PiliPlus/blob/217fb54f51f6764176319bbdedab2a7522d75401/README.md",
+      "reason": "根许可证为 GPL-3.0，README 又限定仅用于学习测试，并要求下载后 24 小时内删除。两处使用条件不一致，本期跳过。"
+    },
+    {
+      "repo": "z7786/wenxi",
+      "source_url": "https://github.com/z7786/wenxi/blob/66a175b172ac3620a5e1baa07035fecedd7502b7/docs/LICENSING.md",
+      "reason": "许可范围文档明确说明，内置第三方 SDK 的组合分发兼容性仍待确认。无法确认整包许可条件，本期暂不收录。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "ardia-browser/ardia",
+      "repo_id": "R_kgDOS_pvMQ",
+      "url": "https://github.com/ardia-browser/ardia",
+      "weekly_stars": 519,
+      "total_stars": 2841,
+      "forks": 377,
+      "language": "TypeScript",
+      "license": "GPL-3.0",
+      "last_push_at": "2026-11-23T00:55:23Z",
+      "source_revision": "80384b50c7e635cfed55f374a399ffead5347306",
+      "evidence_url": "https://github.com/ardia-browser/ardia/blob/80384b50c7e635cfed55f374a399ffead5347306/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-11-23T08:56:59.481745+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "基于 Chromium 浏览网页，把地址与标签管理放到侧边，支持分屏、扩展和开发者工具。",
+      "fit_short": "网页调试与分屏资料对照",
+      "project_fit": "适合需要同时对照说明页和演示页的人，也适合研究 Chromium 浏览器界面和扩展集成的开发者。",
+      "example": "把接口说明与演示网页放进同一窗口并排查看，再打开开发者工具检查页面表现，减少来回切换标签的操作。",
+      "difficulty": "中",
+      "cost": "浏览器整包采用 GPLv3，Ardia 自有源码采用 Apache-2.0，其他组件保留各自许可。本期以 Mac 版为例，需要 Apple 芯片和 macOS 14 或更新版本；二次开发还需评估引擎构建资源。",
+      "caution": "部分能力仍有限制，例如通行密钥与 DRM 支持并不完整，本地翻译另需 macOS 26。先核对功能状态，并检查扩展、同步等功能的数据访问范围。",
+      "first_step": "参照[官方功能与状态说明](https://github.com/ardia-browser/ardia/blob/80384b50c7e635cfed55f374a399ffead5347306/README.md)，用两个公开页面测试分屏、一个常用扩展和开发者工具，确认日常网页兼容性后再扩大使用范围。",
+      "diagram_title": "把说明与演示放在同一窗口",
+      "diagram_steps": [
+        "两个公开网页",
+        "分屏浏览并检查页面",
+        "可对照的调试视图"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "GopeedLab/gopeed",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkxODI1MDI4NTA=",
+      "url": "https://github.com/GopeedLab/gopeed",
+      "weekly_stars": 218,
+      "total_stars": 27898,
+      "forks": 1817,
+      "language": "Dart",
+      "license": "GPL-3.0",
+      "last_push_at": "2026-11-22T13:56:35Z",
+      "source_revision": "996685c8478ac055f4842746682b1db2a8b810f8",
+      "evidence_url": "https://github.com/GopeedLab/gopeed/blob/996685c8478ac055f4842746682b1db2a8b810f8/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/dart?since=weekly",
+          "rank": 8,
+          "captured_at": "2026-11-23T08:57:01.329599+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把不同来源的文件下载放进统一任务列表，支持暂停、继续、重试和批量管理。",
+      "fit_short": "管理文件下载与自动化任务",
+      "project_fit": "适合集中处理合法授权的文件下载；需要程序发起任务时，也可研究它的 REST 接口、命令行和扩展机制。",
+      "example": "把几份获授权的公开样例文件加入队列，查看各自进度，暂停其中一个任务后继续，完成后核对保存位置和文件校验值。",
+      "difficulty": "中",
+      "cost": "代码采用 GPLv3，主要资源成本是网络流量、磁盘和运行设备。二次开发需要 Go、Flutter 等基础，扩展或第三方服务按各自条件使用。",
+      "caution": "速度和续传能力受来源服务器、网络与协议限制。扩展和下载后脚本会增加执行权限，需核对来源；稳定版与 2.0 Beta 的功能应分别确认。",
+      "first_step": "按[官方使用说明](https://github.com/GopeedLab/gopeed/blob/996685c8478ac055f4842746682b1db2a8b810f8/README_zh-CN.md)，从可信且支持续传的测试源下载一个小样例文件，核对大小、校验值和保存位置，再测试暂停与继续。",
+      "diagram_title": "把多个下载放进一个任务队列",
+      "diagram_steps": [
+        "获授权的文件链接",
+        "排队下载并管理进度",
+        "可核对的本地文件"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "Chevey339/kelivo",
+      "repo_id": "R_kgDOPmUEoQ",
+      "url": "https://github.com/Chevey339/kelivo",
+      "weekly_stars": 214,
+      "total_stars": 4736,
+      "forks": 533,
+      "language": "Dart",
+      "license": "AGPL-3.0",
+      "last_push_at": "2026-11-22T15:14:51Z",
+      "source_revision": "e0832d2b4f447b41939048bd30a66a6305d0cc6d",
+      "evidence_url": "https://github.com/Chevey339/kelivo/blob/e0832d2b4f447b41939048bd30a66a6305d0cc6d/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/dart?since=weekly",
+          "rank": 6,
+          "captured_at": "2026-11-23T08:57:01.329599+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "用一个客户端连接多家模型，管理会话、助手配置，并按需接入工具。",
+      "fit_short": "比较模型与整理常用助手",
+      "project_fit": "适合经常切换不同模型、想统一保存会话和提示配置的人，也适合研究跨平台模型客户端的开发者。",
+      "example": "把同一段虚构需求分别交给两个模型会话，保存回答供人工对照，再把常用提示整理成一份助手配置。",
+      "difficulty": "中",
+      "cost": "客户端代码采用 AGPL-3.0，需要自行准备可用模型连接。模型 API、订阅、搜索或语音服务按提供方计费；使用本地兼容服务则需相应硬件和配置。",
+      "caution": "任务内容会发给所选模型或工具服务，应检查上下文日志和外发范围。备份、工作区和 MCP 工具按需要开放，凭据与备份文件需妥善保管。",
+      "first_step": "照[官方入门](https://github.com/Chevey339/kelivo/blob/e0832d2b4f447b41939048bd30a66a6305d0cc6d/README.md)只连接一个获授权的模型或本地兼容服务，用虚构文本开一个会话，查看上下文日志确认发送了什么，再决定是否启用工具或备份。",
+      "diagram_title": "在同一客户端使用不同模型",
+      "diagram_steps": [
+        "虚构问题和模型配置",
+        "向选定模型发送请求",
+        "可保存比较的会话"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "tobi/qmd",
+      "repo_id": "R_kgDOQk1Y9Q",
+      "url": "https://github.com/tobi/qmd",
+      "weekly_stars": 203,
+      "total_stars": 31349,
+      "forks": 1977,
+      "language": "TypeScript",
+      "license": "MIT",
+      "last_push_at": "2026-11-20T21:34:04Z",
+      "source_revision": "8be0c42395c02ff73bce6d6c2e67d7905b0a771c",
+      "evidence_url": "https://github.com/tobi/qmd/blob/8be0c42395c02ff73bce6d6c2e67d7905b0a771c/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 18,
+          "captured_at": "2026-11-23T08:56:59.481745+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给本地 Markdown 文档建立索引，用关键词、语义或混合搜索找回相关原文片段。",
+      "fit_short": "为文档或助手提供资料检索",
+      "project_fit": "适合文档较多、希望按内容找回出处的团队，也可作为 AI 助手的文档检索工具；搜索结果仍需回到原文核对。",
+      "example": "把三篇虚构产品说明放进测试目录，先按功能名查关键词，再用同义说法做语义搜索，比较结果指向哪些原文片段。",
+      "difficulty": "中",
+      "cost": "代码采用 MIT，需要符合官方版本要求的 Node.js 或 Bun 运行环境及索引依赖。语义检索和重排还需模型、磁盘与算力；远端服务费用和模型权重许可应单独核对。",
+      "caution": "先限定被收录的目录。中文语义检索应通过已知问题验证召回效果；启用远端嵌入或重排时，需确认哪些文档片段会发给服务商。",
+      "first_step": "按[官方快速开始](https://github.com/tobi/qmd/blob/8be0c42395c02ff73bce6d6c2e67d7905b0a771c/README.md)只给一个示例目录建立集合，先验证关键词搜索和原文返回，再决定是否生成语义索引或接入 AI 客户端。",
+      "diagram_title": "从文档里找回有出处的片段",
+      "diagram_steps": [
+        "示例 Markdown 文档",
+        "建索引并检索内容",
+        "带来源的相关片段"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "exelban/stats",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkxODkyODU1NTQ=",
+      "url": "https://github.com/exelban/stats",
+      "weekly_stars": 179,
+      "total_stars": 43569,
+      "forks": 1645,
+      "language": "Swift",
+      "license": "MIT",
+      "last_push_at": "2026-11-22T11:18:48Z",
+      "source_revision": "f47dca1e2549db5efe776e8acdf3b5a108f6004d",
+      "evidence_url": "https://github.com/exelban/stats/blob/f47dca1e2549db5efe776e8acdf3b5a108f6004d/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/swift?since=weekly",
+          "rank": 8,
+          "captured_at": "2026-11-23T08:57:01.411250+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在 Mac 菜单栏显示 CPU、内存、磁盘、网络等资源使用情况。",
+      "fit_short": "观察本地应用运行时的负载",
+      "project_fit": "适合在 Mac 上观察演示任务、导出任务或本地工具的资源变化，先找到值得进一步排查的资源项。",
+      "example": "运行一个演示视频导出任务前后，比较 CPU 和内存变化，决定接下来应重点检查应用日志还是其他系统资源。",
+      "difficulty": "低",
+      "cost": "代码采用 MIT，文档支持正式版 macOS 12 或更新系统。监控本身也会占用资源，可按需要选择模块与刷新频率。",
+      "caution": "传感器数据取决于机型和权限，名称不一定对应某个具体核心。文档将风扇控制标为未维护，初次使用先选择只读监控项。",
+      "first_step": "照[官方功能说明](https://github.com/exelban/stats/blob/f47dca1e2549db5efe776e8acdf3b5a108f6004d/README.md)只启用 CPU 和内存两个模块，运行一个小演示任务，核对刷新频率、显示单位以及空闲和运行时的差异。",
+      "diagram_title": "在菜单栏观察 Mac 的资源变化",
+      "diagram_steps": [
+        "Mac 的运行状态",
+        "采集并显示资源指标",
+        "菜单栏里的负载图表"
+      ]
+    }
+  ]
+}
