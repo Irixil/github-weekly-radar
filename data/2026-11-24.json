@@ -1,0 +1,240 @@
+{
+  "issue_date": "2026-11-24",
+  "timezone": "Asia/Shanghai",
+  "schema_version": 3,
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 115,
+  "eligible_count": 97,
+  "history_count": 204,
+  "unseen_count": 43,
+  "editor_note": "本期先看 DESIGN.md 如何把设计规则写成可检查的文档，再看 GitHub CLI 的终端工作流。Clash Mi 用于管理网络分流，PyRIT 用于自有 AI 应用的授权安全测试，Hidden 用于整理 Mac 菜单栏。建议从只读操作、测试配置和虚构数据开始。",
+  "exclusions": [
+    {
+      "repo": "tradermonty/claude-trading-skills",
+      "source_url": "https://github.com/tradermonty/claude-trading-skills/blob/4080042a7863f5eeb48aabeaf60bd547efb99949/README.md",
+      "reason": "README 将用途限定为教育、研究和流程改进；其金融交易主题与面向一般软件项目的使用范围不匹配，本期跳过。"
+    },
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "source_url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/45d9a0eee8e84ba9c7732f3ba1e7fd6a60ed0f63/README.md",
+      "reason": "README 同时提供买卖点位等金融分析，并声明仅供学习和研究、不构成投资建议；用途边界不适合作为一般项目建议，本期跳过。"
+    },
+    {
+      "repo": "soxoj/maigret",
+      "source_url": "https://github.com/soxoj/maigret/blob/327c2bc44546be2fee8d2342b1cfd79ba0a34cd6/README.md",
+      "reason": "README 一处称 MIT 版本商业使用不受限制，另一处又限定仅用于教育及合法目的；许可与用途表述不一致，本期跳过。"
+    },
+    {
+      "repo": "bggRGjQaUbCoE/PiliPlus",
+      "source_url": "https://github.com/bggRGjQaUbCoE/PiliPlus/blob/217fb54f51f6764176319bbdedab2a7522d75401/README.md",
+      "reason": "README 将用途限定为学习和测试，并要求下载后 24 小时内删除；该范围与日常使用建议冲突，本期跳过。"
+    },
+    {
+      "repo": "z7786/wenxi",
+      "source_url": "https://github.com/z7786/wenxi/blob/66a175b172ac3620a5e1baa07035fecedd7502b7/docs/LICENSING.md",
+      "reason": "许可范围文档说明内置第三方 SDK 的组合分发兼容性仍待确认；整包许可尚不清楚，本期跳过。"
+    },
+    {
+      "repo": "misakano7545/workbuddy2api-panel",
+      "source_url": "https://github.com/misakano7545/workbuddy2api-panel/blob/d221c721fc0ace6cfab3f4562ebe2a6d7344d117/README.md",
+      "reason": "README 说明它是针对第三方服务的非官方 OAuth 网关，并将使用限制在本人授权账号与本机或私有环境测试，同时提示账号和上游可用性风险；不作为一般项目接入建议。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "google-labs-code/design.md",
+      "repo_id": "R_kgDOR_TBxQ",
+      "url": "https://github.com/google-labs-code/design.md",
+      "weekly_stars": 187,
+      "total_stars": 29065,
+      "forks": 2350,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-18T02:55:33Z",
+      "source_revision": "db977b3c1d1f309269f43d5d17ae828d54bd6ae3",
+      "evidence_url": "https://github.com/google-labs-code/design.md/blob/db977b3c1d1f309269f43d5d17ae828d54bd6ae3/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 17,
+          "captured_at": "2026-11-24T09:04:20.240823+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "用 DESIGN.md 把颜色、字体和组件规则写成编码工具能读取的格式，并检查文档结构与令牌。",
+      "fit_short": "统一设计规范与代码协作",
+      "project_fit": "适合要让开发者和编码助手共用一份设计系统说明的网页项目，也可用于检查和导出设计令牌。",
+      "example": "把品牌主色、正文字体和按钮圆角写进一份 DESIGN.md，用 lint 检查规则，再用 diff 对比改版前后的令牌变化。",
+      "difficulty": "低",
+      "cost": "代码采用 [Apache-2.0](https://github.com/google-labs-code/design.md/blob/db977b3c1d1f309269f43d5d17ae828d54bd6ae3/LICENSE)。命令行需要 Node.js 和 npm；本地检查不需要模型服务。",
+      "caution": "README 标明格式仍处于 alpha，规范与命令行工具还在开发。结构检查不保证页面视觉还原，也不能代替人工检查可读性与无障碍。",
+      "first_step": "照官方 README 的示例写一页包含颜色、字体和按钮规则的 DESIGN.md，运行 lint 看输出，再人工对照一个真实页面。",
+      "diagram_title": "把设计规则变成可检查的文档",
+      "diagram_steps": [
+        "品牌色与组件规范",
+        "解析文档并检查令牌",
+        "问题列表与可导出令牌"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "KaringX/clashmi",
+      "repo_id": "R_kgDOOZZTow",
+      "url": "https://github.com/KaringX/clashmi",
+      "weekly_stars": 181,
+      "total_stars": 10708,
+      "forks": 666,
+      "language": "Dart",
+      "license": "GPL-3.0",
+      "last_push_at": "2026-11-22T06:38:43Z",
+      "source_revision": "62c15a2fb34fb3b4619a7d01d2a34c22935266f1",
+      "evidence_url": "https://github.com/KaringX/clashmi/blob/62c15a2fb34fb3b4619a7d01d2a34c22935266f1/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/dart?since=weekly",
+          "rank": 5,
+          "captured_at": "2026-11-24T09:04:21.993599+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "用图形界面配置 Mihomo 网络代理规则，在手机和桌面设备上选择流量路由。",
+      "fit_short": "检查网络分流和代理配置",
+      "project_fit": "适合需要在自有设备测试规则路由或管理合法代理节点的人，也可作为跨平台网络客户端的功能参考。",
+      "example": "给测试设备导入一份获授权的规则配置，让演示应用的一个域名走指定出口，再核对是否按预期分流。",
+      "difficulty": "中",
+      "cost": "代码采用 [GPL-3.0](https://github.com/KaringX/clashmi/blob/62c15a2fb34fb3b4619a7d01d2a34c22935266f1/LICENSE)。软件代码本身无许可费；代理节点或订阅服务由第三方提供，可能收费。",
+      "caution": "代理会改变设备的网络出口；只使用可信且获授权的节点，妥善保护订阅地址与账号。客户端可用平台和规则能力以固定版本文档为准。",
+      "first_step": "在测试设备用不含真实账号的配置，只检查一个域名的路由规则和停用后的网络恢复，确认出口符合预期再扩大范围。",
+      "diagram_title": "按规则查看网络流量走向",
+      "diagram_steps": [
+        "测试设备与合法节点",
+        "按规则选择流量出口",
+        "连接状态与路由结果"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "cli/cli",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkyMTI2MTMwNDk=",
+      "url": "https://github.com/cli/cli",
+      "weekly_stars": 165,
+      "total_stars": 47170,
+      "forks": 9440,
+      "language": "Go",
+      "license": "MIT",
+      "last_push_at": "2026-11-24T00:05:42Z",
+      "source_revision": "761ea6d6915b74b5479e29e25019d4d9f09e58c7",
+      "evidence_url": "https://github.com/cli/cli/blob/761ea6d6915b74b5479e29e25019d4d9f09e58c7/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-11-24T09:04:21.049502+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把 GitHub 仓库、Issue 和 Pull request 等操作放到终端，与 git 一起管理代码任务。",
+      "fit_short": "从终端查看仓库事项",
+      "project_fit": "适合开发者在代码目录里查看评审进度、列出 Issue 或处理 Pull request，也可用于经过审核的自动化脚本。",
+      "example": "在一个公开仓库查看未关闭的 Issue 和当前 Pull request 状态，把待办留在终端里核对。",
+      "difficulty": "低",
+      "cost": "代码采用 [MIT](https://github.com/cli/cli/blob/761ea6d6915b74b5479e29e25019d4d9f09e58c7/LICENSE)，支持 macOS、Windows 和 Linux。GitHub 托管服务的套餐和 API 限制按账户类型执行。",
+      "caution": "登录凭据权限决定可读写范围。创建、关闭或合并等操作会改变远端项目状态，执行前核对仓库和目标事项。",
+      "first_step": "按固定版本 README 配置最小必要登录，先对一个公开仓库使用只读命令查看 Issue 与 Pull request，再考虑写入命令。",
+      "diagram_title": "在终端处理 GitHub 事项",
+      "diagram_steps": [
+        "仓库与待办事项",
+        "命令调用 GitHub 接口",
+        "事项列表与操作结果"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "microsoft/PyRIT",
+      "repo_id": "R_kgDOK45rdQ",
+      "url": "https://github.com/microsoft/PyRIT",
+      "weekly_stars": 164,
+      "total_stars": 5039,
+      "forks": 1117,
+      "language": "Python",
+      "license": "MIT",
+      "last_push_at": "2026-11-24T01:00:04Z",
+      "source_revision": "a453984ca6921c8698a04966162ee8fbf24f9230",
+      "evidence_url": "https://github.com/microsoft/PyRIT/blob/a453984ca6921c8698a04966162ee8fbf24f9230/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/python?since=weekly",
+          "rank": 10,
+          "captured_at": "2026-11-24T09:04:20.318894+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "为生成式 AI 应用组织安全测试，组合自动扫描、多轮测试和人工复核。",
+      "fit_short": "评估自有 AI 应用的安全风险",
+      "project_fit": "适合已搭建生成式 AI 功能、需要在发布前检查输入攻击和安全边界的团队；测试结果仍需人工解释。",
+      "example": "对隔离的测试聊天机器人提供虚构资料，检查一组预设提示是否诱导它泄露测试内容，并记录需要修复的情况。",
+      "difficulty": "高",
+      "cost": "代码采用 [MIT](https://github.com/microsoft/PyRIT/blob/a453984ca6921c8698a04966162ee8fbf24f9230/LICENSE)。需要 Python 环境和测试端点；本地模型消耗算力，外部模型接口可能收费。",
+      "caution": "仅测试自有或获明确授权的系统。一次测试未发现问题不代表安全；外部模型可能记录输入，测试数据应使用虚构内容并核对服务条款。",
+      "first_step": "按官方 README 选择与安装版本匹配的文档，在隔离环境用虚构输入跑一个非破坏性测试，人工检查请求、输出和日志。",
+      "diagram_title": "用授权测试找出模型安全弱点",
+      "diagram_steps": [
+        "授权端点与虚构输入",
+        "组合扫描与多轮测试",
+        "风险记录与复核线索"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "consolelabs/hidden",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkxNzAyNDQ0NTY=",
+      "url": "https://github.com/consolelabs/hidden",
+      "weekly_stars": 159,
+      "total_stars": 15578,
+      "forks": 551,
+      "language": "Swift",
+      "license": "MIT",
+      "last_push_at": "2026-11-23T14:51:26Z",
+      "source_revision": "a2f765d5040fb910393ef57ad33874970b9497a0",
+      "evidence_url": "https://github.com/consolelabs/hidden/blob/a2f765d5040fb910393ef57ad33874970b9497a0/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/swift?since=weekly",
+          "rank": 9,
+          "captured_at": "2026-11-24T09:04:22.224516+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "把 Mac 菜单栏里暂时用不到的图标收起来，需要时再展开查看。",
+      "fit_short": "整理 Mac 菜单栏图标",
+      "project_fit": "适合菜单栏图标较多、希望让常用状态更容易辨认的人，也可参考它的折叠和快捷键交互。",
+      "example": "把不常用的同步工具图标收进折叠区，需要检查时点箭头展开，不改变这些应用本身的运行状态。",
+      "difficulty": "低",
+      "cost": "代码采用 [MIT](https://github.com/consolelabs/hidden/blob/a2f765d5040fb910393ef57ad33874970b9497a0/LICENSE)。项目要求 macOS 13 或更新版本；App Store 价格以商店页面为准。",
+      "caution": "它只隐藏菜单栏图标，不会暂停后台应用。README 说明 macOS 27 上 App Store 版受沙盒限制，不能隐藏图标；需按官方渠道选择版本。",
+      "first_step": "先选一个非关键图标，按固定版本 README 的说明折叠再展开，确认重要状态提示仍能及时查看。",
+      "diagram_title": "收起不常用的菜单栏图标",
+      "diagram_steps": [
+        "菜单栏中的应用图标",
+        "收起图标并按需展开",
+        "更整洁的菜单栏"
+      ]
+    }
+  ]
+}
