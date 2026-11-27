@@ -1,0 +1,255 @@
+{
+  "issue_date": "2026-11-27",
+  "timezone": "Asia/Shanghai",
+  "schema_version": 3,
+  "source_urls": [
+    "https://github.com/trending?since=weekly",
+    "https://github.com/trending/python?since=weekly",
+    "https://github.com/trending/typescript?since=weekly",
+    "https://github.com/trending/javascript?since=weekly",
+    "https://github.com/trending/go?since=weekly",
+    "https://github.com/trending/rust?since=weekly",
+    "https://github.com/trending/swift?since=weekly",
+    "https://github.com/trending/dart?since=weekly",
+    "https://github.com/trending/java?since=weekly"
+  ],
+  "candidate_count": 120,
+  "eligible_count": 102,
+  "history_count": 209,
+  "unseen_count": 42,
+  "editor_note": "本期从桌面自动化、Obsidian 笔记技能、Java 管理后台基座和 AI 编程配置管理中挑选。前两项可先在测试账号或笔记副本试用；后台框架需要较完整的开发与部署环境。榜单热度是滚动一周新增 Star。",
+  "exclusions": [
+    {
+      "repo": "tradermonty/claude-trading-skills",
+      "source_url": "https://github.com/tradermonty/claude-trading-skills/blob/39c189daba13f63974b46ae58b202a31a67f9c89/README.md",
+      "reason": "README 将用途限定为教育、研究和流程改进；项目聚焦金融交易，暂不作为通用软件项目应用建议。"
+    },
+    {
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "source_url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/a780a5b15d8d67639c9db61a4d7914166c34e9ab/README.md",
+      "reason": "README 提供金融分析与买卖点位，同时声明仅供学习研究；用途范围不适合一般项目建议。"
+    },
+    {
+      "repo": "bggRGjQaUbCoE/PiliPlus",
+      "source_url": "https://github.com/bggRGjQaUbCoE/PiliPlus/blob/217fb54f51f6764176319bbdedab2a7522d75401/README.md",
+      "reason": "README 将用途限制为学习和测试，并要求下载内容在 24 小时内删除，本期不推荐作日常使用。"
+    },
+    {
+      "repo": "soxoj/maigret",
+      "source_url": "https://github.com/soxoj/maigret/blob/b815b91ceb17f20a6ddfbe71d395844960d8e60c/README.md",
+      "reason": "README 对用途作教育及合法行为限制，项目针对账号线索检索；本期避免给出可能扩展到未经授权个人调查的通用建议。"
+    },
+    {
+      "repo": "z7786/wenxi",
+      "source_url": "https://github.com/z7786/wenxi/blob/66a175b172ac3620a5e1baa07035fecedd7502b7/README.md",
+      "reason": "许可证说明指出内置第三方 SDK 的组合分发兼容性尚未确认，整体分发许可边界不清。"
+    },
+    {
+      "repo": "MorpheApp/morphe-patches",
+      "source_url": "https://github.com/MorpheApp/morphe-patches/blob/10b58e236a6ea07632a94eddf7e866a22336f5e2/README.md",
+      "reason": "README 对 GPLv3 增列 Section 7 条件并要求一并查阅 NOTICE；涉及为第三方应用制作补丁，使用及再分发条件需要逐项核对。"
+    },
+    {
+      "repo": "misakano7545/workbuddy2api-panel",
+      "source_url": "https://github.com/misakano7545/workbuddy2api-panel/blob/fba9e147e640095e3d3d2fcb4094408d2559d89f/README.md",
+      "reason": "README 说明这是第三方服务的非官方 OAuth 代理，并把使用限定于本人授权账号及私有测试环境；不作一般服务接入建议。"
+    },
+    {
+      "repo": "TeamNewPipe/NewPipe",
+      "source_url": "https://github.com/TeamNewPipe/NewPipe/blob/62c87aa6b7556e260d5639da1d23240cfba17e6e/README.md",
+      "reason": "项目依赖第三方视频平台接口；平台规则与可用性会变化，本期不把它作为普遍的服务集成方案推荐。"
+    }
+  ],
+  "projects": [
+    {
+      "rank": 1,
+      "repo": "n8n-io/nod",
+      "repo_id": "R_kgDOUrTiCw",
+      "url": "https://github.com/n8n-io/nod",
+      "weekly_stars": 1165,
+      "total_stars": 4011,
+      "forks": 616,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-27T00:39:48Z",
+      "source_revision": "cdde2d12e35d02963659196a2190c4d85414ab5b",
+      "evidence_url": "https://github.com/n8n-io/nod/blob/cdde2d12e35d02963659196a2190c4d85414ab5b/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 4,
+          "captured_at": "2026-11-27T09:09:51.790227+08:00"
+        },
+        {
+          "url": "https://github.com/trending/typescript?since=weekly",
+          "rank": 4,
+          "captured_at": "2026-11-27T09:09:52.083058+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在电脑上操作网页和常用工作工具的个人 AI 助手，执行发送或提交等动作前会请求确认。",
+      "fit_short": "人工确认的桌面工作自动化",
+      "project_fit": "适合想把日历、邮件或网页中的重复步骤整理成草稿，再由人确认后执行的个人或小团队。",
+      "example": "先用测试日历和虚构客户资料生成一页会前摘要，检查内容与来源后再决定是否连接真实工作区。",
+      "difficulty": "中",
+      "cost": "代码采用 Apache-2.0，软件本身无许可费。README 标注目前为研究预览；模型账号或 API 可能收费，联网服务也需按各自套餐计费。",
+      "caution": "研究预览阶段，连接器会接触工作区数据；先用测试账号和最小权限。确认提示不能替代检查收件人、内容和最终动作。",
+      "first_step": "在隔离的测试账号中连接一个只读来源，生成一份虚构会议摘要并核对引用内容；先不要开启发送或购买操作。",
+      "diagram_title": "先整理信息，再由人确认执行",
+      "diagram_steps": [
+        "日历、邮件与网页资料",
+        "助手整理草稿并等待确认",
+        "可核对的摘要或待办"
+      ]
+    },
+    {
+      "rank": 2,
+      "repo": "obsidianmd/obsidian-skills",
+      "repo_id": "R_kgDOQyvZCA",
+      "url": "https://github.com/obsidianmd/obsidian-skills",
+      "weekly_stars": 704,
+      "total_stars": 54021,
+      "forks": 3845,
+      "language": "Shell",
+      "license": "MIT",
+      "last_push_at": "2026-11-26T17:50:16Z",
+      "source_revision": "9c9560a870fd490b0e1a847f2c8401a50e2d931d",
+      "evidence_url": "https://github.com/obsidianmd/obsidian-skills/blob/9c9560a870fd490b0e1a847f2c8401a50e2d931d/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "rank": 13,
+          "captured_at": "2026-11-27T09:09:51.790227+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "给 AI 助手提供读写 Obsidian 笔记、画布和资料库的操作说明。",
+      "fit_short": "让 AI 按统一格式整理笔记",
+      "project_fit": "适合希望 AI 助手依照 Obsidian 的 Markdown、Bases 或 Canvas 格式创建和维护知识资料的人。",
+      "example": "在笔记副本上试用 Markdown 技能，创建一张包含三个主题卡片和连接线的 JSON Canvas，再打开检查布局。",
+      "difficulty": "低",
+      "cost": "仓库采用 MIT，技能文件本身无许可费。使用 Obsidian 或 AI 助手时，账号、模型和同步服务可能另有费用。",
+      "caution": "技能会把操作规则交给 AI 助手；使用前应阅读文件内容，并限制它能访问的笔记目录。第三方工具对技能格式的支持可能不同。",
+      "first_step": "只安装一个需要的技能，在不含私人资料的测试笔记或副本上运行一次，检查生成和修改的文件后再扩大范围。",
+      "diagram_title": "按 Obsidian 格式生成资料",
+      "diagram_steps": [
+        "笔记主题与资料副本",
+        "技能按 Obsidian 格式组织",
+        "可打开的笔记或画布"
+      ]
+    },
+    {
+      "rank": 3,
+      "repo": "YunaiV/ruoyi-vue-pro",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkzMzIzNTc2OTg=",
+      "url": "https://github.com/YunaiV/ruoyi-vue-pro",
+      "weekly_stars": 138,
+      "total_stars": 40654,
+      "forks": 8716,
+      "language": "Java",
+      "license": "MIT",
+      "last_push_at": "2026-11-23T14:13:57Z",
+      "source_revision": "e34c0f22dc542bd36aebc65afa4dd4ac81c88863",
+      "evidence_url": "https://github.com/YunaiV/ruoyi-vue-pro/blob/e34c0f22dc542bd36aebc65afa4dd4ac81c88863/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/java?since=weekly",
+          "rank": 9,
+          "captured_at": "2026-11-27T09:09:55.683225+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "提供 Java 后端与 Vue 管理页面的业务系统基础模块，含用户权限、接口和常见后台功能。",
+      "fit_short": "从现成后台基座搭建业务系统",
+      "project_fit": "适合需要用户角色、菜单、权限和管理页面，并愿意维护一套完整 Java 与 Vue 工程的团队。",
+      "example": "用精简版本做一个内部设备登记原型，先配置设备名称、状态和负责人字段，再检查不同角色的查看权限。",
+      "difficulty": "高",
+      "cost": "仓库标注 MIT 许可，代码无许可费。运行需要 Java、前端依赖和数据库等环境；服务器、数据库托管及可选服务可能产生费用。",
+      "caution": "完整版本和精简版本、JDK 与 Spring Boot 组合不同；先按选定分支的文档配套。权限配置和生成代码仍需开发人员审查。",
+      "first_step": "先选一个明确维护的版本分支，按固定版本 README 启动演示环境，用虚构数据检查一张列表和一个角色权限，再决定是否采用。",
+      "diagram_title": "用现成模块搭建管理后台",
+      "diagram_steps": [
+        "业务字段与角色需求",
+        "复用后台模块并配置权限",
+        "可检查的管理页面与接口"
+      ]
+    },
+    {
+      "rank": 4,
+      "repo": "runkids/skillshare",
+      "repo_id": "R_kgDOQ5mtHQ",
+      "url": "https://github.com/runkids/skillshare",
+      "weekly_stars": 130,
+      "total_stars": 3372,
+      "forks": 383,
+      "language": "Go",
+      "license": "MIT",
+      "last_push_at": "2026-11-26T16:55:34Z",
+      "source_revision": "7fd2eaa68d348e5274d681934097afba3b20b368",
+      "evidence_url": "https://github.com/runkids/skillshare/blob/7fd2eaa68d348e5274d681934097afba3b20b368/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/go?since=weekly",
+          "rank": 4,
+          "captured_at": "2026-11-27T09:09:53.659932+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "在本地集中管理 AI 编程助手的技能、规则和连接配置，并按项目同步所需内容。",
+      "fit_short": "统一团队的 AI 编程配置",
+      "project_fit": "适合多人使用不同 AI 编程工具，希望共用代码审查清单、项目规则并通过版本库维护的团队。",
+      "example": "把一份代码审查清单放进项目配置源，先审阅它会同步到哪些工具，再只同步到一个测试项目。",
+      "difficulty": "中",
+      "cost": "项目采用 MIT，CLI 无许可费。桌面应用或 AI 模型服务的费用按各自产品计算。",
+      "caution": "同步规则、技能或 hooks 可能改变本机 AI 工具行为；先审查配置和安全检查结果，团队共享时也要避免提交密钥。",
+      "first_step": "在空白测试项目中加入一份只读审查规则，运行官方 audit，再同步给一个工具并核对实际生成的文件。",
+      "diagram_title": "把一份规则同步到指定工具",
+      "diagram_steps": [
+        "技能、规则与连接配置",
+        "检查内容后选择目标工具",
+        "可复用的项目级助手配置"
+      ]
+    },
+    {
+      "rank": 5,
+      "repo": "jeecgboot/JeecgBoot",
+      "repo_id": "MDEwOlJlcG9zaXRvcnkxNTkxNTI5MDQ=",
+      "url": "https://github.com/jeecgboot/JeecgBoot",
+      "weekly_stars": 125,
+      "total_stars": 48636,
+      "forks": 16216,
+      "language": "Java",
+      "license": "Apache-2.0",
+      "last_push_at": "2026-11-11T14:09:01Z",
+      "source_revision": "6184e2448fbf0a84e7f638596324c69c1a747549",
+      "evidence_url": "https://github.com/jeecgboot/JeecgBoot/blob/6184e2448fbf0a84e7f638596324c69c1a747549/README.md",
+      "sources": [
+        {
+          "url": "https://github.com/trending/java?since=weekly",
+          "rank": 3,
+          "captured_at": "2026-11-27T09:09:55.683225+08:00"
+        }
+      ],
+      "verified_runtime": false,
+      "change": "首次推荐",
+      "summary": "面向 Java 项目的低代码开发平台，可配置表单、流程和报表，也提供可继续修改的源码。",
+      "fit_short": "快速搭建可扩展的业务后台",
+      "project_fit": "适合需要表单、审批或报表等常见后台功能，并能承担 Java 平台部署和维护成本的团队。",
+      "example": "用本地演示环境搭一张虚构的设备申领表，观察表单字段、审批流程和权限如何衔接。",
+      "difficulty": "高",
+      "cost": "仓库标注 Apache-2.0，平台代码无许可费。部署需要数据库及配套运行环境；服务器、短信或可选模型服务可能收费。",
+      "caution": "平台模块多、版本和部署方式会影响依赖；低代码生成结果仍要做权限、数据隔离和安全审查。README 描述的功能不代表已验证适配具体业务。",
+      "first_step": "使用测试环境和虚构数据，先启动官方示例，只配置一张简单表单并检查普通用户与管理员看到的内容差异。",
+      "diagram_title": "配置表单后检查业务流程",
+      "diagram_steps": [
+        "表单字段与角色需求",
+        "配置页面、流程和权限",
+        "可检查的业务后台原型"
+      ]
+    }
+  ]
+}
